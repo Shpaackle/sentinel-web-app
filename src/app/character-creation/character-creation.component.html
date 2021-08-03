@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group" appDropdown>
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Choose Step <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#" (click)="onStepSelect(1)">Step 1</a></li>
+        <li><a href="#" (click)="onStepSelect(2)">Step 2</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <app-creation-step></app-creation-step>
+</div>
+<hr />
+<div class="row">
+  <app-step-selections></app-step-selections>
+</div>
+<hr />
+<div class="row">
+  <button class="btn btn-success">Make Selection</button>
+</div>
+<hr />
