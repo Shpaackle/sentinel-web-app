@@ -5,8 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CharacterCreationComponent } from './character-creation/character-creation.component';
 import { CharacterSheetComponent } from './character-sheet/character-sheet.component';
-import { CreationStepComponent } from './character-creation/creation-step/creation-step.component';
-import { StepSelectionsComponent } from './character-creation/step-selections/step-selections.component';
 import { SheetComponent } from './character-sheet/sheet/sheet.component';
 import { InfoGroupComponent } from './character-sheet/sheet/info-group/info-group.component';
 import { DetailDisplayComponent } from './character-sheet/sheet/detail-display/detail-display.component';
@@ -19,18 +17,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     CharacterCreationComponent,
     CharacterSheetComponent,
-    CreationStepComponent,
-    StepSelectionsComponent,
     SheetComponent,
     InfoGroupComponent,
-    DetailDisplayComponent, 
-    DropdownDirective
+    DetailDisplayComponent,
+    DropdownDirective,
   ],
-  imports: [
-    BrowserModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
