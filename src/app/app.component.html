@@ -1,25 +1,28 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+  <div class="row"><h1>Guided Character Creation</h1></div>
+</div>
+
+<hr />
+
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <!-- <app-character-creation *ngIf="loadedFeature === 'creation'"></app-character-creation> -->
-      <!-- <app-character-sheet *ngIf="loadedFeature !== 'creation'"></app-character-sheet> -->
-      <h1>Guided Character Creation</h1>
-      <hr />
-      <div class="container" id="step-1-container">
-        <div class="row" id="step-1-instructions">
-          <div class="col-xs-12">
-            <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
-            <p>{{ firstStep.stepDetails }}</p>
-          </div>
+    <!-- <div class="col"> -->
+
+    <div class="container" id="step-1-container">
+      <div class="row" id="step-1-instructions">
+        <div class="col">
+          <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
+          <p>{{ firstStep.stepDetails }}</p>
         </div>
-        <div class="row" id="step-1-dice">
-          <div class="col-xs-6">
-            <div
-              class="col-xs-4"
-              *ngFor="let die of firstStep.diceToRoll; let d = index"
-            >
-              <div class="row">
+      </div>
+      <div class="row" id="step-1-dice">
+        <div class="col">
+          <div
+            class="col"
+            *ngFor="let die of firstStep.diceToRoll; let d = index"
+          >
+            <div class="row">
+              <div class="col">
                 <button
                   id="die-button-{{ d }}"
                   class="D{{ die.sides }} die-button"
@@ -32,19 +35,35 @@
                     id="die-image-{{ d }}"
                   />
                 </button>
-              </div>
-              <div class="row">
-                <p id="die-{{ d }}-result">
-                  <em
-                    ><b>{{ die.faceShowing }}</b></em
-                  >
-                </p>
+
+                <div class="row">
+                  <p id="die-{{ d }}-result">
+                    <em
+                      ><b>{{ die.faceShowing }}</b></em
+                    >
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row" id="step-1-options">Step 1 options go here</div>
       </div>
+      <div class="row" id="step-1-options">Step 1 options go here</div>
+      <!-- </div> -->
     </div>
   </div>
+</div>
+<hr />
+<div class="container" id="step-2-container">
+  <div class="row" id="step-2-instructions">
+    <h2>Step {{ secondStep.stepNumber }}: {{ secondStep.stepName }}</h2>
+    <p>{{ secondStep.stepDetails }}</p>
+  </div>
+  <hr />
+  <div class="row" id="step-2-dice">
+    <div class="col">Dice to roll go here</div>
+    <div class="col"><button class="btn btn-warn">Roll Dice</button></div>
+  </div>
+  <hr />
+  <div class="row" id="step-2-options">Step 2 options go here</div>
 </div>
