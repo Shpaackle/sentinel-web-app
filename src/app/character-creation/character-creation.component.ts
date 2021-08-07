@@ -13,13 +13,6 @@ export class CharacterCreationComponent implements OnInit {
   @Output() dieRolled = new EventEmitter<Die>();
 
   constructor() {
-    // create die objects
-    const d4 = new Die(4);
-    const d6 = new Die(6);
-    const d8 = new Die(8);
-    const d10 = new Die(10);
-    const d12 = new Die(12);
-
     // create placeholder text for now
     const firstStep = new CreationStep(
       1,
@@ -39,7 +32,7 @@ export class CharacterCreationComponent implements OnInit {
        of dice you just rolled provides you with some of your powers (Details 
         on Page 44). You also receive some yellow abilities, other abilities, 
         or qualities, and dice to roll for your archetype for the next step`,
-      [d10, d6, d8]
+      [new Die()]
     );
     const thirdStep = new CreationStep(
       3,
@@ -49,7 +42,7 @@ export class CharacterCreationComponent implements OnInit {
       dice you just rolled provides you with more powers and/or qualities. It also 
       provides green abilities, sometimes other abilities, a second principle, 
       and a new set of dice to roll for your personality for the next step.`,
-      [d8, d4]
+      [new Die(6)]
     );
     const fourthStep = new CreationStep(
       4,
@@ -58,7 +51,7 @@ export class CharacterCreationComponent implements OnInit {
       your personality in your hero sheet’s Characteristics section. It provides 
       you with your status dice and an Out ability. You also take a core character 
       quality of your choice, as explained on page 121.`,
-      [d6, d4]
+      [new Die(8)]
     );
     const fifthStep = new CreationStep(
       5,
@@ -68,7 +61,7 @@ export class CharacterCreationComponent implements OnInit {
       with the category of the power
       or quality that you will use for
       this ability.`,
-      [d12, d4]
+      [new Die(12)]
     );
     const sixthStep = new CreationStep(
       6,
@@ -88,7 +81,7 @@ export class CharacterCreationComponent implements OnInit {
     quality of your choice
     • Swap one of your
     principles for any other`,
-      [d12, d4]
+      []
     );
     const seventhStep = new CreationStep(
       7,
@@ -105,7 +98,7 @@ export class CharacterCreationComponent implements OnInit {
       page 113 to determine
       your Green, Yellow,
       and Red Health ranges.`,
-      [d12, d4]
+      [new Die(8)]
     );
     const eigthStep = new CreationStep(
       8,
@@ -113,7 +106,7 @@ export class CharacterCreationComponent implements OnInit {
       `Fill in the final details of your hero:
       name, alias, description, and new
       names for your abilities.`,
-      [d12, d4]
+      []
     );
 
     // push placeholder text into list of steps
