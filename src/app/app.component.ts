@@ -10,14 +10,14 @@ import { Die } from './shared/die.model';
 export class AppComponent {
   title = 'sentinel-web-app';
   loadedFeature = 'creation';
-  private firstStep: CreationStep;
-  private secondStep: CreationStep;
-  private thirdStep: CreationStep;
-  private fourthStep: CreationStep;
-  private fifthStep: CreationStep;
-  private sixthStep: CreationStep;
-  private seventhStep: CreationStep;
-  private eighthStep: CreationStep;
+  firstStep: CreationStep;
+  secondStep: CreationStep;
+  thirdStep: CreationStep;
+  fourthStep: CreationStep;
+  fifthStep: CreationStep;
+  sixthStep: CreationStep;
+  seventhStep: CreationStep;
+  eighthStep: CreationStep;
 
   constructor() {
     this.firstStep = new CreationStep(
