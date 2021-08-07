@@ -2,8 +2,48 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-character-creation *ngIf="loadedFeature === 'creation'"></app-character-creation>
-      <app-character-sheet *ngIf="loadedFeature !== 'creation'"></app-character-sheet>
+      <!-- <app-character-creation *ngIf="loadedFeature === 'creation'"></app-character-creation> -->
+      <!-- <app-character-sheet *ngIf="loadedFeature !== 'creation'"></app-character-sheet> -->
+      <h1>Guided Character Creation</h1>
+      <hr />
+      <div class="container" id="step-1-container">
+        <div class="row" id="step-1-instructions">
+          <div class="col-xs-12">
+            <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
+            <p>{{ firstStep.stepDetails }}</p>
+          </div>
+        </div>
+        <div class="row" id="step-1-dice">
+          <div class="col-xs-6">
+            <div
+              class="col-xs-4"
+              *ngFor="let die of firstStep.diceToRoll; let d = index"
+            >
+              <div class="row">
+                <button
+                  id="die-button-{{ d }}"
+                  class="D{{ die.sides }} die-button"
+                  (click)="rollDie(die)"
+                >
+                  <img
+                    src="{{ die.imagePath }}"
+                    alt="D{{ die.sides }}"
+                    style="max-height: 50px"
+                    id="die-image-{{ d }}"
+                  />
+                </button>
+              </div>
+              <div class="row">
+                <p id="die-{{ d }}-result">
+                  <em
+                    ><b>{{ die.faceShowing }}</b></em
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
