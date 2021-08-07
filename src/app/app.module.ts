@@ -10,6 +10,7 @@ import { InfoGroupComponent } from './character-sheet/sheet/info-group/info-grou
 import { DetailDisplayComponent } from './character-sheet/sheet/detail-display/detail-display.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DetailDisplayComponent,
     DropdownDirective,
   ],
-  imports: [BrowserModule, NgbModule],
+  imports: [BrowserModule, NgbModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
