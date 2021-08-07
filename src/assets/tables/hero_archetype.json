@@ -1,0 +1,144 @@
+[
+  {"num": 1,
+    "name": "SPEEDSTER",
+    "powers": ["Speed (required)", "Agility", "Intangibility", "Lightning Calculator", "Vitality",
+"any Mobility powers" , "any Mental qualities", "Physical qualities"],
+    "principle": "Expertise",
+    "page": 73
+  },
+  {
+    "num": 2,
+    "name": "SHADOW",
+    "powers": ["Stealth (required)", "Intangibility", "Invisibility",
+"Signature Weaponry", "any Athletic powers", "any Physical qualities"],
+    "principle": "Expertise",
+    "page": 74
+  },
+  {
+    "num": 3,
+    "name": "PHYSICAL POWERHOUSE",
+    "powers": ["Strength (required)", "Density Control", "Leaping", "Signature Weaponry", "Size-Changing", "any Athletic powers", "any Physical qualities", "any Social qualities"],
+    "principle": "Expertise",
+    "page": 75
+  },
+  {
+    "num": 4,
+    "name": "MARKSMAN",
+    "powers": ["Signature Weaponry (required)", "Signature Vehicle", "Swinging", "any Athletic powers", "any Intellectual powers", "any Technological powers", "any Information qualities", "any Mental qualities", "any Physical qualities"],
+    "principle": "Responsibility",
+    "page": 76
+  },
+  {
+    "num": 5,
+    "name": "BLASTER",
+    "powers": ["Elemental/Energy (required)", "Signature Weaponry", "any Elemental/Energy powers",
+"any Mobility powers", "any Technological powers", "any Mental qualities", "any Physical qualities"],
+    "principle": "Esoteric",
+    "page": 77
+  },
+  {
+    "num": 6,
+    "name": "CLOSE QUARTERS COMBAT",
+    "powers": ["Close Combat quality (required)", "Signature Weaponry", "any Athletic powers", "any Mobility powers", "any Technological powers", "any Physical qualities", "any Social qualities"],
+    "principle": "Responsibility",
+    "page": 78
+  },
+  {
+    "num": 7,
+    "name": "ARMORED",
+    "powers": ["Signature Vehicle", "Signature Weaponry", "any Athletic powers", "any Intellectual powers", "any Materials powers", "any Mobility powers", "any Technological powers", "any Physical qualities ", "any Social qualities"],
+    "principle": "Expertise",
+    "page": 79
+  },
+  {
+    "num": 8,
+    "name": "FLYER",
+    "powers": ["Flight or Signature Vehicle (required)", "Signature Vehicle", "Signature Weaponry", "any Athletic powers", "any Mobility powers", "any Technological powers", "any Information qualities", "any Physical qualities"],
+    "principle": "Ideals",
+    "page": 80
+  },
+  {
+    "num": 9,
+    "name": "ELEMENTAL MANIPULATOR",
+    "powers": ["Elemental/Energy (required)", "Absorption", "Flight", "Leaping", "Swimming", "Signature Vehicle", "Signature Weaponry", "Transmutation", "any Elemental/Energy powers", "Magical Lore", "Science", "any Mental qualities", "any Physical qualities"],
+    "principle": "Esoteric",
+    "page": 81
+  },
+  {
+    "name": 10,
+    "num": "ROBOT/CYBORG",
+    "powers": ["Signature Vehicle", "Signature Weaponry", "any Athletic powers", "any Intellectual powers", "any Mobility powers", "any Self Control powers", "any Technological powers", "any Information qualities", "any Mental qualities"],
+    "principle": "Expertise",
+    "page": 82
+  },
+  {
+    "name": 11,
+    "num": "SORCERER",
+    "powers": ["Any Elemental/Energy", "any Materials", "any Mobility", "any Psychic powers", "any Self Control powers", "any Information qualities", "any Mental qualities"],
+    "principle": "Esoteric",
+    "page": 83
+  },
+  {
+    "num": 12,
+    "name": "PSYCHIC",
+    "powers": ["Any Psychic power (required)", "any Intellectual", "any Materials", "any Psychic", "any Self Control powers", "any Information qualities", "any Mental qualities"],
+    "principle": "Esoteric",
+    "page": 84
+  },
+  {
+    "num": 13,
+    "name": "TRANSPORTER",
+    "powers": ["Any Mobility power or Signature Vehicle (required)", "any Athletic", "any Mobility powers", "any Psychic powers", "any Technological powers", "any Physical qualities", "any Social qualities"],
+    "principle": "Expertise",
+    "page": 85
+  },
+  {
+    "num": 14,
+    "name": "MINIONMAKER",
+    "powers": ["Duplication", "Inventions", "Part Detachment", "Robotics", "any Elemental/Energy", "any Materials powers", "any Information qualities", "any Mental qualities"],
+    "principle": "Expertise",
+    "page": 86
+  },
+  {
+    "num": 15,
+    "name": "WILD CARD",
+    "powers": ["Signature Vehicle", "Signature Weaponry", "any Athletic", "any Intellectual", "any Mobility", "any Self Control powers", "any Physical qualities", "any Social qualities"],
+    "principle": "Ideals",
+    "page": 89
+  },
+  {
+    "num": 16,
+    "name": "FORMCHANGER",
+    "powers": ["Any Self Control power (required)", "any Athletic", "any Mobility", "any Self Control", "any Technological powers", "any Information qualities", "any Physical qualities"],
+    "principle": "Esoteric",
+    "page": 90
+  },
+  {
+    "num": 17,
+    "name": "GADGETEER",
+    "powers": ["Signature Vehicle", "Signature Weaponry", "any Intellectual power (required)", "any Mobility", "any Psychic", "any Technological powers", "any Information qualities", "any Mental qualities"],
+    "principle": "Identity",
+    "page": 92
+  },
+  {
+    "num": 18,
+    "name": "REALITY SHAPER",
+    "powers": ["Density Control", "Intangibility", "Invisibility", "Speed", "Teleportation", "Transmutation", "any Intellectual", "any Psychic", "any Technological powers", "any Information qualities", "any Mental qualities"],
+    "principle": "Expertise",
+    "page": 93
+  },
+  {
+    "num": 19,
+    "name": "DIVIDED",
+    "powers": "Varies",
+    "principle": "Responsibility",
+    "page": 94
+  },
+  {
+    "num": 20,
+    "name": "MODULAR",
+    "powers": "Varies",
+    "principle": "Varies",
+    "page": 96
+  }
+]

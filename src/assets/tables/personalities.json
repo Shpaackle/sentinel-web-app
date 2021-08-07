@@ -1,0 +1,162 @@
+[
+  {
+    "num": 1,
+    "personality": "Lone Wolf",
+    "green": 8,
+    "yellow": 8,
+    "red": 8,
+    "page": 101
+  },
+  {
+    "num": 2,
+    "personality": "Natural Leader",
+    "green": 6,
+    "yellow": 8,
+    "red": 10,
+    "page": 101
+  },
+  {
+    "num": 3,
+    "personality": "Impulsive",
+    "green": 6,
+    "yellow": 6,
+    "red": 8,
+    "page": 101
+  },
+  {
+    "num": 4,
+    "personality": "Mischievous",
+    "green": 6,
+    "yellow": 8,
+    "red": 8,
+    "page": 101
+  },
+  {
+    "num": 5,
+    "personality": "Sarcastic",
+    "green": 8,
+    "yellow": 8,
+    "red": 8,
+    "page": 102
+  },
+  {
+    "num": 6,
+    "personality": "Distant",
+    "green": 10,
+    "yellow": 8,
+    "red": 6,
+    "page": 102
+  },
+  {
+    "num": 7,
+    "personality": "Stalwart",
+    "green": 8,
+    "yellow": 8,
+    "red": 8,
+    "page": 102
+  },
+  {
+    "num": 8,
+    "personality": "Fast Talking",
+    "green": 6,
+    "yellow": 8,
+    "red": 10,
+    "page": 102
+  },
+  {
+    "num": 9,
+    "personality": "Inquisitive",
+    "green": 6,
+    "yellow": 8,
+    "red": 10,
+    "page": 102
+  },
+  {
+    "num": 10,
+    "personality": "Alluring",
+    "green": 6,
+    "yellow": 8,
+    "red": 10,
+    "page": 102
+  },
+  {
+    "num": 11,
+    "personality": "Stoic",
+    "green": 6,
+    "yellow": 8,
+    "red": 10,
+    "page": 103
+  },
+  {
+    "num": 12,
+    "personality": "Nurturing",
+    "green": 6,
+    "yellow": 6,
+    "red": 12,
+    "page": 103
+  },
+  {
+    "num": 13,
+    "personality": "Analytical",
+    "green": 10,
+    "yellow": 8,
+    "red": 6,
+    "page": 103
+  },
+  {
+    "num": 14,
+    "personality": "Decisive",
+    "green": 8,
+    "yellow": 8,
+    "red": 8,
+    "page": 103
+  },
+  {
+    "num": 15,
+    "personality": "Jovial",
+    "green": 6,
+    "yellow": 8,
+    "red": 10,
+    "page": 103
+  },
+  {
+    "num": 16,
+    "personality": "Cheerful",
+    "green": 10,
+    "yellow": 8,
+    "red": 6,
+    "page": 104
+  },
+  {
+    "num": 17,
+    "personality": "Naive",
+    "green": 6,
+    "yellow": 6,
+    "red": 12,
+    "page": 104
+  },
+  {
+    "num": 18,
+    "personality": "Apathetic",
+    "green": 6,
+    "yellow": 8,
+    "red": 10,
+    "page": 104
+  },
+  {
+    "num": 19,
+    "personality": "Jaded",
+    "green": 10,
+    "yellow": 8,
+    "red": 6,
+    "page": 104
+  },
+  {
+    "num": 20,
+    "personality": "Arrogant",
+    "green": 10,
+    "yellow": 8,
+    "red": 6,
+    "page": 104
+  }
+]

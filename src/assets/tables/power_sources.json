@@ -1,0 +1,342 @@
+[
+  {
+    "num": 1,
+    "name": "ACCIDENT",
+    "powers": [
+      "any Athletic",
+      "any Elemental/Energy",
+      "any Intellectual",
+      "any Materials",
+      "any Psychic",
+      "any Self Control"
+    ],
+    "dice": [12,6],
+    "blurb": "An external source caused you to manifest powers or perhaps the cure for an accident caused it.",
+    "page": 57
+  },
+  {
+    "num": 2,
+    "name": "TRAINING",
+    "powers": [
+      "Gadgets",
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Athletic",
+      "any Intellectual"
+    ],
+    "dice": [10, 8, 8],
+    "blurb": "The source of your powers is the result of your hard work, dedication, and long hours.",
+    "page": 58
+  },
+  {
+    "num": 3,
+    "name": "GENETIC",
+    "powers": [
+      "Agility",
+      "Flight",
+      "Signature Weaponry",
+      "Strength",
+      "Vitality",
+      "any Intellectual",
+      "any Psychic"
+    ],
+    "dice": [10, 8, 8],
+    "blurb": "Mutations in your DNA have caused you to develop unusual abilities.",
+    "page": 58
+  },
+  {
+    "num": 4,
+    "name": "EXPERIMENTATION",
+    "powers": [
+      "Signature Weaponry",
+      "any Athletic",
+      "any Elemental/Energy",
+      "any Intellectual",
+      "any Mobility",
+      "any Self Control"
+    ],
+    "dice": [8, 8, 8],
+    "blurb": "Your powers were created in a lab and had some unexpected side effects.",
+    "page": 59
+  },
+  {
+    "num": 5,
+    "name": "MYSTICAL",
+    "powers": [
+      "Awareness",
+      "Flight",
+      "Presence",
+      "Signature Weaponry",
+      "Teleportation",
+      "any Elemental/Energy",
+      "any Materials",
+      "any Psychic",
+      "any Self Control"
+    ],
+    "dice": [10, 8, 8],
+    "blurb": "Your magical training or alteration by magic gives you your powers.",
+    "page": 59
+  },
+  {
+    "num": 6,
+    "name": "NATURE",
+    "powers": [
+      "Animal Control",
+      "Cold",
+      "Electricity",
+      "Fire",
+      "Flight",
+      "Leaping",
+      "Shapeshifting",
+      "Swimming",
+      "Swinging",
+      "Wall-Crawling",
+      "Weather",
+      "any Athletic",
+      "any Materials"
+    ],
+    "dice": [10, 8, 8],
+    "blurb": "The power of nature flows through you.",
+    "page": 60
+  },
+  {
+    "num": 7,
+    "name": "RELIC",
+    "powers": [
+      "Awareness",
+      "Intuition",
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Elemental/Energy",
+      "any Materials",
+      "any Mobility",
+      "any Psychic",
+      "any Self Control"
+    ],
+    "dice": [10, 10, 6],
+    "blurb": "An object (or collection of objects) of mystical significance either grants you powers or altered you to give you powers.",
+    "page": 61
+  },
+  {
+    "num": 8,
+    "name": "POWERED SUIT",
+    "powers": [
+      "Power Suit (required)",
+      "Awareness",
+      "Cold",
+      "Elasticity",
+      "Electricity",
+      "Fire",
+      "Lightning Calculator",
+      "Nuclear",
+      "Part Detachment",
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Athletic",
+      "any Mobility"
+    ],
+    "dice": [10, 6, 6],
+    "blurb": "An engineered suit provides you with your powers, and may even be important to keeping you alive.",
+    "page": 62
+  },
+  {
+    "num": 9,
+    "name": "RADIATION",
+    "powers": [
+      "Nuclear",
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Athletic",
+      "any Self Control",
+      "any Technological"
+    ],
+    "dice": [10, 8, 6],
+    "blurb": "Exposure to radiation has charged your system and given you new abilities.",
+    "page": 63
+  },
+  {
+    "num": 10,
+    "name": "TECH UPGRADES",
+    "powers": [
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Athletic",
+      "any Elemental/Energy",
+      "any Intellectual",
+      "any Mobility",
+      "any Technological"
+    ],
+    "dice": [10, 8, 8],
+    "blurb": "You have technological upgrades and implants that give you your powers.",
+    "page": 64
+  },
+  {
+    "num": 11,
+    "name": "SUPERNATURAL",
+    "powers": [
+      "Awareness",
+      "Cold",
+      "Electricity",
+      "Fire",
+      "Infernal",
+      "Plants",
+      "Presence",
+      "Radiant",
+      "Strength",
+      "Transmutation",
+      "Vitality",
+      "Weather",
+      "any Mobility",
+      "any Psychic",
+      "any Self Control"
+    ],
+    "dice": [10, 10, 6],
+    "blurb": "In some way, you have pierced the veil of life and reality and brought back power.",
+    "page": 65
+  },
+  {
+    "num": 12,
+    "name": "ARTIFICIAL BEING",
+    "powers": [
+      "Inventions",
+      "Robotics",
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Athletic",
+      "any Elemental/Energy",
+      "any Intellectual",
+      "any Mobility",
+      "any Self Control"
+    ],
+    "dice": [10, 8, 8],
+    "blurb": "You were created, not born, and your abilities simply stem from your makeup.",
+    "page": 66
+  },
+  {
+    "num": 13,
+    "name": "CURSED",
+    "powers": [
+      "Signature Weaponry",
+      "any Athletic",
+      "any Elemental/Energy",
+      "any Materials",
+      "any Self Control"
+    ],
+    "dice": [12, 6],
+    "blurb": "A supernatural curse has been inflicted upon you or your family line, granting both boons and banes.",
+    "page": 67
+  },
+  {
+    "num": 14,
+    "name": "ALIEN",
+    "powers": [
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Athletic",
+      "any Elemental/Energy",
+      "any Intellectual",
+      "any Mobility",
+      "any Psychic",
+      "any Technological"
+    ],
+    "dice": [8, 8, 8],
+    "blurb": "You are not from Earth, though your powers might not be all that unusual where you come from, or you've been granted abilities by an extraterrestrial source.",
+    "page": 67
+  },
+  {
+    "num": 15,
+    "name": "GENIUS",
+    "powers": [
+      "Inventions",
+      "Robotics",
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Intellectual"
+    ],
+    "dice": [10, 6, 6],
+    "blurb": "The source of your powers is your brilliant mind. You have put your staggering intellect to the task of fighting crime.",
+    "page": 68
+  },
+  {
+    "num": 16,
+    "name": "COSMOS",
+    "powers": [
+      "Cosmic",
+      "Intuition",
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "any Mobility",
+      "any Psychic",
+      "any Self Control",
+      "any Technological"
+    ],
+    "dice": [10, 8, 8],
+    "blurb": "Exposure to forces from beyond the stars have changed you.",
+    "page": 68
+  },
+  {
+    "num": 17,
+    "name": "EXTRADIMENSIONAL",
+    "powers": [
+      "Cosmic",
+      "Duplication",
+      "Infernal",
+      "Intangibility",
+      "Invisibility",
+      "Radiant",
+      "Signature Vehicle",
+      "Signature Weaponry",
+      "Transmutation",
+      "Teleportation",
+      "any Intellectual",
+      "any Psychic"
+    ],
+    "dice": [12, 6],
+    "blurb": "Exposure to side dimensions like the Realm of Discord has left its mark on you.",
+    "page": 69
+  },
+  {
+    "num": 18,
+    "name": "UNKNOWN",
+    "powers": [
+      "Any Elemental/Energy",
+      "any Intellectual",
+      "any Materials",
+      "any Self Control",
+      "any Technological"
+    ],
+    "dice": [10, 8, 6],
+    "blurb": "You don't know the source of your powers: they either just manifested one day, or hint at a bigger mystery.",
+    "page": 69
+  },
+  {
+    "num": 19,
+    "name": "HIGHER POWER",
+    "powers": [
+      "Any Athletic",
+      "any Elemental/Energy",
+      "any Material",
+      "any Psychic",
+      "any Self Control"
+    ],
+    "dice": [10, 8, 8],
+    "blurb": "You have been chosen by a higher force or are being from another realm. Your powers are a reflection of your calling or true form.",
+    "page": 70
+  },
+  {
+    "num": 20,
+    "name": "THE MULTIVERSE",
+    "powers": [
+      "Awareness",
+      "Cosmic",
+      "Intuition",
+      "Speed",
+      "Teleportation",
+      "any Psychic",
+      "any Self Control"
+    ],
+    "dice": [10, 8, 6],
+    "blurb": "You have traveled or been flung through the realm of time and space. Without the multiverse itself, you would not be who you are now.",
+    "page": 70
+  }
+]

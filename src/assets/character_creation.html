@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    select {
+        margin-left: 15px;
+    }
+
+    .background-roll-button {
+        font-size: 1em;
+        margin: 1em;
+        height: 2em;
+        width: 5em;
+    }
+
+    .D10-button {
+        margin: 5px;
+        height: 4em;
+        width: 4em;
+        font-size: 1em;
+    }
+
+    .D8-button {
+        margin: 5px;
+        height: 4em;
+        width: 4em;
+        font-size: 1em;
+    }
+
+    .background-roll-button {
+        margin-right: 10px;
+    }
+
+    .background-options-table {
+
+        margin-bottom: 20px;
+        width: 70%;
+    }
+
+    #First-Quality {
+        margin-left: 10px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Sentinel Comics RPG Character Creation</title>
+</head>
+<body>
+<h1>Guided Character Creation Method</h1>
+<div id="step-1">
+    <h2>Step 1: Background</h2>
+    <p>To begin: Roll 2d10. Using one of the two d10 you just rolled, or by adding them together, select a
+        <b>background</b>,
+        recording it in the characteristics section of your hero sheet. That provides you with some of your qualities, a
+        principle, and a new set of dice to roll for power source for the next step.</p>
+    <div id="background-dice-roller">
+    <button class="D10-button" id="background-die-1-result" disabled><b>D10</b></button>
+    <button class="D10-button" id="background-die-2-result" disabled><b>D10</b></button>
+    <button class="background-roll-button" onclick="rollBackgroundDice()">Roll dice</button>
+    </div>
+
+    <div class="background-options">
+        <label for="background-selection">Choose your background:</label>
+        <select id="background-selection">
+            <option value="0"></option>
+            <option id="first-background-option" value="1">Upper Class</option>
+            <option id="second-background-option" value="2">Blank Slate</option>
+            <option id="summed-background-option" value="3">Struggling</option>
+        </select>
+        <!--    <button class="show-background-button" onclick="changeBackgroundTable()">Show Background</button>-->
+        <table class="background-options-table">
+            <tr class="background-options-headers" id="background-options-headers">
+                <th>Roll</th>
+                <th>Background</th>
+                <th>Qualities</th>
+                <th>Principle Category</th>
+                <th>Dice</th>
+                <th>Page</th>
+            </tr>
+            <tr class="first-background-row" id="first-background-row">
+                <th id="first-background-roll"></th>
+                <th id="first-background-name">Upper Class</th>
+                <th id="first-background-qualities">Fitness, Persuasion, any Mental</th>
+                <th id="first-background-principle">Responsibility</th>
+                <th id="first-background-dice"><b>D10</b> <b>D8</b> <b>D8</b></th>
+                <th id="first-background-page">49</th>
+            </tr>
+            <tr class="second-background-row" id="second-background-row">
+                <th id="second-background-roll">2</th>
+                <th id="second-background-name">Blank Slate</th>
+                <th id="second-background-qualities">Any Mental or Physical</th>
+                <th id="second-background-principle">Identity</th>
+                <th id="second-background-dice"><b>D10</b> <b>D8</b> <b>D8</b></th>
+                <th id="second-background-page">49</th>
+            </tr>
+            <tr class="summed-background-row" id="summed-background-row">
+                <th id="summed-background-roll">3</th>
+                <th id="summed-background-name">Struggling</th>
+                <th id="summed-background-qualities">Banter, Criminal Underworld Info, any Physical</th>
+                <th id="summed-background-principle">Responsibility</th>
+                <th id="summed-background-dice"><b>D8</b> <b>D8</b> <b>D6</b></th>
+                <th id="summed-background-page">50</th>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<hr>
+<!-- Pretend we selected Blank Slate -->
+<h3>Selected Background: <i>Blank Slate</i></h3>
+<!--<p>Assign D10 and D8 to two of these qualities:-->
+<h3>Assign D10 and D8 to two of these qualities</h3>
+<form action="" method="get" class="">
+    <label for="First-Quality"> Select a quality to assign a D10: </label>
+    <select name="First-Quality" id="First-Quality">
+        <optgroup label="Mental qualities">
+            <option value="Alertness">Alertness</option>
+            <option value="Conviction">Conviction</option>
+            <option value="Creativity">Creativity</option>
+            <option value="Investigation">Investigation</option>
+            <option value="Self-Discipline">Self-Discipline</option>
+        </optgroup>
+        <optgroup label="Physical qualities">
+            <option value="Acrobatics">Acrobatics</option>
+            <option value="Close Combat">Close Combat</option>
+            <option value="Finesse">Finesse</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Ranged Combat">Ranged Combat</option>
+            <option value="Stealth">Stealth</option>
+        </optgroup>
+    </select>
+    <br><br>
+    <label for="Second-Quality"> Select a quality to assign a D8: </label>
+    <select name="Second-Quality" id="Second-Quality">
+        <optgroup label="Mental qualities">
+            <option value="Alertness">Alertness</option>
+            <option value="Conviction">Conviction</option>
+            <option value="Creativity">Creativity</option>
+            <option value="Investigation">Investigation</option>
+            <option value="Self-Discipline">Self-Discipline</option>
+        </optgroup>
+        <optgroup label="Physical qualities">
+            <option value="Acrobatics">Acrobatics</option>
+            <option value="Close Combat">Close Combat</option>
+            <option value="Finesse">Finesse</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Ranged Combat">Ranged Combat</option>
+            <option value="Stealth">Stealth</option>
+        </optgroup>
+    </select>
+</form>
+<br>
+<h3>Choose an Identity principle (pages 135-137).</h3>
+<label for="first-identity-selection"></label>
+<select name="first-identity-selection" id="first-identity-selection" class="first-identity-selection">
+    <option value="Ambition">Principle of Ambition</option>
+    <option value="Amnesia">Principle of Amnesia</option>
+    <option value="Detachment">Principle of Detachment</option>
+    <option value="Discovery">Principle of Discovery</option>
+    <option value="Levity">Principle of Levity</option>
+    <option value="Loner">Principle of the Loner</option>
+    <option value="Nomad">Principle of the Nomad</option>
+    <option value="Peace">Principle of Peace</option>
+    <option value="Rage">Principle of Rage</option>
+    <option value="Savagery">Principle of Savagery</option>
+    <option value="Split">Principle of the Split</option>
+    <option value="Spotless-Mind">Principle of the Spotless Mind</option>
+</select>
+<h3>Roll D10 and D8 D8 for power source selection.</h3>
+<button class="D10-button"><b>D10</b></button>
+<em>Result</em>
+<button class="D10-button"><b>D10</b></button>
+<em>Result</em>
+<button class="D8-button"><b>D8</b></button>
+<em>Result</em>
+<hr>
+<h2>Step 2: Power Source</h2>
+<p>Roll the dice you gained from your background to select a Power Source, recording it in the characteristics section
+    of your hero sheet. The size of dice you just rolled provides you with some of your powers (details on page 44). You
+    also receive some yellow abilities, other abilities, or qualities, and dice to roll for your archetype for the next
+    step.</p>
+<div id="power-source-dice-roller">
+    <button class="power-source-roll-button" onclick="">Roll dice</button>
+</div>
+<hr>
+<h2>Step 3: Archetype</h2>
+<p>Roll the dice you gained from your power source to select an archetype, recording it in the characteristics section
+    of your hero sheet. The size of dice you just rolled provides you wit more powers and/or qualities. It also provides
+    green abilities, sometimes other abilities, a second principle, and a new set of dice to roll for your personality
+    for the next step.</p>
+<hr>
+<h2>Step 4: Personality</h2>
+<p>Roll the dice you gained from your archetype to select a personality. Record your personality in your hero sheet's
+    characteristics section. It provides you with your status dice and an out ability. You also take a d8 core character
+    quality of your choice, as explained on page 121.</p>
+<hr>
+<h2>Step 5: Red Abilities</h2>
+<p>Choose two red abilities. Pick form the list that corresponds with the category or the power or quality that you will
+    use for this ability.</p>
+<hr>
+<h2>Step 6: Retcon</h2>
+<p>Take one retcon from the following list:</p>
+<ul>
+    <li>An extra red ability</li>
+    <li>Swap two dice in your powers and/or qualities</li>
+    <li>Swap an ability to use a different power or quality</li>
+    <li>Increase your red status die by one size (maximum d12)</li>
+    <li>Add any d6 power or quality of your choice</li>
+    <li>Swap one of your principles for any other</li>
+</ul>
+<hr>
+<h2>Step 7: Health</h2>
+<p>Add up the following numbers 8 + the maximum of your red status die + the maximum of your choice of any one athletic
+    power or mental quality (or a d4 if you have none) + the result of rolling d8 (if you dont want to roll, just use
+    4). This total is your total health. Use the chart on page 113 to determine your green, yellow, and red health
+    ranges.</p>
+<hr>
+<h2>Step 8: Finishing Touches></h2>
+<p>Fill in the final details of your hero: name, alias, description, and new names for your abilities.</p>
+<script>
+    let BACKGROUND_NAMES = [
+        "BACKGROUND_NAMES",
+        "UPPER CLASS",
+        "BLANK SLATE",
+        "STRUGGLING",
+        "ADVENTURER",
+        "UNREMARKABLE",
+        "LAW ENFORCEMENT",
+        "ACADEMIC",
+        "TRAGIC",
+        "PERFORMER",
+        "MILITARY",
+        "RETIRED",
+        "CRIMINAL",
+        "MEDICAL",
+        "ANACHRONISTIC",
+        "EXILE",
+        "FORMER VILLAIN",
+        "INTERSTELLAR",
+        "DYNASTY",
+        "OTHERWORLDLY",
+        "CREATED"
+    ];
+    let BACKGROUND_PRINCIPLES = [
+        "BACKGROUND_PRINCIPLES",
+        "Responsibility",
+        "Identity",
+        "Responsibility",
+        "Expertise",
+        "Identity",
+        "Responsibility",
+        "Expertise",
+        "Ideals",
+        "Responsibility",
+        "Ideals",
+        "Identity",
+        "Expertise",
+        "Expertise",
+        "Esoteric",
+        "Ideals",
+        "Expertise",
+        "Esoteric",
+        "Ideals",
+        "Esoteric",
+        "Expertise"
+    ];
+
+    function changeBackgroundRow(backgroundNumber, rowName) {
+        document.getElementById(rowName + "-roll").innerText = String(backgroundNumber);
+        document.getElementById(rowName + "-name").innerText = BACKGROUND_NAMES[backgroundNumber];
+        document.getElementById(rowName + "-principle").innerText = BACKGROUND_PRINCIPLES[backgroundNumber];
+    }
+
+    function changeBackgroundTable(die1, die2, die_sum) {
+        changeBackgroundRow(die1, "first-background");
+        changeBackgroundRow(die2, "second-background");
+        changeBackgroundRow(die_sum, "summed-background");
+    }
+
+    function rollDie(sides) {
+        return Math.floor(Math.random() * sides) + 1;
+    }
+
+    function rollBackgroundDice() {
+        // roll 2d10 to determine background choices
+        let die1 = rollDie(10);
+        let die2 = rollDie(10);
+        let die_sum = die1 + die2;
+        // set roll results on page
+        document.getElementById("background-die-1-result").innerText = String(die1);
+        document.getElementById("background-die-2-result").innerText = String(die2);
+        // add first, second, and summed background to select list
+        let firstBackgroundOption = BACKGROUND_NAMES[die1];
+        let secondBackgroundOption = BACKGROUND_NAMES[die2];
+        let summedBackgroundOption = BACKGROUND_NAMES[die_sum];
+        document.getElementById("first-background-option").innerText = firstBackgroundOption;
+        document.getElementById("second-background-option").innerText = secondBackgroundOption;
+        document.getElementById("summed-background-option").innerText = summedBackgroundOption;
+
+        changeBackgroundTable(
+            die1,
+            die2,
+            die_sum
+        );
+    }
+</script>
+</body>
+</html>
