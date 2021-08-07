@@ -122,4 +122,9 @@ export class AppComponent {
   onNavigate(feature: string) {
     this.loadedFeature = feature;
   }
+
+  rollDie(die: Die) {
+    const roll: number = Math.floor(Math.random() * die.sides) + 1;
+    die.faceShowing = roll;
+  }
 }
