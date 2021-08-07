@@ -10,10 +10,17 @@ import { Die } from './shared/die.model';
 export class AppComponent {
   title = 'sentinel-web-app';
   loadedFeature = 'creation';
-  creationSteps: CreationStep[] = [];
+  private firstStep: CreationStep;
+  private secondStep: CreationStep;
+  private thirdStep: CreationStep;
+  private fourthStep: CreationStep;
+  private fifthStep: CreationStep;
+  private sixthStep: CreationStep;
+  private seventhStep: CreationStep;
+  private eighthStep: CreationStep;
 
   constructor() {
-    const firstStep = new CreationStep(
+    this.firstStep = new CreationStep(
       1,
       'Background',
       `To begin: roll 2D10. Using one of the two D10 you just rolled, or by adding 
@@ -23,7 +30,7 @@ export class AppComponent {
       dice to roll for power source for the next step.`,
       [new Die(10), new Die(10)]
     );
-    const secondStep = new CreationStep(
+    this.secondStep = new CreationStep(
       2,
       'Power Source',
       `Roll the dice you gained from your background to select a Power Source, 
@@ -33,7 +40,7 @@ export class AppComponent {
         or qualities, and dice to roll for your archetype for the next step`,
       [new Die()]
     );
-    const thirdStep = new CreationStep(
+    this.thirdStep = new CreationStep(
       3,
       'Archetype',
       `Roll the dice you gained from your power source to select an Archetype, 
@@ -43,7 +50,7 @@ export class AppComponent {
       and a new set of dice to roll for your personality for the next step.`,
       [new Die(6)]
     );
-    const fourthStep = new CreationStep(
+    this.fourthStep = new CreationStep(
       4,
       'Personality',
       `Roll the dice you gained from your archetype to select a personality. Record 
@@ -52,7 +59,7 @@ export class AppComponent {
       quality of your choice, as explained on page 121.`,
       [new Die(8)]
     );
-    const fifthStep = new CreationStep(
+    this.fifthStep = new CreationStep(
       5,
       'Red Abilities',
       `Choose two red abilities. Pick
@@ -62,7 +69,7 @@ export class AppComponent {
       this ability.`,
       [new Die(12)]
     );
-    const sixthStep = new CreationStep(
+    this.sixthStep = new CreationStep(
       6,
       'Retcon',
       `Take one retcon from the
@@ -82,7 +89,7 @@ export class AppComponent {
     principles for any other`,
       []
     );
-    const seventhStep = new CreationStep(
+    this.seventhStep = new CreationStep(
       7,
       'Health',
       `Add up the following numbers: 8 + the maximum
@@ -99,7 +106,7 @@ export class AppComponent {
       and Red Health ranges.`,
       [new Die(8)]
     );
-    const eigthStep = new CreationStep(
+    this.eighthStep = new CreationStep(
       8,
       'Finishing Touches',
       `Fill in the final details of your hero:
@@ -107,16 +114,6 @@ export class AppComponent {
       names for your abilities.`,
       []
     );
-
-    // push placeholder text into list of steps
-    this.creationSteps.push(firstStep);
-    this.creationSteps.push(secondStep);
-    this.creationSteps.push(thirdStep);
-    this.creationSteps.push(fourthStep);
-    this.creationSteps.push(fifthStep);
-    this.creationSteps.push(sixthStep);
-    this.creationSteps.push(seventhStep);
-    this.creationSteps.push(eigthStep);
   }
 
   onNavigate(feature: string) {
