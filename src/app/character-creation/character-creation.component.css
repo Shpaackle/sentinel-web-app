@@ -1,15 +1,20 @@
-.D4-button {
+.die-button {
+  margin: 10px;
+  height: 75px;
+  width: 75px;
+}
+.D4 {
   background-color: blue;
 }
-.D6-button {
+.D6 {
   background-color: green;
 }
-.D8-button {
+.D8 {
   background-color: yellow;
 }
-.D10-button {
+.D10 {
   background-color: red;
 }
-.D12-button {
+.D12 {
   background-color: purple;
 }

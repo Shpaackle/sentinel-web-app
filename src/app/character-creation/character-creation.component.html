@@ -9,7 +9,7 @@
       <p>{{ creationSteps[i].stepDetails }}</p>
     </div>
 
-    <div class="row" id="background-dice">
+    <div class="row" id="step{{ creationSteps[i].stepNumber }}-dice">
       <div class="col-xs-6">
         <div
           class="col-xs-4"
@@ -18,8 +18,7 @@
           <div class="row">
             <button
               id="die-button-{{ d }}"
-              style="margin: 10px; height: 75px; width: 75px"
-              class="D{{ die.sides }}-button"
+              class="D{{ die.sides }} die-button"
               (click)="rollDie(die)"
             >
               <img
@@ -31,7 +30,11 @@
             </button>
           </div>
           <div class="row">
-            <p id="die-{{ d }}-result">{{ die.faceShowing }}</p>
+            <p id="die-{{ d }}-result">
+              <em
+                ><b>{{ die.faceShowing }}</b></em
+              >
+            </p>
           </div>
         </div>
       </div>
