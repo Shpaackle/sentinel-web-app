@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CharacterBackground } from './shared/background.model';
+import { CharacterSheet } from './shared/character-sheet.model';
 import { CreationStep } from './shared/creation-step.model';
 import { Die } from './shared/die.model';
 
@@ -23,6 +24,8 @@ export class AppComponent {
   firstBackground: CharacterBackground;
   secondBackground: CharacterBackground;
   thirdBackground: CharacterBackground;
+
+  characterSheet: CharacterSheet;
 
   constructor() {
     this.firstStep = new CreationStep(
@@ -119,6 +122,7 @@ export class AppComponent {
       names for your abilities.`,
       []
     );
+
     this.firstBackground = new CharacterBackground(
       1,
       'Upper Class',
@@ -149,6 +153,8 @@ export class AppComponent {
       'D8 D8 and D6',
       50
     );
+
+    this.characterSheet = new CharacterSheet();
   }
 
   onNavigate(feature: string) {
