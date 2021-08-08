@@ -198,8 +198,15 @@
           </div>
           <hr />
           <div class="row">
-            <div class="container">
-              <div class="row">
+            <div
+              class="container"
+              style="
+                outline-width: 3px;
+                outline-color: crimson;
+                outline-style: double;
+              "
+            >
+              <div class="row" style="margin-top: 20px">
                 <p class="fs-4">
                   Options for
                   <b
@@ -207,11 +214,17 @@
                   >
                 </p>
               </div>
+              <hr />
               <div
                 class="row justify-content-start"
-                style="margin-bottom: 10px"
+                style="
+                  margin-bottom: 10px;
+                  outline-width: 3px;
+                  outline-color: darkblue;
+                  outline-style: auto;
+                "
               >
-                <div class="col col-lg-2">
+                <div class="col-sm-auto">
                   <img
                     src="{{ firstBackground.diceToAssign[0].imagePath }}"
                     alt="D{{ firstBackground.diceToAssign[0].sides }}"
@@ -227,14 +240,30 @@
                 </div>
                 <div class="col-md-auto">dropdown list goes here</div>
               </div>
-              <div class="row" style="margin-bottom: 10px">
-                <div class="col">
+              <div
+                class="row justify-content-start"
+                style="
+                  margin-bottom: 10px;
+                  outline-width: 3px;
+                  outline-color: darkgreen;
+                  outline-style: auto;
+                "
+              >
+                <div class="col-sm-auto">
                   <img
                     src="{{ firstBackground.diceToAssign[1].imagePath }}"
                     alt="D{{ firstBackground.diceToAssign[1].sides }}"
                     style="max-height: 50px; max-width: 50px"
                   />
                 </div>
+                <div class="col col-lg-3">
+                  <p>
+                    Select a quality to assign a D{{
+                      firstBackground.diceToAssign[1].sides
+                    }}
+                  </p>
+                </div>
+                <div class="col-md-auto">dropdown list goes here</div>
               </div>
               <div class="row">
                 <div class="btn-group" role="group" aria-label="save-clear">
