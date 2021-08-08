@@ -9,6 +9,7 @@ export class CharacterBackground {
     public principleCategory: string,
     public powerSourceDice: Die[],
     public diceText: string,
-    public pageNumber: number
+    public pageNumber: number,
+    public diceToAssign: Die[] = []
   ) {}
 }
