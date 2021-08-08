@@ -264,4 +264,14 @@ export class AppComponent {
         return [];
     }
   }
+
+  getBackgroundFromRoll(roll: number): string {
+    switch (roll) {
+      case 1:
+        return '';
+
+      default:
+        return '';
+    }
+  }
 }
