@@ -171,8 +171,8 @@ export class AppComponent {
     }
   }
 
-  rollAllDice(currentStep: CreationStep) {
-    for (let die of currentStep.diceToRoll) {
+  rollAllDice(diceToRoll: Die[]) {
+    for (let die of diceToRoll) {
       this.rollDie(die);
     }
   }
