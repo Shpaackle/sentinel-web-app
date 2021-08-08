@@ -8,6 +8,7 @@ export class CharacterBackground {
     public qualities: string[],
     public principleCategory: string,
     public powerSourceDice: Die[],
+    public diceText: string,
     public pageNumber: number
   ) {}
 }

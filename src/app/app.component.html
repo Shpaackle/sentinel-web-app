@@ -1,98 +1,253 @@
 <div class="container">
   <div class="row"><h1>Guided Character Creation</h1></div>
-</div>
 
-<hr />
-
-<div class="container" id="step-1-container">
-  <div class="row" id="step-1-instructions">
-    <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
-    <p>{{ firstStep.stepDetails }}</p>
-  </div>
   <hr />
-  <div class="row" id="step-1-dice">
-    <div class="col" id="die-0">
-      <button
-        id="first-Step-die-button-0"
-        class="btn btn-disabled D{{ firstStep.firstDie.sides }} die-button "
-        style="margin: 10px; height: 100px; width: 100px"
-      >
-        <figure>
-          <img
-            src="{{ firstStep.firstDie.imagePath }}"
-            alt="D{{ firstStep.firstDie.sides"
-            id="firstStep-die-image-0"
-            style="max-height: 75px; max-width: 75px"
-          />
-          <figcaption class="D{{ firstStep.firstDie.sides }}-roll">
-            {{ firstStep.firstDie.faceShowing }}
-          </figcaption>
-        </figure>
-      </button>
-    </div>
-    <div class="col" id="die-1">
-      <button
-        id="first-Step-die-button-1"
-        class="btn btn-disabled D{{ firstStep.secondDie.sides }} die-button "
-        style="margin: 10px; height: 100px; width: 100px"
-      >
-        <figure>
-          <img
-            src="{{ firstStep.secondDie.imagePath }}"
-            alt="D{{ firstStep.secondDie.sides"
-            id="firstStep-die-image-1"
-            style="max-height: 75px; max-width: 75px"
-          />
-          <figcaption class="D{{ firstStep.secondDie.sides }}-roll">
-            {{ firstStep.secondDie.faceShowing }}
-          </figcaption>
-        </figure>
-      </button>
-    </div>
-
+  <div class="row">
     <div class="col">
-      <button class="btn btn-warn" (click)="rollAllDice(firstStep)">
-        Roll Dice
-      </button>
+      <div class="container" id="character-creation-container">
+        <div class="container" id="step-1-container">
+          <div class="row" id="step-1-instructions">
+            <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
+            <p>{{ firstStep.stepDetails }}</p>
+          </div>
+          <hr />
+          <div class="row" id="step-1-dice">
+            <div class="col" id="die-0">
+              <button
+                id="first-Step-die-button-0"
+                class="btn btn-disabled D{{
+                  firstStep.firstDie.sides
+                }} die-button "
+                style="margin: 10px; height: 100px; width: 100px"
+              >
+                <figure>
+                  <img
+                    src="{{ firstStep.firstDie.imagePath }}"
+                    alt="D{{ firstStep.firstDie.sides"
+                    id="firstStep-die-image-0"
+                    style="max-height: 75px; max-width: 75px"
+                  />
+                  <figcaption class="D{{ firstStep.firstDie.sides }}-roll">
+                    {{ firstStep.firstDie.faceShowing }}
+                  </figcaption>
+                </figure>
+              </button>
+            </div>
+            <div class="col" id="die-1">
+              <button
+                id="first-Step-die-button-1"
+                class="btn btn-disabled D{{
+                  firstStep.secondDie.sides
+                }} die-button "
+                style="margin: 10px; height: 100px; width: 100px"
+              >
+                <figure>
+                  <img
+                    src="{{ firstStep.secondDie.imagePath }}"
+                    alt="D{{ firstStep.secondDie.sides"
+                    id="firstStep-die-image-1"
+                    style="max-height: 75px; max-width: 75px"
+                  />
+                  <figcaption class="D{{ firstStep.secondDie.sides }}-roll">
+                    {{ firstStep.secondDie.faceShowing }}
+                  </figcaption>
+                </figure>
+              </button>
+            </div>
+
+            <div class="col">
+              <button
+                class="btn btn-primary"
+                role="button"
+                (click)="rollAllDice(firstStep)"
+              >
+                Roll Dice
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="step-1-options">
+            <div
+              class="accordion accordion-flush"
+              id="backgroundSelectionOptions"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    <b
+                      >{{ firstStep.firstDie.faceShowing }} -
+                      <i>{{ firstBackground.name }}</i></b
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>{{ firstBackground.backgroundText }}</p>
+                    <ul>
+                      <li *ngFor="let qual of firstBackground.qualities">
+                        {{ qual }}
+                      </li>
+                    </ul>
+                    <hr />
+                    <p>
+                      Choose a
+                      {{ firstBackground.principleCategory }} principle.
+                    </p>
+                    <hr />
+                    <p>
+                      Roll a {{ firstBackground.diceText }} for power source
+                      selection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <b
+                      >{{ firstStep.secondDie.faceShowing }} -
+                      <i>{{ secondBackground.name }}</i></b
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>{{ secondBackground.backgroundText }}</p>
+                    <ul>
+                      <li *ngFor="let qual of secondBackground.qualities">
+                        {{ qual }}
+                      </li>
+                    </ul>
+                    <hr />
+                    <p>
+                      Choose a
+                      {{ secondBackground.principleCategory }} principle.
+                    </p>
+                    <hr />
+                    <p>
+                      Roll a {{ secondBackground.diceText }} for power source
+                      selection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    <b
+                      >{{
+                        firstStep.firstDie.faceShowing +
+                          firstStep.secondDie.faceShowing
+                      }}
+                      - <i>{{ thirdBackground.name }}</i></b
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>{{ thirdBackground.backgroundText }}</p>
+                    <ul>
+                      <li *ngFor="let qual of thirdBackground.qualities">
+                        {{ qual }}
+                      </li>
+                    </ul>
+                    <hr />
+                    <p>
+                      Choose a
+                      {{ thirdBackground.principleCategory }} principle.
+                    </p>
+                    <hr />
+                    <p>
+                      Roll a {{ thirdBackground.diceText }} for power source
+                      selection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="container" id="step-2-container">
+          <div class="row" id="step-2-instructions">
+            <h2>Step {{ secondStep.stepNumber }}: {{ secondStep.stepName }}</h2>
+            <p>{{ secondStep.stepDetails }}</p>
+          </div>
+          <hr />
+          <div class="row" id="step-2-dice">
+            <div class="col">
+              <button
+                id="secondStep-die-button-0"
+                class="D{{
+                  secondStep.firstDie.sides
+                }} die-button btn btn-disabled"
+                (click)="rollDie(secondStep.firstDie)"
+                style="margin: 10px; height: 100px; width: 100px"
+              >
+                <figure>
+                  <img
+                    src="{{ secondStep.firstDie.imagePath }}"
+                    alt="D{{ secondStep.firstDie.sides"
+                    id="secondStep-die-image-0"
+                    style="max-height: 75px; max-width: 75px"
+                  />
+                  <figcaption class="D{{ secondStep.firstDie.sides }}-roll">
+                    {{ secondStep.firstDie.faceShowing }}
+                  </figcaption>
+                </figure>
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-warn">Roll Dice</button>
+            </div>
+          </div>
+          <hr />
+          <div class="row" id="step-2-options">
+            <div class="col"><b>Step 2 options go here</b></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <hr />
-  <div class="row" id="step-1-options">
-    <div class="col"><b>Step 1 options go here</b></div>
-  </div>
-</div>
-<hr />
-<div class="container" id="step-2-container">
-  <div class="row" id="step-2-instructions">
-    <h2>Step {{ secondStep.stepNumber }}: {{ secondStep.stepName }}</h2>
-    <p>{{ secondStep.stepDetails }}</p>
-  </div>
-  <hr />
-  <div class="row" id="step-2-dice">
     <div class="col">
-      <button
-        id="secondStep-die-button-0"
-        class="D{{ secondStep.firstDie.sides }} die-button btn btn-disabled"
-        (click)="rollDie(secondStep.firstDie)"
-        style="margin: 10px; height: 100px; width: 100px"
-      >
-        <figure>
-          <img
-            src="{{ secondStep.firstDie.imagePath }}"
-            alt="D{{ secondStep.firstDie.sides"
-            id="secondStep-die-image-0"
-            style="max-height: 75px; max-width: 75px"
-          />
-          <figcaption class="D{{ secondStep.firstDie.sides }}-roll">
-            {{ secondStep.firstDie.faceShowing }}
-          </figcaption>
-        </figure>
-      </button>
+      <div class="container" id="character-sheet-container">
+        Character Sheet goes here
+      </div>
     </div>
-    <div class="col"><button class="btn btn-warn">Roll Dice</button></div>
-  </div>
-  <hr />
-  <div class="row" id="step-2-options">
-    <div class="col"><b>Step 2 options go here</b></div>
   </div>
 </div>

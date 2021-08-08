@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CharacterBackground } from './shared/background.model';
 import { CreationStep } from './shared/creation-step.model';
 import { Die } from './shared/die.model';
 
@@ -18,6 +19,10 @@ export class AppComponent {
   sixthStep: CreationStep;
   seventhStep: CreationStep;
   eighthStep: CreationStep;
+
+  firstBackground: CharacterBackground;
+  secondBackground: CharacterBackground;
+  thirdBackground: CharacterBackground;
 
   constructor() {
     this.firstStep = new CreationStep(
@@ -113,6 +118,36 @@ export class AppComponent {
       name, alias, description, and new
       names for your abilities.`,
       []
+    );
+    this.firstBackground = new CharacterBackground(
+      1,
+      'Upper Class',
+      'Assign a D10 and D8 to any of these qualities:',
+      ['Fitness', 'Persuasion', 'any Mental'],
+      'Responsibility',
+      [new Die(10), new Die(8), new Die(8)],
+      'D10 and D8 D8',
+      49
+    );
+    this.secondBackground = new CharacterBackground(
+      2,
+      'Blank Slate',
+      'Assign a D10 and D8 to any of these qualities:',
+      ['any Mental', 'any Physical'],
+      'Identity',
+      [new Die(10), new Die(8), new Die(8)],
+      'D10 and D8 D8',
+      49
+    );
+    this.thirdBackground = new CharacterBackground(
+      3,
+      'Struggling',
+      '',
+      ['Banter', 'Criminal Underworld Info', 'any Physical'],
+      'Responsibility',
+      [new Die(8), new Die(8), new Die(6)],
+      'D8 D8 and D6',
+      50
     );
   }
 
