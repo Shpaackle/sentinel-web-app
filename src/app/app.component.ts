@@ -131,7 +131,8 @@ export class AppComponent {
       'Responsibility',
       [new Die(10), new Die(8), new Die(8)],
       'D10 and D8 D8',
-      49
+      49,
+      [new Die(10), new Die(8)]
     );
     this.secondBackground = new CharacterBackground(
       2,
@@ -141,7 +142,8 @@ export class AppComponent {
       'Identity',
       [new Die(10), new Die(8), new Die(8)],
       'D10 and D8 D8',
-      49
+      49,
+      [new Die(10), new Die(8)]
     );
     this.thirdBackground = new CharacterBackground(
       3,
@@ -151,7 +153,8 @@ export class AppComponent {
       'Responsibility',
       [new Die(8), new Die(8), new Die(6)],
       'D8 D8 and D6',
-      50
+      50,
+      [new Die(8), new Die(6), new Die(6)]
     );
 
     this.characterSheet = new CharacterSheet();
