@@ -216,181 +216,271 @@
               </div>
               <hr />
               <div
-                class="row justify-content-start"
-                style="
-                  margin-bottom: 10px;
-                  outline-width: 3px;
-                  outline-color: darkblue;
-                  outline-style: auto;
-                "
+                class="container"
+                style="outline-style: dashed; outline-color: darkgreen"
               >
-                <div class="col-sm-auto">
-                  <img
-                    src="{{ firstBackground.diceToAssign[0].imagePath }}"
-                    alt="D{{ firstBackground.diceToAssign[0].sides }}"
-                    style="max-height: 50px; max-width: 50px"
-                  />
-                </div>
+                <div
+                  class="row justify-content-start"
+                  style="margin-bottom: 10px"
+                >
+                  <div class="col-sm-auto">
+                    <img
+                      src="{{ firstBackground.diceToAssign[0].imagePath }}"
+                      alt="D{{ firstBackground.diceToAssign[0].sides }}"
+                      style="max-height: 50px; max-width: 50px"
+                    />
+                  </div>
 
-                <div class="col-md-auto">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      id="firstQualityDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Select a quality to assign a D{{
-                        firstBackground.diceToAssign[0].sides
-                      }}
-                    </button>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="firstQualityDropdown"
-                    >
-                      <li>
-                        <button
-                          class="dropdown-item btn btn-outline"
-                          role="button"
-                        >
-                          Fitness
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="dropdown-item btn btn-outline"
-                          role="button"
-                        >
-                          Persuasion
-                        </button>
-                      </li>
-                      <li>
-                        <h5 class="dropdown-header"><b>Any mental</b></h5>
-                      </li>
-                      <li>
-                        <button
-                          class="dropdown-item btn btn-outline"
-                          role="button"
-                        >
-                          Alertness
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" role="button">
-                          Conviction
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" role="button">
-                          Creativity
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" role="button">
-                          Investigation
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" role="button">
-                          Self-Discipline
-                        </button>
-                      </li>
-                    </ul>
+                  <div class="col-md-auto">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="firstQualityDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Select a quality to assign a D{{
+                          firstBackground.diceToAssign[0].sides
+                        }}
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="firstQualityDropdown"
+                      >
+                        <li>
+                          <button
+                            class="dropdown-item btn btn-outline"
+                            role="button"
+                          >
+                            Fitness
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            class="dropdown-item btn btn-outline"
+                            role="button"
+                          >
+                            Persuasion
+                          </button>
+                        </li>
+                        <li>
+                          <h5 class="dropdown-header"><b>Any mental</b></h5>
+                        </li>
+                        <li>
+                          <button
+                            class="dropdown-item btn btn-outline"
+                            role="button"
+                          >
+                            Alertness
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" role="button">
+                            Conviction
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" role="button">
+                            Creativity
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" role="button">
+                            Investigation
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" role="button">
+                            Self-Discipline
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <p><i>Selected quality goes here</i></p>
                   </div>
                 </div>
-                <div class="col-md-auto">
-                  <p><i>Selected quality goes here</i></p>
+                <div
+                  class="row justify-content-start"
+                  style="margin-bottom: 10px"
+                >
+                  <div class="col-sm-auto">
+                    <img
+                      src="{{ firstBackground.diceToAssign[1].imagePath }}"
+                      alt="D{{ firstBackground.diceToAssign[1].sides }}"
+                      style="max-height: 50px; max-width: 50px"
+                    />
+                  </div>
+
+                  <div class="col-md-auto">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="secondQualityDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Select a quality to assign a D{{
+                          firstBackground.diceToAssign[1].sides
+                        }}
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="secondQualityDropdown"
+                      >
+                        <li>
+                          <button
+                            class="dropdown-item btn btn-outline"
+                            role="button"
+                          >
+                            Fitness
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            class="dropdown-item btn btn-outline"
+                            role="button"
+                          >
+                            Persuasion
+                          </button>
+                        </li>
+                        <li>
+                          <h5 class="dropdown-header"><b>Any mental</b></h5>
+                        </li>
+                        <li>
+                          <button
+                            class="dropdown-item btn btn-outline"
+                            role="button"
+                          >
+                            Alertness
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" role="button">
+                            Conviction
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" role="button">
+                            Creativity
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" role="button">
+                            Investigation
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" role="button">
+                            Self-Discipline
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <p>
+                      <i>Selected <b>Quality</b> goes here</i>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div
-                class="row justify-content-start"
-                style="
-                  margin-bottom: 10px;
-                  outline-width: 3px;
-                  outline-color: darkgreen;
-                  outline-style: auto;
-                "
+                class="container"
+                style="outline-style: groove; outline-color: darkmagenta"
+                id="background-principle-selection-container"
               >
-                <div class="col-sm-auto">
-                  <img
-                    src="{{ firstBackground.diceToAssign[1].imagePath }}"
-                    alt="D{{ firstBackground.diceToAssign[1].sides }}"
-                    style="max-height: 50px; max-width: 50px"
-                  />
-                </div>
-
-                <div class="col-md-auto">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      id="secondQualityDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Select a quality to assign a D{{
-                        firstBackground.diceToAssign[1].sides
-                      }}
-                    </button>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="secondQualityDropdown"
-                    >
-                      <li>
-                        <button
-                          class="dropdown-item btn btn-outline"
-                          role="button"
-                        >
-                          Fitness
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="dropdown-item btn btn-outline"
-                          role="button"
-                        >
-                          Persuasion
-                        </button>
-                      </li>
-                      <li>
-                        <h5 class="dropdown-header"><b>Any mental</b></h5>
-                      </li>
-                      <li>
-                        <button
-                          class="dropdown-item btn btn-outline"
-                          role="button"
-                        >
-                          Alertness
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" role="button">
-                          Conviction
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" role="button">
-                          Creativity
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" role="button">
-                          Investigation
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" role="button">
-                          Self-Discipline
-                        </button>
-                      </li>
-                    </ul>
+                <div class="row">
+                  <div class="col-md-auto">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="backgroundPrincipleDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Select a
+                        {{ firstBackground.principleCategory }} principle
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="backgroundPrincipleDropdown"
+                      >
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Business
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Debtor
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Detective
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Double Agent
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Everyman
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Family
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Mask
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Sidekick
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Team
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Underworld
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Veteran
+                          </button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item btn btn-outline">
+                            Youth
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <p>
+                      <i>Selected <b>Principle</b> goes here</i>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-auto">
-                  <p><i>Selected quality goes here</i></p>
-                </div>
               </div>
+
               <div class="row">
                 <div class="btn-group" role="group" aria-label="save-clear">
                   <button
