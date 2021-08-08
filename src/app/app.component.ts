@@ -179,6 +179,71 @@ export class AppComponent {
 
   getPrinciplesFromCategory(principle: string): string[] {
     switch (principle.toLowerCase()) {
+      case 'esoteric':
+        return [
+          'Destiny',
+          'Energy/Element',
+          'Exorcism',
+          'Fauna',
+          'Flora',
+          'Future',
+          'Immortality',
+          'Inner Demon',
+          'Magic',
+          'Sea',
+          'Space',
+          'Time Traveller',
+          'Undead',
+        ];
+      case 'expertise':
+        return [
+          'Clockwork',
+          'Gearhead',
+          'History',
+          'Indestructible',
+          'Lab',
+          'Mastery',
+          'Mentor',
+          'Powerless',
+          'Science',
+          'Speed',
+          'Stealth',
+          'Strength',
+          'Tactician',
+          'Whispers',
+        ];
+      case 'ideals':
+        return [
+          'Chaos',
+          'Compassion',
+          'Defender',
+          'Dependence',
+          'Equality',
+          'Great Power',
+          'Hero',
+          'Honor',
+          'Justice',
+          'Liberty',
+          'Order',
+          'Self Preservation',
+          'Zealot',
+        ];
+      case 'identitity':
+        return [
+          'Ambition',
+          'Amnesia',
+          'Detachment',
+          'Discovery',
+          'Loner',
+          'Nomad',
+          'Peace',
+          'Rage',
+          'Split',
+          'Savagery',
+          'Levity',
+          'Spotless Mind',
+        ];
+
       case 'responsibility':
         return [
           'Business',
