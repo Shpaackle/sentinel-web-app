@@ -480,6 +480,32 @@
                   </div>
                 </div>
               </div>
+              <div
+                class="container"
+                style="outline-style: solid; outline-color: deeppink"
+                id="dice-given-container"
+              >
+                <div class="row" style="margin-top: 10px">
+                  <div
+                    class="col-md-auto"
+                    *ngFor="let die of firstBackground.powerSourceDice"
+                  >
+                    <figure>
+                      <img
+                        src="{{ die.imagePath }}"
+                        alt="D{{ die.sides }}"
+                        style="max-height: 50px; max-width: 50px"
+                      />
+                      <figcaption style="text-align: center">
+                        <p>
+                          <b>{{ die.faceShowing }}</b>
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="col-md-3"></div>
+                </div>
+              </div>
 
               <div class="row">
                 <div class="btn-group" role="group" aria-label="save-clear">
