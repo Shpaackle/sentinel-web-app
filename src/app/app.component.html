@@ -12,13 +12,13 @@
           </div>
           <hr />
           <div class="row" id="step-1-dice">
-            <div class="col" id="die-0">
+            <div class="btn-group" role="group" aria-label="step-1-dice">
               <button
                 id="first-Step-die-button-0"
                 class="btn btn-disabled D{{
                   firstStep.firstDie.sides
                 }} die-button "
-                style="margin: 10px; height: 100px; width: 100px"
+                style="margin: 10px; height: 100px; max-width: 100px"
               >
                 <figure>
                   <img
@@ -32,14 +32,13 @@
                   </figcaption>
                 </figure>
               </button>
-            </div>
-            <div class="col" id="die-1">
+
               <button
                 id="first-Step-die-button-1"
                 class="btn btn-disabled D{{
                   firstStep.secondDie.sides
-                }} die-button "
-                style="margin: 10px; height: 100px; width: 100px"
+                }} die-button"
+                style="margin: 10px; height: 100px; max-width: 100px"
               >
                 <figure>
                   <img
@@ -53,13 +52,11 @@
                   </figcaption>
                 </figure>
               </button>
-            </div>
-
-            <div class="col">
               <button
-                class="btn btn-primary"
+                class="btn btn-primary btn-lg"
                 role="button"
                 (click)="rollAllDice(firstStep)"
+                style="margin-left: 50px; max-width: 175px"
               >
                 Roll Dice
               </button>
