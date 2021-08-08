@@ -411,63 +411,15 @@
                         aria-labelledby="backgroundPrincipleDropdown"
                       >
                         <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Business
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Debtor
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Detective
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Double Agent
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Everyman
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Family
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Mask
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Sidekick
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Team
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Underworld
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Veteran
-                          </button>
-                        </li>
-                        <li>
-                          <button class="dropdown-item btn btn-outline">
-                            Youth
+                          <button
+                            class="dropdown-item btn btn-outline"
+                            *ngFor="
+                              let principle of getPrinciplesFromCategory(
+                                firstBackground.principleCategory
+                              )
+                            "
+                          >
+                            {{ principle }}
                           </button>
                         </li>
                       </ul>

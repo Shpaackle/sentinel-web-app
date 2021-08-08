@@ -176,4 +176,27 @@ export class AppComponent {
       this.rollDie(die);
     }
   }
+
+  getPrinciplesFromCategory(principle: string): string[] {
+    switch (principle.toLowerCase()) {
+      case 'responsibility':
+        return [
+          'Business',
+          'Debtor',
+          'Detective',
+          'Double Agent',
+          'Everyman',
+          'Family',
+          'Mask',
+          'Sidekick',
+          'Team',
+          'Underworld',
+          'Veteran',
+          'Youth',
+        ];
+
+      default:
+        return [];
+    }
+  }
 }
