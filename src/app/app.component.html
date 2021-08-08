@@ -196,9 +196,46 @@
               </div>
             </div>
           </div>
+          <hr />
           <div class="row">
             <div class="container">
-              <div class="row">Change this with selection from above</div>
+              <div class="row">
+                <p class="fs-4">
+                  Options for
+                  <b
+                    ><i>{{ firstBackground.name }}</i></b
+                  >
+                </p>
+              </div>
+              <div
+                class="row justify-content-start"
+                style="margin-bottom: 10px"
+              >
+                <div class="col col-lg-2">
+                  <img
+                    src="{{ firstBackground.diceToAssign[0].imagePath }}"
+                    alt="D{{ firstBackground.diceToAssign[0].sides }}"
+                    style="max-height: 50px; max-width: 50px"
+                  />
+                </div>
+                <div class="col col-lg-3">
+                  <p>
+                    Select a quality to assign a D{{
+                      firstBackground.diceToAssign[0].sides
+                    }}
+                  </p>
+                </div>
+                <div class="col-md-auto">dropdown list goes here</div>
+              </div>
+              <div class="row" style="margin-bottom: 10px">
+                <div class="col">
+                  <img
+                    src="{{ firstBackground.diceToAssign[1].imagePath }}"
+                    alt="D{{ firstBackground.diceToAssign[1].sides }}"
+                    style="max-height: 50px; max-width: 50px"
+                  />
+                </div>
+              </div>
               <div class="row">
                 <div class="btn-group" role="group" aria-label="save-clear">
                   <button
@@ -221,6 +258,8 @@
           </div>
         </div>
         <hr />
+        <hr />
+        <!-- Step 2 -->
         <div class="container" id="step-2-container">
           <div class="row" id="step-2-instructions">
             <h2>Step {{ secondStep.stepNumber }}: {{ secondStep.stepName }}</h2>
