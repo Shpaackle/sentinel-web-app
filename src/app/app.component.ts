@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CreationStep } from './character-creation/creation-step.model';
+import { CreationStep } from './shared/creation-step.model';
 import { Die } from './shared/die.model';
 
 @Component({
@@ -120,8 +120,16 @@ export class AppComponent {
     this.loadedFeature = feature;
   }
 
-  rollDie(die: Die) {
-    const roll: number = Math.floor(Math.random() * die.sides) + 1;
-    die.faceShowing = roll;
+  rollDie(die: Die | null) {
+    if (die) {
+      const roll: number = Math.floor(Math.random() * die.sides) + 1;
+      die.faceShowing = roll;
+    }
+  }
+
+  rollAllDice(currentStep: CreationStep) {
+    for (let die of currentStep.diceToRoll) {
+      this.rollDie(die);
+    }
   }
 }

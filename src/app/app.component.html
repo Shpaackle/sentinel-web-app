@@ -4,53 +4,61 @@
 
 <hr />
 
-<div class="container">
-  <div class="row">
-    <!-- <div class="col"> -->
-
-    <div class="container" id="step-1-container">
-      <div class="row" id="step-1-instructions">
-        <div class="col">
-          <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
-          <p>{{ firstStep.stepDetails }}</p>
-        </div>
-      </div>
-      <div class="row" id="step-1-dice">
-        <div class="col">
-          <div
-            class="col"
-            *ngFor="let die of firstStep.diceToRoll; let d = index"
-          >
-            <div class="row">
-              <div class="col">
-                <button
-                  id="die-button-{{ d }}"
-                  class="D{{ die.sides }} die-button"
-                  (click)="rollDie(die)"
-                >
-                  <img
-                    src="{{ die.imagePath }}"
-                    alt="D{{ die.sides }}"
-                    style="max-height: 50px"
-                    id="die-image-{{ d }}"
-                  />
-                </button>
-
-                <div class="row">
-                  <p id="die-{{ d }}-result">
-                    <em
-                      ><b>{{ die.faceShowing }}</b></em
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row" id="step-1-options">Step 1 options go here</div>
-      <!-- </div> -->
+<div class="container" id="step-1-container">
+  <div class="row" id="step-1-instructions">
+    <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
+    <p>{{ firstStep.stepDetails }}</p>
+  </div>
+  <hr />
+  <div class="row" id="step-1-dice">
+    <div class="col" id="die-0">
+      <button
+        id="first-Step-die-button-0"
+        class="btn btn-disabled D{{ firstStep.firstDie.sides }} die-button "
+        style="margin: 10px; height: 100px; width: 100px"
+      >
+        <figure>
+          <img
+            src="{{ firstStep.firstDie.imagePath }}"
+            alt="D{{ firstStep.firstDie.sides"
+            id="firstStep-die-image-0"
+            style="max-height: 75px; max-width: 75px"
+          />
+          <figcaption class="D{{ firstStep.firstDie.sides }}-roll">
+            {{ firstStep.firstDie.faceShowing }}
+          </figcaption>
+        </figure>
+      </button>
     </div>
+    <div class="col" id="die-1">
+      <button
+        id="first-Step-die-button-1"
+        class="btn btn-disabled D{{ firstStep.secondDie.sides }} die-button "
+        style="margin: 10px; height: 100px; width: 100px"
+      >
+        <figure>
+          <img
+            src="{{ firstStep.secondDie.imagePath }}"
+            alt="D{{ firstStep.secondDie.sides"
+            id="firstStep-die-image-1"
+            style="max-height: 75px; max-width: 75px"
+          />
+          <figcaption class="D{{ firstStep.secondDie.sides }}-roll">
+            {{ firstStep.secondDie.faceShowing }}
+          </figcaption>
+        </figure>
+      </button>
+    </div>
+
+    <div class="col">
+      <button class="btn btn-warn" (click)="rollAllDice(firstStep)">
+        Roll Dice
+      </button>
+    </div>
+  </div>
+  <hr />
+  <div class="row" id="step-1-options">
+    <div class="col"><b>Step 1 options go here</b></div>
   </div>
 </div>
 <hr />
@@ -61,9 +69,30 @@
   </div>
   <hr />
   <div class="row" id="step-2-dice">
-    <div class="col">Dice to roll go here</div>
+    <div class="col">
+      <button
+        id="secondStep-die-button-0"
+        class="D{{ secondStep.firstDie.sides }} die-button btn btn-disabled"
+        (click)="rollDie(secondStep.firstDie)"
+        style="margin: 10px; height: 100px; width: 100px"
+      >
+        <figure>
+          <img
+            src="{{ secondStep.firstDie.imagePath }}"
+            alt="D{{ secondStep.firstDie.sides"
+            id="secondStep-die-image-0"
+            style="max-height: 75px; max-width: 75px"
+          />
+          <figcaption class="D{{ secondStep.firstDie.sides }}-roll">
+            {{ secondStep.firstDie.faceShowing }}
+          </figcaption>
+        </figure>
+      </button>
+    </div>
     <div class="col"><button class="btn btn-warn">Roll Dice</button></div>
   </div>
   <hr />
-  <div class="row" id="step-2-options">Step 2 options go here</div>
+  <div class="row" id="step-2-options">
+    <div class="col"><b>Step 2 options go here</b></div>
+  </div>
 </div>

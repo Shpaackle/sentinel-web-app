@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Die } from '../shared/die.model';
-import { CreationStep } from './creation-step.model';
+import { CreationStep } from '../shared/creation-step.model';
 
 @Component({
   selector: 'app-character-creation',
