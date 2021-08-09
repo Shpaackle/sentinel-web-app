@@ -25,6 +25,9 @@ export class AppComponent {
   secondBackground: CharacterBackground;
   thirdBackground: CharacterBackground;
 
+  currentBackground: CharacterBackground;
+  selectedBackground: CharacterBackground;
+
   characterSheet: CharacterSheet;
 
   constructor() {
