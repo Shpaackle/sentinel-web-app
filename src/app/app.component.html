@@ -76,7 +76,7 @@
                     aria-controls="flush-collapseOne"
                   >
                     <b
-                      >{{ firstStep.firstDie.faceShowing }} -
+                      >{{ firstBackground.number }} -
                       <i>{{ firstBackground.name }}</i></b
                     >
                   </button>
@@ -118,7 +118,7 @@
                     aria-controls="flush-collapseTwo"
                   >
                     <b
-                      >{{ firstStep.secondDie.faceShowing }} -
+                      >{{ secondBackground.number }} -
                       <i>{{ secondBackground.name }}</i></b
                     >
                   </button>
@@ -160,11 +160,8 @@
                     aria-controls="flush-collapseThree"
                   >
                     <b
-                      >{{
-                        firstStep.firstDie.faceShowing +
-                          firstStep.secondDie.faceShowing
-                      }}
-                      - <i>{{ thirdBackground.name }}</i></b
+                      >{{ thirdBackground.number }} -
+                      <i>{{ thirdBackground.name }}</i></b
                     >
                   </button>
                 </h2>
