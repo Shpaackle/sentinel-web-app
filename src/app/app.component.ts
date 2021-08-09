@@ -4,6 +4,59 @@ import { CharacterSheet } from './shared/character-sheet.model';
 import { CreationStep } from './shared/creation-step.model';
 import { Die } from './shared/die.model';
 
+const backgroundsTable = {
+  1: new CharacterBackground(
+    1,
+    'Upper Class',
+    'Assign a D10 and D8 to any of these qualities:',
+    ['Fitness', 'Persuasion', 'any Mental'],
+    'Responsibility',
+    [new Die(10), new Die(8), new Die(8)],
+    'D10 and D8 D8',
+    49,
+    [new Die(10), new Die(8)]
+  ),
+  2: new CharacterBackground(
+    2,
+    'Blank Slate',
+    'Assign a D10 and D8 to any of these qualities:',
+    ['any Mental', 'any Physical'],
+    'Identity',
+    [new Die(10), new Die(8), new Die(8)],
+    'D10 and D8 D8',
+    49,
+    [new Die(10), new Die(8)]
+  ),
+  3: new CharacterBackground(
+    3,
+    'Struggling',
+    '',
+    ['Banter', 'Criminal Underworld Info', 'any Physical'],
+    'Responsibility',
+    [new Die(8), new Die(8), new Die(6)],
+    'D8 D8 and D6',
+    50,
+    [new Die(8), new Die(6), new Die(6)]
+  ),
+  4: { name: 'Adventurer' },
+  5: { name: 'Unremarkable' },
+  6: { name: 'Law Enforcement' },
+  7: { name: 'Academic' },
+  8: { name: 'Tragic' },
+  9: { name: 'Performer' },
+  10: { name: 'Military' },
+  11: { name: 'Retired' },
+  12: { name: 'Criminal' },
+  13: { name: 'Medical' },
+  14: { name: 'Anachronistic' },
+  15: { name: 'Exile' },
+  16: { name: 'Former Villain' },
+  17: { name: 'Interstellar' },
+  18: { name: 'Dynasty' },
+  19: { name: 'Otherworldly' },
+  20: { name: 'Created' },
+};
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -180,6 +233,10 @@ export class AppComponent {
     }
   }
 
+  rollBackgroundDice() {
+    this.rollAllDice(this.firstStep.diceToRoll);
+  }
+
   getPrinciplesFromCategory(principle: string): string[] {
     switch (principle.toLowerCase()) {
       case 'esoteric':
@@ -269,28 +326,6 @@ export class AppComponent {
   }
 
   getBackgroundFromRoll(roll: number) {
-    const backgrounds = {
-      1: { name: 'Upper Class' },
-      2: { name: 'Blank Slate' },
-      3: { name: 'Struggling' },
-      4: { name: 'Adventurer' },
-      5: { name: 'Unremarkable' },
-      6: { name: 'Law Enforcement' },
-      7: { name: 'Academic' },
-      8: { name: 'Tragic' },
-      9: { name: 'Performer' },
-      10: { name: 'Military' },
-      11: { name: 'Retired' },
-      12: { name: 'Criminal' },
-      13: { name: 'Medical' },
-      14: { name: 'Anachronistic' },
-      15: { name: 'Exile' },
-      16: { name: 'Former Villain' },
-      17: { name: 'Interstellar' },
-      18: { name: 'Dynasty' },
-      19: { name: 'Otherworldly' },
-      20: { name: 'Created' },
-    };
-    return backgrounds[roll];
+    return backgroundsTable[roll];
   }
 }
