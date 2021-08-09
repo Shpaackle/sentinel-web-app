@@ -78,6 +78,8 @@ export class AppComponent {
   secondBackground: CharacterBackground;
   thirdBackground: CharacterBackground;
 
+  rolledBackgrounds: CharacterBackground[] = [];
+
   currentBackground: CharacterBackground;
   selectedBackground: CharacterBackground;
 
@@ -235,6 +237,15 @@ export class AppComponent {
 
   rollBackgroundDice() {
     this.rollAllDice(this.firstStep.diceToRoll);
+
+    const roll1 = this.firstStep.diceToRoll[0].faceShowing;
+    const roll2 = this.firstStep.diceToRoll[1].faceShowing;
+    this.rolledBackgrounds.push(this.getBackgroundFromRoll(roll1));
+    this.rolledBackgrounds.push(this.getBackgroundFromRoll(roll2));
+    this.rolledBackgrounds.push(this.getBackgroundFromRoll(roll1 + roll2));
+    this.firstBackground = this.getBackgroundFromRoll(roll1);
+    this.secondBackground = this.getBackgroundFromRoll(roll2);
+    this.thirdBackground = this.getBackgroundFromRoll(roll1 + roll2);
   }
 
   getPrinciplesFromCategory(principle: string): string[] {
