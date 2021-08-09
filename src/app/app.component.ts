@@ -269,12 +269,28 @@ export class AppComponent {
   }
 
   getBackgroundFromRoll(roll: number): string {
-    switch (roll) {
-      case 1:
-        return '';
-
-      default:
-        return '';
-    }
+    const backgrounds = {
+      1: { name: 'Upper Class' },
+      2: { name: 'Blank Slate' },
+      3: { name: 'Struggling' },
+      4: { name: 'Adventurer' },
+      5: { name: 'Unremarkable' },
+      6: { name: 'Law Enforcement' },
+      7: { name: 'Academic' },
+      8: { name: 'Tragic' },
+      9: { name: 'Performer' },
+      10: { name: 'Military' },
+      11: { name: 'Retired' },
+      12: { name: 'Criminal' },
+      13: { name: 'Medical' },
+      14: { name: 'Anachronistic' },
+      15: { name: 'Exile' },
+      16: { name: 'Former Villain' },
+      17: { name: 'Interstellar' },
+      18: { name: 'Dynasty' },
+      19: { name: 'Otherworldly' },
+      20: { name: 'Created' },
+    };
+    return backgrounds[roll];
   }
 }

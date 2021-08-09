@@ -77,7 +77,11 @@
                   >
                     <b
                       >{{ firstStep.firstDie.faceShowing }} -
-                      <i>{{ firstBackground.name }}</i></b
+                      <i>{{
+                        getBackgroundFromRoll(firstStep.firstDie.faceShowing)[
+                          "name"
+                        ]
+                      }}</i></b
                     >
                   </button>
                 </h2>
