@@ -38,7 +38,17 @@ const backgroundsTable = {
     50,
     [new Die(8), new Die(6), new Die(6)]
   ),
-  4: { number: 4, name: 'Adventurer' },
+  4: new CharacterBackground(
+    4,
+    'Adventurer',
+    'Adventurer Text',
+    ['first quality', 'second quality', 'third second quality'],
+    'Expertise',
+    [new Die(10), new Die(6)],
+    'Dice Text',
+    -1,
+    [new Die(12), new Die(12), new Die(12)]
+  ),
   5: { number: 5, name: 'Unremarkable' },
   6: { number: 6, name: 'Law Enforcement' },
   7: { number: 7, name: 'Academic' },
