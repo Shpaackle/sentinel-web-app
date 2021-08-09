@@ -268,7 +268,7 @@ export class AppComponent {
     }
   }
 
-  getBackgroundFromRoll(roll: number): string {
+  getBackgroundFromRoll(roll: number) {
     const backgrounds = {
       1: { name: 'Upper Class' },
       2: { name: 'Blank Slate' },
