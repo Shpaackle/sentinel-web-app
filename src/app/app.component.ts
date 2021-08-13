@@ -14,7 +14,7 @@ const backgroundsTable = {
     [new Die(10), new Die(8), new Die(8)],
     'D10 and D8 D8',
     49,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   2: new CharacterBackground(
     2,
@@ -25,22 +25,18 @@ const backgroundsTable = {
     [new Die(10), new Die(8), new Die(8)],
     'D10 and D8 D8',
     49,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   3: new CharacterBackground(
     3,
     'Struggling',
     'Assign a D8 and D6 D6 to three of these qualities:',
-    [
-      'Banter',
-      'Criminal Underworld Info',
-      'Select from any Physical qualities category',
-    ],
+    ['Banter', 'Criminal Underworld Info', 'Select from any Physical qualities category'],
     'Responsibility',
     [new Die(8), new Die(8), new Die(6)],
     'D8 D8 and D6',
     50,
-    [new Die(8), new Die(6), new Die(6)]
+    [new Die(8), new Die(6), new Die(6)],
   ),
   4: new CharacterBackground(
     4,
@@ -51,163 +47,117 @@ const backgroundsTable = {
     [new Die(8), new Die(8)],
     'D8 D8 D8',
     50,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   5: new CharacterBackground(
     5,
     'Unremarkable',
     'Assign D10 and D8 to two of these qualities:',
-    [
-      'Close Combat',
-      'Select from Mental qualities category',
-      'Select from Social qualities category',
-    ],
+    ['Close Combat', 'Select from Mental qualities category', 'Select from Social qualities category'],
     'Identity',
     [new Die(10), new Die(8), new Die(6)],
     'D10 D8 and D6',
     50,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   6: new CharacterBackground(
     6,
     'Law Enforcement',
     'Assign D10 and D8 to two of these qualities:',
-    [
-      'Close Combat',
-      'Criminal Underworld Info',
-      'Ranged Combat',
-      'Select from Mental qualities category',
-      'Select from Social qualities category',
-    ],
+    ['Close Combat', 'Criminal Underworld Info', 'Ranged Combat', 'Select from Mental qualities category', 'Select from Social qualities category'],
     'Responsibility',
     [new Die(10), new Die(8), new Die(6)],
     'D10 D8 and D6',
     50,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   7: new CharacterBackground(
     7,
     'Academic',
     'Assign D12 and D8 to two of these qualities:',
-    [
-      'Leadership',
-      'Self-Discipline',
-      'Select from Information qualities category',
-    ],
+    ['Leadership', 'Self-Discipline', 'Select from Information qualities category'],
     'Expertise',
     [new Die(10), new Die(8)],
     'D10 and D8',
     51,
-    [new Die(12), new Die(8)]
+    [new Die(12), new Die(8)],
   ),
   8: new CharacterBackground(
     8,
     'Tragic',
     'Assign D10 and D8 to two of these qualities:',
-    [
-      'Banter',
-      'Close Combat',
-      'Imposing',
-      'Select from Mental qualities category',
-    ],
+    ['Banter', 'Close Combat', 'Imposing', 'Select from Mental qualities category'],
     'Ideals',
     [new Die(10), new Die(10), new Die(6)],
     'D10 D10 and D6',
     51,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   9: new CharacterBackground(
     9,
     'Performer',
     'Assign D10 and D8 to two of these qualities:',
-    [
-      'Acrobatics',
-      'Creativity',
-      'Finesse',
-      'Select from Social qualities category',
-    ],
+    ['Acrobatics', 'Creativity', 'Finesse', 'Select from Social qualities category'],
     'Responsibility',
     [new Die(10), new Die(8), new Die(6)],
     'D10 D8 and D6',
     51,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   10: new CharacterBackground(
     10,
     'Military',
     'Assign D10 and D8 to two of these qualities:',
-    [
-      'Leadership',
-      'Self-Discipline',
-      'Select from Physical qualities category',
-    ],
+    ['Leadership', 'Self-Discipline', 'Select from Physical qualities category'],
     'Ideals',
     [new Die(10), new Die(8), new Die(8)],
     'D10 and D8 D8',
     52,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   11: new CharacterBackground(
     11,
     'Retired',
     'Assign D10 D10 to two of these qualities:',
-    [
-      'Select from any Information qualities category',
-      'Select from any Social qualities category',
-    ],
+    ['Select from any Information qualities category', 'Select from any Social qualities category'],
     'Identity',
     [new Die(12), new Die(6), new Die(6)],
     'D12 and D6 D6',
     52,
-    [new Die(10), new Die(10)]
+    [new Die(10), new Die(10)],
   ),
   12: new CharacterBackground(
     12,
     'Criminal',
     'Assign a D10 and D8 to two of these qualities:',
-    [
-      'Criminal Underworld Info',
-      'Imposing',
-      'Select from any Physical qualities category',
-    ],
+    ['Criminal Underworld Info', 'Imposing', 'Select from any Physical qualities category'],
     'Expertise',
     [new Die(8), new Die(8), new Die(8)],
     'D8 D8 D8',
     52,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   13: new CharacterBackground(
     13,
     'Medical',
     'Assign a D10 D8 and D6 to three of these qualities:',
-    [
-      'Medicine (Required)',
-      'Finesse',
-      'Science',
-      'Technology',
-      'Select from any Mental qualities',
-    ],
+    ['Medicine (Required)', 'Finesse', 'Science', 'Technology', 'Select from any Mental qualities'],
     'Expertise',
     [new Die(10), new Die(8), new Die(8)],
     'D10 and D8 D8',
     52,
-    [new Die(10), new Die(8), new Die(6)]
+    [new Die(10), new Die(8), new Die(6)],
   ),
   14: new CharacterBackground(
     14,
     'Anachronistic',
     'Assign a D10 and D8 to two of these qualities:',
-    [
-      'History',
-      'Magical Lore',
-      'Technology',
-      'Select from and Physical qualities',
-    ],
+    ['History', 'Magical Lore', 'Technology', 'Select from and Physical qualities'],
     'Esoteric',
     [new Die(10), new Die(8), new Die(6)],
     'D10 D8 and D6',
     53,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   15: new CharacterBackground(
     15,
@@ -218,36 +168,29 @@ const backgroundsTable = {
     [new Die(8), new Die(8), new Die(8)],
     'D8 D8 D8',
     53,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   16: new CharacterBackground(
     16,
     'Former Villain',
     'Assign a D10 and D8 to two of these qualities:',
-    [
-      'Conviction',
-      'Select from any Information qualities',
-      'Select from any Social qualities',
-    ],
+    ['Conviction', 'Select from any Information qualities', 'Select from any Social qualities'],
     'Expertise',
     [new Die(10), new Die(8), new Die(8)],
     'D10 and D8 D8',
     53,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   17: new CharacterBackground(
     17,
     'Interstellar',
     'Assign a D12 and D6 to two of these qualities:',
-    [
-      'Select from any Information qualities',
-      'Select from any Mental qualities',
-    ],
+    ['Select from any Information qualities', 'Select from any Mental qualities'],
     'Esoteric',
     [new Die(10), new Die(8), new Die(6)],
     'D10 D8 and D6',
     53,
-    [new Die(12), new Die(6)]
+    [new Die(12), new Die(6)],
   ),
   18: new CharacterBackground(
     18,
@@ -258,7 +201,7 @@ const backgroundsTable = {
     [new Die(8), new Die(8), new Die(6)],
     'D8 D8 and D6',
     54,
-    [new Die(10), new Die(10)]
+    [new Die(10), new Die(10)],
   ),
   19: new CharacterBackground(
     19,
@@ -269,23 +212,18 @@ const backgroundsTable = {
     [new Die(10), new Die(6), new Die(6)],
     'D10 and D6 D6',
     54,
-    [new Die(10), new Die(8)]
+    [new Die(10), new Die(8)],
   ),
   20: new CharacterBackground(
     20,
     'Created',
     'Assign a D12 and D6 to two of these qualities:',
-    [
-      'Alertness',
-      'Science',
-      'Technology',
-      'Select from any Physical qualities',
-    ],
+    ['Alertness', 'Science', 'Technology', 'Select from any Physical qualities'],
     'Expertise',
     [new Die(10), new Die(10), new Die(6)],
     'D10 D10 and D6',
     54,
-    [new Die(12), new Die(6)]
+    [new Die(12), new Die(6)],
   ),
 };
 
@@ -326,7 +264,7 @@ export class AppComponent {
       section of your hero sheet. That provides you with some of your qualities 
       (details on page 44), a principle (details on page 45), and a new set of 
       dice to roll for power source for the next step.`,
-      [new Die(10), new Die(10)]
+      [new Die(10), new Die(10)],
     );
     this.secondStep = new CreationStep(
       2,
@@ -336,7 +274,7 @@ export class AppComponent {
        of dice you just rolled provides you with some of your powers (Details 
         on Page 44). You also receive some yellow abilities, other abilities, 
         or qualities, and dice to roll for your archetype for the next step`,
-      [new Die()]
+      [new Die()],
     );
     this.thirdStep = new CreationStep(
       3,
@@ -346,7 +284,7 @@ export class AppComponent {
       dice you just rolled provides you with more powers and/or qualities. It also 
       provides green abilities, sometimes other abilities, a second principle, 
       and a new set of dice to roll for your personality for the next step.`,
-      [new Die(6)]
+      [new Die(6)],
     );
     this.fourthStep = new CreationStep(
       4,
@@ -355,7 +293,7 @@ export class AppComponent {
       your personality in your hero sheet’s Characteristics section. It provides 
       you with your status dice and an Out ability. You also take a core character 
       quality of your choice, as explained on page 121.`,
-      [new Die(8)]
+      [new Die(8)],
     );
     this.fifthStep = new CreationStep(
       5,
@@ -365,7 +303,7 @@ export class AppComponent {
       with the category of the power
       or quality that you will use for
       this ability.`,
-      [new Die(12)]
+      [new Die(12)],
     );
     this.sixthStep = new CreationStep(
       6,
@@ -385,7 +323,7 @@ export class AppComponent {
     quality of your choice
     • Swap one of your
     principles for any other`,
-      []
+      [],
     );
     this.seventhStep = new CreationStep(
       7,
@@ -402,7 +340,7 @@ export class AppComponent {
       page 113 to determine
       your Green, Yellow,
       and Red Health ranges.`,
-      [new Die(8)]
+      [new Die(8)],
     );
     this.eighthStep = new CreationStep(
       8,
@@ -410,7 +348,7 @@ export class AppComponent {
       `Fill in the final details of your hero:
       name, alias, description, and new
       names for your abilities.`,
-      []
+      [],
     );
 
     this.firstBackground = new CharacterBackground(
@@ -422,7 +360,7 @@ export class AppComponent {
       [new Die(10), new Die(8), new Die(8)],
       'D10 and D8 D8',
       49,
-      [new Die(10), new Die(8)]
+      [new Die(10), new Die(8)],
     );
     this.secondBackground = new CharacterBackground(
       2,
@@ -433,7 +371,7 @@ export class AppComponent {
       [new Die(10), new Die(8), new Die(8)],
       'D10 and D8 D8',
       49,
-      [new Die(10), new Die(8)]
+      [new Die(10), new Die(8)],
     );
     this.thirdBackground = new CharacterBackground(
       3,
@@ -444,7 +382,7 @@ export class AppComponent {
       [new Die(8), new Die(8), new Die(6)],
       'D8 D8 and D6',
       50,
-      [new Die(8), new Die(6), new Die(6)]
+      [new Die(8), new Die(6), new Die(6)],
     );
 
     this.characterSheet = new CharacterSheet();
@@ -532,20 +470,7 @@ export class AppComponent {
           'Zealot',
         ];
       case 'identitity':
-        return [
-          'Ambition',
-          'Amnesia',
-          'Detachment',
-          'Discovery',
-          'Loner',
-          'Nomad',
-          'Peace',
-          'Rage',
-          'Split',
-          'Savagery',
-          'Levity',
-          'Spotless Mind',
-        ];
+        return ['Ambition', 'Amnesia', 'Detachment', 'Discovery', 'Loner', 'Nomad', 'Peace', 'Rage', 'Split', 'Savagery', 'Levity', 'Spotless Mind'];
 
       case 'responsibility':
         return [
