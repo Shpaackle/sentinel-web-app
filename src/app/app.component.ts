@@ -428,6 +428,9 @@ export class AppComponent {
         this.firstBackground = this.getBackgroundFromRoll(roll1);
         this.secondBackground = this.getBackgroundFromRoll(roll2);
         this.thirdBackground = this.getBackgroundFromRoll(roll1 + roll2);
+
+        console.log(this.backgroundSelected.name);
+        console.log(this.backgroundSelected.power_source_dice);
     }
 
     getPrinciplesFromCategory(principle: string): string[] {
