@@ -132,39 +132,9 @@ export class AppComponent {
             [],
         );
 
-        this.firstBackground = new CharacterBackground(
-            1,
-            'Upper Class',
-            'Assign a D10 and D8 to any of these qualities:',
-            ['Fitness', 'Persuasion', 'any Mental'],
-            'Responsibility',
-            [new Die(10), new Die(8), new Die(8)],
-            'D10 and D8 D8',
-            49,
-            [new Die(10), new Die(8)],
-        );
-        this.secondBackground = new CharacterBackground(
-            2,
-            'Blank Slate',
-            'Assign a D10 and D8 to any of these qualities:',
-            ['any Mental', 'any Physical'],
-            'Identity',
-            [new Die(10), new Die(8), new Die(8)],
-            'D10 and D8 D8',
-            49,
-            [new Die(10), new Die(8)],
-        );
-        this.thirdBackground = new CharacterBackground(
-            3,
-            'Struggling',
-            '',
-            ['Banter', 'Criminal Underworld Info', 'any Physical'],
-            'Responsibility',
-            [new Die(8), new Die(8), new Die(6)],
-            'D8 D8 and D6',
-            50,
-            [new Die(8), new Die(6), new Die(6)],
-        );
+        this.firstBackground = new CharacterBackground(backgrounds['1']);
+        this.secondBackground = new CharacterBackground(backgrounds['2']);
+        this.thirdBackground = new CharacterBackground(backgrounds['3']);
 
         this.characterSheet = new CharacterSheet();
 
@@ -208,8 +178,6 @@ export class AppComponent {
         this.thirdBackground = this.rolledBackgrounds[2];
 
         this.backgroundSelected = backgrounds[dice_sum.toString()];
-        console.log(this.backgroundSelected.name);
-        console.log(this.backgroundSelected.power_source_dice);
     }
 
     getPrinciplesFromCategory(principle: string): string[] {
@@ -303,17 +271,7 @@ export class AppComponent {
     getBackgroundFromRoll(roll: number) {
         let rolledBackgroundData = backgrounds[roll.toString()];
 
-        let background = new CharacterBackground(
-            rolledBackgroundData.num,
-            rolledBackgroundData.name,
-            rolledBackgroundData.background_text,
-            rolledBackgroundData.qualities,
-            rolledBackgroundData.principle,
-            rolledBackgroundData.power_source_dice,
-            rolledBackgroundData.dice_text,
-            rolledBackgroundData.page,
-            rolledBackgroundData.quality_dice,
-        );
+        let background = new CharacterBackground(rolledBackgroundData);
 
         return background;
 
