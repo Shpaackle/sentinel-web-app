@@ -14,7 +14,8 @@ export class QualityListComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-        this.options = [];
+        // this.options = [];
+        this.populateOptionsList();
     }
 
     populateOptionsList() {
