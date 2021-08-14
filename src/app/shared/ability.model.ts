@@ -1,7 +1,7 @@
-import { Die } from './die.model';
+import { Die, } from './die.model';
 
 export class Ability {
-  constructor(
+    constructor(
     public abilityName: string,
     public customName: string,
     public category: string,
@@ -11,6 +11,6 @@ export class Ability {
     public tiedAbility: string,
     public color: string,
     public die: Die,
-    public pageNum: number
-  ) {}
+    public pageNum: number,
+    ) {}
 }

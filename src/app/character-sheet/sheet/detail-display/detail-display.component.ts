@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 @Component({
-  selector: 'app-detail-display',
-  templateUrl: './detail-display.component.html',
-  styleUrls: ['./detail-display.component.css']
-})
+    selector: 'app-detail-display',
+    templateUrl: './detail-display.component.html',
+    styleUrls: ['./detail-display.component.css',],
+},)
 export class DetailDisplayComponent implements OnInit {
+  name: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+      this.name = '';
   }
-
 }

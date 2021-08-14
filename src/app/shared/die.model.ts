@@ -3,9 +3,9 @@ export class Die {
   public imagePath: string;
   public faceShowing: number;
 
-  constructor(sides: number = 4) {
-    this.sides = sides;
-    this.faceShowing = sides;
-    this.imagePath = './assets/dice-images/D' + sides + '.jpg';
+  constructor(sides: number = 4,) {
+      this.sides = sides;
+      this.faceShowing = sides;
+      this.imagePath = './assets/dice-images/D' + sides + '.jpg';
   }
 }

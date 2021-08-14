@@ -1,7 +1,7 @@
-import { Die } from './die.model';
+import { Die, } from './die.model';
 
 export class CharacterBackground {
-  constructor(
+    constructor(
     public number: number,
     public name: string,
     public backgroundText: string,
@@ -10,6 +10,6 @@ export class CharacterBackground {
     public powerSourceDice: Die[],
     public diceText: string,
     public pageNumber: number,
-    public diceToAssign: Die[] = []
-  ) {}
+    public diceToAssign: Die[] = [],
+    ) {}
 }

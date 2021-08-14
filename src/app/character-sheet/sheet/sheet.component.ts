@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 @Component({
-  selector: 'app-sheet',
-  templateUrl: './sheet.component.html',
-  styleUrls: ['./sheet.component.css']
-})
+    selector: 'app-sheet',
+    templateUrl: './sheet.component.html',
+    styleUrls: ['./sheet.component.css',],
+},)
 export class SheetComponent implements OnInit {
+  name: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+      this.name = '';
   }
-
 }

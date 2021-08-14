@@ -1,9 +1,9 @@
 export class Principle {
-  constructor(
+    constructor(
     public name: string, 
     public duringRoleplayingText: string, 
     public minorTwistText: string, 
     public majorTwistText: string,
-    public pageNumber: number
+    public pageNumber: number,
     ) {}
 }

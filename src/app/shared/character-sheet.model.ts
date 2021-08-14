@@ -1,28 +1,28 @@
-import { Ability } from "./ability.model";
-import { Die } from "./die.model";
-import { Principle } from "./principle.model";
+import { Ability, } from './ability.model';
+import { Die, } from './die.model';
+import { Principle, } from './principle.model';
 
 export class CharacterSheet {
-  public playerName: string = "";
+  public playerName: string = '';
 
-  public heroName: string = "";
-  public aliasName: string = "";
+  public heroName: string = '';
+  public aliasName: string = '';
 
   // Physical Attributes
-  public gender: string = "";
-  public age: string = "";
-  public height: string = "";
-  public eyes: string = "";
-  public hair: string = "";
-  public skin: string = "";
-  public build: string = "";
-  public costumeOrEquipment: string = "";
+  public gender: string = '';
+  public age: string = '';
+  public height: string = '';
+  public eyes: string = '';
+  public hair: string = '';
+  public skin: string = '';
+  public build: string = '';
+  public costumeOrEquipment: string = '';
 
   // Characteristics
-  public chosenBackground: string = "";
-  public chosenPowerSource: string = "";
-  public chosenArchetype: string = "";
-  public chosenPersonality: string = "";
+  public chosenBackground: string = '';
+  public chosenPowerSource: string = '';
+  public chosenArchetype: string = '';
+  public chosenPersonality: string = '';
 
   // Principles
   public chosenFirstPrinciple: Principle = null;
@@ -51,7 +51,7 @@ export class CharacterSheet {
 
   // Hero Points
   public heroPointsThisIssue: number = 0;
-  public heroPointRewards: number[] = [0, 0, 0, 0];
+  public heroPointRewards: number[] = [0, 0, 0, 0,];
 
   public backIssues: string[] = [];
   public availableCollections: string[] = [];

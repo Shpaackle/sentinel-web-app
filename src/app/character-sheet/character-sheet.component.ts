@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 @Component({
-  selector: 'app-character-sheet',
-  templateUrl: './character-sheet.component.html',
-  styleUrls: ['./character-sheet.component.css']
-})
+    selector: 'app-character-sheet',
+    templateUrl: './character-sheet.component.html',
+    styleUrls: ['./character-sheet.component.css',],
+},)
 export class CharacterSheetComponent implements OnInit {
+  characterName: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+      this.characterName = '';
   }
-
 }
