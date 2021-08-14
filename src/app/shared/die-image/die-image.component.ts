@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Die } from '../die.model';
 
 @Component({
-  selector: 'app-die-image',
-  templateUrl: './die-image.component.html',
-  styleUrls: ['./die-image.component.css']
+    selector: 'app-die-image',
+    templateUrl: './die-image.component.html',
 })
-export class DieImageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class DieImageComponent {
+    @Input() die: Die;
 }
