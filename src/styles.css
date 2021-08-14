@@ -9,10 +9,12 @@ body {
     font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
-.die-button {
+.die-figure {
     margin: 10px;
     height: 75px;
     width: 75px;
+    font-weight: bold;
+    text-align: center;
 }
 .D4 {
     background-color: blue;
@@ -22,25 +24,11 @@ body {
 }
 .D8 {
     background-color: yellow;
+    color: black;
 }
 .D10 {
     background-color: red;
 }
 .D12 {
     background-color: purple;
-}
-.D4-roll {
-    color: white;
-}
-.D6-roll {
-    color: white;
-}
-.D8-roll {
-    color: black;
-}
-.D10-roll {
-    color: white;
-}
-.D12-roll {
-    color: white;
 }
