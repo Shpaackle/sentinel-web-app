@@ -310,14 +310,7 @@
                             <div class="container" style="outline-style: solid; outline-color: deeppink" id="dice-given-container">
                                 <div class="row" style="margin-top: 10px">
                                     <div class="col-md-auto" *ngFor="let die of firstBackground.powerSourceDice">
-                                        <figure>
-                                            <img src="{{ die.imagePath }}" alt="D{{ die.sides }}" style="max-height: 50px; max-width: 50px" />
-                                            <figcaption style="text-align: center">
-                                                <p>
-                                                    <b>{{ die.faceShowing }}</b>
-                                                </p>
-                                            </figcaption>
-                                        </figure>
+                                        <app-rolling-die [die]="die"></app-rolling-die>
                                     </div>
                                     <div class="col-md-3">
                                         <button
