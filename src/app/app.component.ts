@@ -262,7 +262,7 @@ export class AppComponent {
 
     characterSheet: CharacterSheet;
 
-    backgroundSelectedName: string = 'criminal';
+    backgroundSelectedName: string = '5';
     backgroundSelected: any;
 
     constructor() {
@@ -436,6 +436,7 @@ export class AppComponent {
         this.secondBackground = this.rolledBackgrounds[1];
         this.thirdBackground = this.rolledBackgrounds[2];
 
+        this.backgroundSelected = backgrounds[dice_sum.toString()];
         console.log(this.backgroundSelected.name);
         console.log(this.backgroundSelected.power_source_dice);
     }
