@@ -1,5 +1,5 @@
 {
-    "upper-class": {
+    "1": {
         "num": 1,
         "name": "Upper Class",
         "qualities": ["Fitness", "Persuasion", "any Mental"],
@@ -9,7 +9,7 @@
         "page": 49,
         "blurb": "You were born in the upper echelons of high society. Likely you're also pretty damn rich"
     },
-    "blank-slate": {
+    "2": {
         "num": 2,
         "name": "Blank Slate",
         "qualities": ["any Mental", "any Physical"],
@@ -19,7 +19,7 @@
         "page": 49,
         "blurb": "You remember nothing. Were you brainwashed? Maybe you were just created? One way or another, you have no history. You start now. Your future is what you make of it."
     },
-    "struggling": {
+    "3": {
         "num": 3,
         "name": "Struggling",
         "qualities": ["Banter", "Criminal Underworld Info", "any Physical"],
@@ -29,7 +29,7 @@
         "page": 50,
         "blurb": "You’ve been down and out. Perhaps you’ve recovered a bit, but you also might still be stuck in a terrible situation. Low on resources and luck, you did your best, but it often just wasn't good enough."
     },
-    "adventurer": {
+    "4": {
         "num": 4,
         "name": "Adventurer",
         "qualities": ["History", "Leadership", "any Physical"],
@@ -39,7 +39,7 @@
         "page": 50,
         "blurb": "In your past, you have sought excitement and adventure at every turn. Even before you were a hero, you were a thrill seeker."
     },
-    "unremarkable": {
+    "5": {
         "num": 5,
         "name": "Unremarkable",
         "qualities": ["Close Combat", "any Mental", "any Social"],
@@ -49,7 +49,7 @@
         "page": 50,
         "blurb": "You were just a regular person, leading a normal life, until something came along and changed your life in a major way. You came from a commonplace background, but now you’re a hero."
     },
-    "law-enforcement": {
+    "6": {
         "num": 6,
         "name": "Law Enforcement",
         "qualities": ["Close Combat", "Criminal Underworld Info", "Ranged Combat", "any Mental", "any Social"],
@@ -59,7 +59,7 @@
         "page": 50,
         "blurb": "You’re a member of law enforcement, such as a beat cop, detective, or perhaps a lawyer or judge. you made a career of the law at one point. perhaps you still do."
     },
-    "academic": {
+    "7": {
         "num": 7,
         "name": "Academic",
         "qualities": ["Leadership", "Self-Discipline", "any Information"],
@@ -69,7 +69,7 @@
         "page": 51,
         "blurb": "You work or study in a field of knowledge. You could be a school teacher, professor, researcher, or clergy member. The pursuit of knowledge is very important to you, and possibly what led you to become a hero."
     },
-    "tragic": {
+    "8": {
         "num": 8,
         "name": "Tragic",
         "qualities": ["Banter", "Close Combat", "Imposing", "any Mental"],
@@ -79,7 +79,7 @@
         "page": 51,
         "blurb": "Your history is eclipsed by a major negative event That shaped the rest of your life. You struggle to overcome the memory of the tragic event, be it the loss of a loved one or something that happened to you directly. Either way, the tragedy both fuels and haunts you."
     },
-    "performer": {
+    "9": {
         "num": 9,
         "name": "Performer",
         "qualities": ["Acrobatics", "Creativity", "Finesse", "any Social"],
@@ -89,7 +89,7 @@
         "page": 51,
         "blurb": "You were born for the stage. How you present yourself to the world is important to you, whether in or out of the limelight."
     },
-    "military": {
+    "10": {
         "num": 10,
         "name": "Military",
         "qualities": ["Leadership", "Self-Discipline", "any Physical"],
@@ -99,7 +99,7 @@
         "page": 52,
         "blurb": "You have some sort of combat training, possibly as Part of an organized armed forces. You might have even had combat experience before you became a hero."
     },
-    "retired": {
+    "11": {
         "num": 11,
         "name": "Retired",
         "qualities": ["any Information", "any Social"],
@@ -109,7 +109,7 @@
         "page": 52,
         "blurb": "You used to wear the cape and cowl, but hung them up long ago. Now, something has changed, making you feel compelled to once again take up the fight for what is right. You never thought you would be here again."
     },
-    "criminal": {
+    "12": {
         "num": 12,
         "name": "criminal",
         "qualities": ["Criminal Underworld Info", "Imposing", "any Physical"],
@@ -119,7 +119,7 @@
         "page": 52,
         "blurb": "You spent too much time on the wrong side of the law. But something changed for you. Now you’ve turned over a new leaf, using your powers and abilities to be the best hero you can."
     },
-    "medical": {
+    "13": {
         "num": 13,
         "name": "Medical",
         "qualities": ["Medicine (Required)", "Finesse", "Science", "Technology", "any Mental"],
@@ -130,7 +130,7 @@
         "page": 52,
         "blurb": "You were in the business of healing, as a doctor or nurse or maybe even a veterinarian. Given your medical background, you have a lot of experience with treating injuries and diseases."
     },
-    "anachronistic": {
+    "14": {
         "num": 14,
         "name": "Anachronistic",
         "qualities": ["History", "Magical Lore", "Technology", "any Physical"],
@@ -140,7 +140,7 @@
         "page": 53,
         "blurb": "One way or another, you aren't quite in your time. You could be a stranded time traveler, or just a person who fits more with the ideals and customs of a time long before or after the one in which you currently reside. Either way, though this time is not your own, you still fight to protect it."
     },
-    "exile": {
+    "15": {
         "num": 15,
         "name": "Exile",
         "qualities": ["Conviction", "Insight", "any Information"],
@@ -150,7 +150,7 @@
         "page": 53,
         "blurb": "You’re far from your home, one way or another. You may have left of your own accord, but it’s equally likely that you were sent away from whatever place you came from. Either way, you’re making your own way in the land where you now live."
     },
-    "former-villain": {
+    "16": {
         "num": 16,
         "name": "Former Villain",
         "qualities": ["Conviction", "any Information", "any Social"],
@@ -160,7 +160,7 @@
         "page": 53,
         "blurb": "You used to be a foe to the heroes, but you’ve changed your stripes. You may have realized the evil of your former ways, or your motivation might have changed to ally you with those you once fought. Either way, you are now a hero, though many other heroes are hesitant to trust you."
     },
-    "interstella": {
+    "17": {
         "num": 17,
         "name": "Interstellar",
         "qualities": ["any Information", "any Mental"],
@@ -170,7 +170,7 @@
         "page": 53,
         "blurb": "You come from beyond the stars! As a newcomer to planet Earth, you may be unaware of strange customs here, but you can still communicate with earthlings, one way or another. You might be an alien, or a human from a civilization lost in space long ago, or something else entirely."
     },
-    "dynasty": {
+    "18": {
         "num": 18,
         "name": "Dynasty",
         "qualities": ["Close Combat", "Fitness", "History", "any Social"],
@@ -180,7 +180,7 @@
         "page": 54,
         "blurb": "You come from a line of heroes. It could be that your parents and their parents and their parents have all been heroes. Maybe you’re Adopted into a hero family. Regardless of how you came to be a part of this dynasty, heroism is part of your life."
     },
-    "otherworldly": {
+    "19": {
         "num": 19,
         "name": "Otherworldly",
         "qualities": ["Magical Lore", "Otherworldly Mythos", "any Mental"],
@@ -190,7 +190,7 @@
         "page": 54,
         "blurb": "You have at least a little of the uncanny in you. You could be a fully supernatural creature, or perhaps the spawn of one and a human."
     },
-    "created": {
+    "20": {
         "num": 20,
         "name": "Created",
         "qualities": ["Alertness", "Science", "Technology", "any Physical"],
