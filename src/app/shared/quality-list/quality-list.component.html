@@ -4,8 +4,8 @@
     </button>
     <ul class="dropdown-menu">
         <li *ngFor="let optionText of options">
-            <button class="dropdown-item btn btn-warning" role="button" *ngIf="optionText.substr(0, 3) !== 'any'">optionText</button>
-            <h5 class="dropdown-header" *ngIf="optionText.substr(0, 3) === 'any'">optionText</h5>
+            <button class="dropdown-item btn btn-warning" role="button" *ngIf="optionText.substr(0, 3) !== 'any'">{{ optionText }}</button>
+            <h5 class="dropdown-header" *ngIf="optionText.substr(0, 3) === 'any'">{{ optionText }}</h5>
             <hr class="dropdown-divider" *ngIf="optionText.substr(0, 3) === 'any'" />
         </li>
     </ul>
