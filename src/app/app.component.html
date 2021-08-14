@@ -13,31 +13,13 @@
           <hr />
           <div class="row" id="step-1-dice">
             <div class="btn-group" role="group" aria-label="step-1-dice">
-              <button
-                id="first-Step-die-button-0"
-                class="btn btn-disabled D{{
-                  firstStep.firstDie.sides
-                }} die-button "
-                style="margin: 10px; height: 100px; max-width: 100px"
-              >
-                <figure>
-                  <img
-                    src="{{ firstStep.firstDie.imagePath }}"
-                    alt="D{{ firstStep.firstDie.sides"
-                    id="firstStep-die-image-0"
-                    style="max-height: 75px; max-width: 75px"
-                  />
-                  <figcaption class="D{{ firstStep.firstDie.sides }}-roll">
-                    {{ firstStep.firstDie.faceShowing }}
-                  </figcaption>
-                </figure>
-              </button>
+              <!-- <app-rolling-die *ngFor="let die of firstStep.dice" [die]="die"></app-rolling-die> -->
+
+              <app-rolling-die [die]="firstStep.firstDie"></app-rolling-die>
 
               <button
                 id="first-Step-die-button-1"
-                class="btn btn-disabled D{{
-                  firstStep.secondDie.sides
-                }} die-button"
+                class="btn btn-disabled D{{ firstStep.secondDie.sides }} die-button"
                 style="margin: 10px; height: 100px; max-width: 100px"
               >
                 <figure>
@@ -52,12 +34,7 @@
                   </figcaption>
                 </figure>
               </button>
-              <button
-                class="btn btn-primary btn-lg"
-                role="button"
-                (click)="rollBackgroundDice()"
-                style="margin-left: 50px; max-width: 175px"
-              >
+              <button class="btn btn-primary btn-lg" role="button" (click)="rollBackgroundDice()" style="margin-left: 50px; max-width: 175px">
                 Roll Background Dice
               </button>
             </div>
@@ -76,8 +53,7 @@
                     aria-controls="flush-collapseOne"
                   >
                     <b
-                      >{{ firstBackground.number }} -
-                      <i>{{ firstBackground.name }}</i></b
+                      >{{ firstBackground.number }} - <i>{{ firstBackground.name }}</i></b
                     >
                   </button>
                 </h2>
@@ -100,10 +76,7 @@
                       {{ firstBackground.principleCategory }} principle.
                     </p>
                     <hr />
-                    <p>
-                      Roll a {{ firstBackground.diceText }} for power source
-                      selection.
-                    </p>
+                    <p>Roll a {{ firstBackground.diceText }} for power source selection.</p>
                   </div>
                 </div>
               </div>
@@ -118,8 +91,7 @@
                     aria-controls="flush-collapseTwo"
                   >
                     <b
-                      >{{ secondBackground.number }} -
-                      <i>{{ secondBackground.name }}</i></b
+                      >{{ secondBackground.number }} - <i>{{ secondBackground.name }}</i></b
                     >
                   </button>
                 </h2>
@@ -142,10 +114,7 @@
                       {{ secondBackground.principleCategory }} principle.
                     </p>
                     <hr />
-                    <p>
-                      Roll a {{ secondBackground.diceText }} for power source
-                      selection.
-                    </p>
+                    <p>Roll a {{ secondBackground.diceText }} for power source selection.</p>
                   </div>
                 </div>
               </div>
@@ -160,8 +129,7 @@
                     aria-controls="flush-collapseThree"
                   >
                     <b
-                      >{{ thirdBackground.number }} -
-                      <i>{{ thirdBackground.name }}</i></b
+                      >{{ thirdBackground.number }} - <i>{{ thirdBackground.name }}</i></b
                     >
                   </button>
                 </h2>
@@ -184,10 +152,7 @@
                       {{ thirdBackground.principleCategory }} principle.
                     </p>
                     <hr />
-                    <p>
-                      Roll a {{ thirdBackground.diceText }} for power source
-                      selection.
-                    </p>
+                    <p>Roll a {{ thirdBackground.diceText }} for power source selection.</p>
                   </div>
                 </div>
               </div>
@@ -195,14 +160,7 @@
           </div>
           <hr />
           <div class="row">
-            <div
-              class="container"
-              style="
-                outline-width: 3px;
-                outline-color: crimson;
-                outline-style: double;
-              "
-            >
+            <div class="container" style="outline-width: 3px; outline-color: crimson; outline-style: double">
               <div class="row" style="margin-top: 20px">
                 <p class="fs-4">
                   Options for
@@ -213,14 +171,8 @@
                 </p>
               </div>
               <hr />
-              <div
-                class="container"
-                style="outline-style: dashed; outline-color: darkgreen"
-              >
-                <div
-                  class="row justify-content-start"
-                  style="margin-bottom: 10px"
-                >
+              <div class="container" style="outline-style: dashed; outline-color: darkgreen">
+                <div class="row justify-content-start" style="margin-bottom: 10px">
                   <div class="col-sm-auto">
                     <img
                       src="{{ firstBackground.diceToAssign[0].imagePath }}"
@@ -238,60 +190,32 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        Select a quality to assign a D{{
-                          firstBackground.diceToAssign[0].sides
-                        }}
+                        Select a quality to assign a D{{ firstBackground.diceToAssign[0].sides }}
                       </button>
-                      <ul
-                        class="dropdown-menu"
-                        aria-labelledby="firstQualityDropdown"
-                      >
+                      <ul class="dropdown-menu" aria-labelledby="firstQualityDropdown">
                         <li>
-                          <button
-                            class="dropdown-item btn btn-outline"
-                            role="button"
-                          >
-                            Fitness
-                          </button>
+                          <button class="dropdown-item btn btn-outline" role="button">Fitness</button>
                         </li>
                         <li>
-                          <button
-                            class="dropdown-item btn btn-outline"
-                            role="button"
-                          >
-                            Persuasion
-                          </button>
+                          <button class="dropdown-item btn btn-outline" role="button">Persuasion</button>
                         </li>
                         <li>
                           <h5 class="dropdown-header"><b>Any mental</b></h5>
                         </li>
                         <li>
-                          <button
-                            class="dropdown-item btn btn-outline"
-                            role="button"
-                          >
-                            Alertness
-                          </button>
+                          <button class="dropdown-item btn btn-outline" role="button">Alertness</button>
                         </li>
                         <li>
-                          <button class="dropdown-item" role="button">
-                            Conviction
-                          </button>
+                          <button class="dropdown-item" role="button">Conviction</button>
                         </li>
                         <li>
-                          <button class="dropdown-item" role="button">
-                            Creativity
-                          </button>
+                          <button class="dropdown-item" role="button">Creativity</button>
                         </li>
                         <li>
-                          <button class="dropdown-item" role="button">
-                            Investigation
-                          </button>
+                          <button class="dropdown-item" role="button">Investigation</button>
                         </li>
                         <li>
-                          <button class="dropdown-item" role="button">
-                            Self-Discipline
-                          </button>
+                          <button class="dropdown-item" role="button">Self-Discipline</button>
                         </li>
                       </ul>
                     </div>
@@ -302,10 +226,7 @@
                     </p>
                   </div>
                 </div>
-                <div
-                  class="row justify-content-start"
-                  style="margin-bottom: 10px"
-                >
+                <div class="row justify-content-start" style="margin-bottom: 10px">
                   <div class="col-sm-auto">
                     <img
                       src="{{ firstBackground.diceToAssign[1].imagePath }}"
@@ -323,60 +244,32 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        Select a quality to assign a D{{
-                          firstBackground.diceToAssign[1].sides
-                        }}
+                        Select a quality to assign a D{{ firstBackground.diceToAssign[1].sides }}
                       </button>
-                      <ul
-                        class="dropdown-menu"
-                        aria-labelledby="secondQualityDropdown"
-                      >
+                      <ul class="dropdown-menu" aria-labelledby="secondQualityDropdown">
                         <li>
-                          <button
-                            class="dropdown-item btn btn-outline"
-                            role="button"
-                          >
-                            Fitness
-                          </button>
+                          <button class="dropdown-item btn btn-outline" role="button">Fitness</button>
                         </li>
                         <li>
-                          <button
-                            class="dropdown-item btn btn-outline"
-                            role="button"
-                          >
-                            Persuasion
-                          </button>
+                          <button class="dropdown-item btn btn-outline" role="button">Persuasion</button>
                         </li>
                         <li>
                           <h5 class="dropdown-header"><b>Any mental</b></h5>
                         </li>
                         <li>
-                          <button
-                            class="dropdown-item btn btn-outline"
-                            role="button"
-                          >
-                            Alertness
-                          </button>
+                          <button class="dropdown-item btn btn-outline" role="button">Alertness</button>
                         </li>
                         <li>
-                          <button class="dropdown-item" role="button">
-                            Conviction
-                          </button>
+                          <button class="dropdown-item" role="button">Conviction</button>
                         </li>
                         <li>
-                          <button class="dropdown-item" role="button">
-                            Creativity
-                          </button>
+                          <button class="dropdown-item" role="button">Creativity</button>
                         </li>
                         <li>
-                          <button class="dropdown-item" role="button">
-                            Investigation
-                          </button>
+                          <button class="dropdown-item" role="button">Investigation</button>
                         </li>
                         <li>
-                          <button class="dropdown-item" role="button">
-                            Self-Discipline
-                          </button>
+                          <button class="dropdown-item" role="button">Self-Discipline</button>
                         </li>
                       </ul>
                     </div>
@@ -388,11 +281,7 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="container"
-                style="outline-style: groove; outline-color: darkmagenta"
-                id="background-principle-selection-container"
-              >
+              <div class="container" style="outline-style: groove; outline-color: darkmagenta" id="background-principle-selection-container">
                 <div class="row">
                   <div class="col-md-auto">
                     <div class="dropdown">
@@ -406,18 +295,11 @@
                         Select a
                         {{ firstBackground.principleCategory }} principle
                       </button>
-                      <ul
-                        class="dropdown-menu"
-                        aria-labelledby="backgroundPrincipleDropdown"
-                      >
+                      <ul class="dropdown-menu" aria-labelledby="backgroundPrincipleDropdown">
                         <li>
                           <button
                             class="dropdown-item btn btn-outline"
-                            *ngFor="
-                              let principle of getPrinciplesFromCategory(
-                                firstBackground.principleCategory
-                              )
-                            "
+                            *ngFor="let principle of getPrinciplesFromCategory(firstBackground.principleCategory)"
                           >
                             {{ principle }}
                           </button>
@@ -432,22 +314,11 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="container"
-                style="outline-style: solid; outline-color: deeppink"
-                id="dice-given-container"
-              >
+              <div class="container" style="outline-style: solid; outline-color: deeppink" id="dice-given-container">
                 <div class="row" style="margin-top: 10px">
-                  <div
-                    class="col-md-auto"
-                    *ngFor="let die of firstBackground.powerSourceDice"
-                  >
+                  <div class="col-md-auto" *ngFor="let die of firstBackground.powerSourceDice">
                     <figure>
-                      <img
-                        src="{{ die.imagePath }}"
-                        alt="D{{ die.sides }}"
-                        style="max-height: 50px; max-width: 50px"
-                      />
+                      <img src="{{ die.imagePath }}" alt="D{{ die.sides }}" style="max-height: 50px; max-width: 50px" />
                       <figcaption style="text-align: center">
                         <p>
                           <b>{{ die.faceShowing }}</b>
@@ -471,21 +342,9 @@
               <div class="row">
                 <div class="btn-group" role="group" aria-label="save-clear">
                   <!-- Apply choices to character sheet and pushes to next step -->
-                  <button
-                    type="button"
-                    class="btn-success btn-lg"
-                    style="margin: 10px"
-                  >
-                    Save
-                  </button>
+                  <button type="button" class="btn-success btn-lg" style="margin: 10px">Save</button>
                   <!-- Reset choices to defaults -->
-                  <button
-                    type="button"
-                    class="btn-danger btn-lg"
-                    style="margin: 10px"
-                  >
-                    Clear
-                  </button>
+                  <button type="button" class="btn-danger btn-lg" style="margin: 10px">Clear</button>
                 </div>
               </div>
             </div>
@@ -504,9 +363,7 @@
             <div class="col">
               <button
                 id="secondStep-die-button-0"
-                class="D{{
-                  secondStep.firstDie.sides
-                }} die-button btn btn-disabled"
+                class="D{{ secondStep.firstDie.sides }} die-button btn btn-disabled"
                 (click)="rollDie(secondStep.firstDie)"
                 style="margin: 10px; height: 100px; width: 100px"
               >
