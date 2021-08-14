@@ -45,3 +45,5 @@ testem.log
 Thumbs.db
 src/assets/principle-table.jpg
 .prettierrc
+.eslintrc.json
+.gitignore
