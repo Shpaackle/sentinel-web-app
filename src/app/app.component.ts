@@ -408,6 +408,7 @@ export class AppComponent {
         if (die) {
             const roll: number = Math.floor(Math.random() * die.sides) + 1;
             die.faceShowing = roll;
+            return roll;
         }
     }
 
@@ -418,16 +419,22 @@ export class AppComponent {
     }
 
     rollBackgroundDice() {
-        this.rollAllDice(this.firstStep.diceToRoll);
+        //this.rollAllDice(this.firstStep.diceToRoll);
+        this.rolledBackgrounds = [];
 
-        const roll1 = this.firstStep.diceToRoll[0].faceShowing;
-        const roll2 = this.firstStep.diceToRoll[1].faceShowing;
-        this.rolledBackgrounds.push(this.getBackgroundFromRoll(roll1));
-        this.rolledBackgrounds.push(this.getBackgroundFromRoll(roll2));
-        this.rolledBackgrounds.push(this.getBackgroundFromRoll(roll1 + roll2));
-        this.firstBackground = this.getBackgroundFromRoll(roll1);
-        this.secondBackground = this.getBackgroundFromRoll(roll2);
-        this.thirdBackground = this.getBackgroundFromRoll(roll1 + roll2);
+        let dice_sum: number = 0;
+        for (let die of this.firstStep.diceToRoll) {
+            let roll = this.rollDie(die);
+            let rolled_background = this.getBackgroundFromRoll(roll);
+            this.rolledBackgrounds.push(rolled_background);
+            dice_sum += die.faceShowing;
+        }
+        let summed_background = this.getBackgroundFromRoll(dice_sum);
+        this.rolledBackgrounds.push(summed_background);
+
+        this.firstBackground = this.rolledBackgrounds[0];
+        this.secondBackground = this.rolledBackgrounds[1];
+        this.thirdBackground = this.rolledBackgrounds[2];
 
         console.log(this.backgroundSelected.name);
         console.log(this.backgroundSelected.power_source_dice);
