@@ -1,5 +1,5 @@
 <figure class="D{{ die.sides }} die-figure">
-    <img src="{{ die.imagePath }}" alt="D{{ die.sides }}" style="max-height: 50px; max-width: 75px" />
+    <app-die-image [die]="die"></app-die-image>
     <figcaption class="D{{ die.sides }}-roll">
         {{ die.faceShowing }}
     </figcaption>
