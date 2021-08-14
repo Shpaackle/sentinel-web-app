@@ -12,6 +12,7 @@ import { DropdownDirective, } from './shared/dropdown.directive';
 import { NgbModule, } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
 import { RollingDieComponent, } from './shared/rolling-die.component';
+import { DieImageComponent } from './shared/die-image/die-image.component';
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { RollingDieComponent, } from './shared/rolling-die.component';
         DetailDisplayComponent,
         DropdownDirective,
         RollingDieComponent,
+        DieImageComponent,
     ],
     imports: [BrowserModule, NgbModule, BrowserAnimationsModule,],
     providers: [],
