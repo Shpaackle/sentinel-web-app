@@ -163,11 +163,7 @@
                             <div class="container" style="outline-style: dashed; outline-color: darkgreen">
                                 <div class="row justify-content-start" style="margin-bottom: 10px">
                                     <div class="col-sm-auto">
-                                        <img
-                                            src="{{ firstBackground.diceToAssign[0].imagePath }}"
-                                            alt="D{{ firstBackground.diceToAssign[0].sides }}"
-                                            style="max-height: 50px; max-width: 50px"
-                                        />
+                                        <app-die-image [die]="firstBackground.diceToAssign[0]"></app-die-image>
                                     </div>
 
                                     <div class="col-md-auto">
@@ -217,11 +213,7 @@
                                 </div>
                                 <div class="row justify-content-start" style="margin-bottom: 10px">
                                     <div class="col-sm-auto">
-                                        <img
-                                            src="{{ firstBackground.diceToAssign[1].imagePath }}"
-                                            alt="D{{ firstBackground.diceToAssign[1].sides }}"
-                                            style="max-height: 50px; max-width: 50px"
-                                        />
+                                        <app-die-image [die]="firstBackground.diceToAssign[1]"></app-die-image>
                                     </div>
 
                                     <div class="col-md-auto">
