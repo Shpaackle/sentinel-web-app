@@ -30,27 +30,36 @@
                     </div>
                     <hr />
                     <div class="row" id="step-1-selections">
+                        <div class="row" style="text-align: center">
+                            <div class="col-1">#</div>
+                            <div class="col-2">BACKGROUND</div>
+                            <div class="col-4">QUALITIES</div>
+                            <div class="col-2">PRINCIPLE CATEGORY</div>
+                            <div class="col-1">DICE</div>
+                            <div class="col-1">PAGE</div>
+                        </div>
                         <div
                             class="row"
                             *ngFor="let backgroundOption of rolledBackgrounds; index as i"
                             (click)="onBackgroundOptionSelect(backgroundOption)"
+                            style="text-align: center"
                         >
-                            <div class="col-sm-auto">
+                            <div class="col-1">
                                 {{ backgroundOption.number }}
                             </div>
-                            <div class="col-md-auto">
+                            <div class="col-2">
                                 {{ backgroundOption.name }}
                             </div>
-                            <div class="col-md-auto">
+                            <div class="col-4">
                                 {{ backgroundOption.qualities }}
                             </div>
-                            <div class="col-md-auto">
+                            <div class="col-2">
                                 {{ backgroundOption.principleCategory }}
                             </div>
-                            <div class="col-md-auto">
+                            <div class="col-1">
                                 <b>{{ backgroundOption.qualityDiceString }}</b>
                             </div>
-                            <div class="col-sm-auto">
+                            <div class="col-1">
                                 {{ backgroundOption.pageNumber }}
                             </div>
                         </div>
