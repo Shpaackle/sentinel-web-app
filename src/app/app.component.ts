@@ -289,7 +289,7 @@ export class AppComponent {
     }
 
     onBackgroundOptionSelect(selectedBackground: CharacterBackground) {
-        console.log(selectedBackground);
+        // console.log(selectedBackground);
         // this.backgroundOptionSelected.emit(selectedBackground);
 
         this.selectedBackground = selectedBackground;
