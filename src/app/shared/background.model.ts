@@ -10,6 +10,7 @@ export class CharacterBackground {
     public diceText: string;
     public pageNumber: number;
     public diceToAssign: Die[] = [];
+    public qualityDiceString: string;
 
     constructor(backgroundData: {
         num: number;
@@ -30,6 +31,7 @@ export class CharacterBackground {
         this.principleCategory = backgroundData.principle;
         this.diceText = backgroundData.dice_text;
         this.pageNumber = backgroundData.page;
+        this.qualityDiceString = '';
 
         for (let dieSides of backgroundData.power_source_dice) {
             let die = new Die(dieSides);
@@ -39,6 +41,7 @@ export class CharacterBackground {
         for (let dieSides of backgroundData.quality_dice) {
             let die = new Die(dieSides);
             this.diceToAssign.push(die);
+            this.qualityDiceString += die.name + ' ';
         }
     }
 }
