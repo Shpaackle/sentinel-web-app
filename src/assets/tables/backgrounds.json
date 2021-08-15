@@ -2,7 +2,7 @@
     "1": {
         "number": 1,
         "name": "Upper Class",
-        "qualities": ["Fitness", "Persuasion", "any Mental"],
+        "qualityChoices": ["Fitness", "Persuasion", "any Mental"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Responsibility",
         "powerSourceDiceSides": [10, 8, 8],
@@ -14,7 +14,7 @@
     "2": {
         "number": 2,
         "name": "Blank Slate",
-        "qualities": ["any Mental", "any Physical"],
+        "qualityChoices": ["any Mental", "any Physical"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Identity",
         "powerSourceDiceSides": [10, 8, 8],
@@ -26,7 +26,7 @@
     "3": {
         "number": 3,
         "name": "Struggling",
-        "qualities": ["Banter", "Criminal Underworld Info", "any Physical"],
+        "qualityChoices": ["Banter", "Criminal Underworld Info", "any Physical"],
         "qualityDiceSides": [8, 6, 6],
         "principleCategory": "Responsibility",
         "powerSourceDiceSides": [8, 8, 6],
@@ -38,7 +38,7 @@
     "4": {
         "number": 4,
         "name": "Adventurer",
-        "qualities": ["History", "Leadership", "any Physical"],
+        "qualityChoices": ["History", "Leadership", "any Physical"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Expertise",
         "powerSourceDiceSides": [8, 8, 8],
@@ -50,7 +50,7 @@
     "5": {
         "number": 5,
         "name": "Unremarkable",
-        "qualities": ["Close Combat", "any Mental", "any Social"],
+        "qualityChoices": ["Close Combat", "any Mental", "any Social"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Identity",
         "powerSourceDiceSides": [10, 8, 6],
@@ -62,7 +62,7 @@
     "6": {
         "number": 6,
         "name": "Law Enforcement",
-        "qualities": ["Close Combat", "Criminal Underworld Info", "Ranged Combat", "any Mental", "any Social"],
+        "qualityChoices": ["Close Combat", "Criminal Underworld Info", "Ranged Combat", "any Mental", "any Social"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Responsibility",
         "powerSourceDiceSides": [10, 8, 6],
@@ -74,7 +74,7 @@
     "7": {
         "number": 7,
         "name": "Academic",
-        "qualities": ["Leadership", "Self-Discipline", "any Information"],
+        "qualityChoices": ["Leadership", "Self-Discipline", "any Information"],
         "qualityDiceSides": [12, 8],
         "principleCategory": "Expertise",
         "powerSourceDiceSides": [10, 8],
@@ -86,7 +86,7 @@
     "8": {
         "number": 8,
         "name": "Tragic",
-        "qualities": ["Banter", "Close Combat", "Imposing", "any Mental"],
+        "qualityChoices": ["Banter", "Close Combat", "Imposing", "any Mental"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Ideals",
         "powerSourceDiceSides": [10, 10, 6],
@@ -98,7 +98,7 @@
     "9": {
         "number": 9,
         "name": "Performer",
-        "qualities": ["Acrobatics", "Creativity", "Finesse", "any Social"],
+        "qualityChoices": ["Acrobatics", "Creativity", "Finesse", "any Social"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Responsibility",
         "powerSourceDiceSides": [10, 8, 6],
@@ -110,7 +110,7 @@
     "10": {
         "number": 10,
         "name": "Military",
-        "qualities": ["Leadership", "Self-Discipline", "any Physical"],
+        "qualityChoices": ["Leadership", "Self-Discipline", "any Physical"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Ideals",
         "powerSourceDiceSides": [10, 8, 8],
@@ -122,7 +122,7 @@
     "11": {
         "number": 11,
         "name": "Retired",
-        "qualities": ["any Information", "any Social"],
+        "qualityChoices": ["any Information", "any Social"],
         "qualityDiceSides": [10, 10],
         "principleCategory": "Identity",
         "powerSourceDiceSides": [12, 6, 6],
@@ -134,7 +134,7 @@
     "12": {
         "number": 12,
         "name": "Criminal",
-        "qualities": ["Criminal Underworld Info", "Imposing", "any Physical"],
+        "qualityChoices": ["Criminal Underworld Info", "Imposing", "any Physical"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Expertise",
         "powerSourceDiceSides": [8, 8, 8],
@@ -146,7 +146,7 @@
     "13": {
         "number": 13,
         "name": "Medical",
-        "qualities": ["Medicine (Required)", "Finesse", "Science", "Technology", "any Mental"],
+        "qualityChoices": ["Medicine (Required)", "Finesse", "Science", "Technology", "any Mental"],
         "qualityDiceSides": [10, 8, 6],
         "principleCategory": "Expertise",
         "powerSourceDiceSides": [10, 8, 8],
@@ -159,7 +159,7 @@
     "14": {
         "number": 14,
         "name": "Anachronistic",
-        "qualities": ["History", "Magical Lore", "Technology", "any Physical"],
+        "qualityChoices": ["History", "Magical Lore", "Technology", "any Physical"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Esoteric",
         "powerSourceDiceSides": [10, 8, 6],
@@ -171,7 +171,7 @@
     "15": {
         "number": 15,
         "name": "Exile",
-        "qualities": ["Conviction", "Insight", "any Information"],
+        "qualityChoices": ["Conviction", "Insight", "any Information"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Ideals",
         "powerSourceDiceSides": [8, 8, 8],
@@ -183,7 +183,7 @@
     "16": {
         "number": 16,
         "name": "Former Villain",
-        "qualities": ["Conviction", "any Information", "any Social"],
+        "qualityChoices": ["Conviction", "any Information", "any Social"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Expertise",
         "powerSourceDiceSides": [10, 8, 8],
@@ -195,7 +195,7 @@
     "17": {
         "number": 17,
         "name": "Interstellar",
-        "qualities": ["any Information", "any Mental"],
+        "qualityChoices": ["any Information", "any Mental"],
         "qualityDiceSides": [12, 6],
         "principleCategory": "Esoteric",
         "powerSourceDiceSides": [10, 8, 6],
@@ -207,7 +207,7 @@
     "18": {
         "number": 18,
         "name": "Dynasty",
-        "qualities": ["Close Combat", "Fitness", "History", "any Social"],
+        "qualityChoices": ["Close Combat", "Fitness", "History", "any Social"],
         "qualityDiceSides": [10, 10],
         "principleCategory": "Ideals",
         "powerSourceDiceSides": [8, 8, 6],
@@ -219,7 +219,7 @@
     "19": {
         "number": 19,
         "name": "Otherworldly",
-        "qualities": ["Magical Lore", "Otherworldly Mythos", "any Mental"],
+        "qualityChoices": ["Magical Lore", "Otherworldly Mythos", "any Mental"],
         "qualityDiceSides": [10, 8],
         "principleCategory": "Esoteric",
         "powerSourceDiceSides": [10, 6, 6],
@@ -231,7 +231,7 @@
     "20": {
         "number": 20,
         "name": "Created",
-        "qualities": ["Alertness", "Science", "Technology", "any Physical"],
+        "qualityChoices": ["Alertness", "Science", "Technology", "any Physical"],
         "qualityDiceSides": [12, 6],
         "principleCategory": "Expertise",
         "powerSourceDiceSides": [10, 10, 6],
@@ -243,7 +243,7 @@
     "empty": {
         "number": 0,
         "name": "empty",
-        "qualities": ["Qualities Unknown"],
+        "qualityChoices": ["Qualities Unknown"],
         "qualityDiceSides": [4, 4],
         "principleCategory": "None",
         "powerSourceDiceSides": [4],
