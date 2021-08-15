@@ -69,66 +69,17 @@
                             </div>
                             <hr />
                             <div class="container" style="outline-style: dashed; outline-color: darkgreen">
-                                <div class="row justify-content-start" style="margin-bottom: 10px">
+                                <div
+                                    *ngFor="let die of selectedBackground.diceToAssign"
+                                    class="row justify-content-start"
+                                    style="margin-bottom: 10px"
+                                >
                                     <div class="col-sm-auto">
-                                        <app-die-image [die]="selectedBackground.diceToAssign[0]"></app-die-image>
+                                        <app-die-image [die]="die"></app-die-image>
                                     </div>
 
                                     <div class="col-md-auto">
-                                        <app-quality-list
-                                            [assignedDie]="selectedBackground.diceToAssign[0]"
-                                            [jsonData]="selectedBackground.qualities"
-                                        ></app-quality-list>
-                                    </div>
-                                    <div class="col-md-auto">
-                                        <p>
-                                            <i>Selected <b>Quality</b> goes here</i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-start" style="margin-bottom: 10px">
-                                    <div class="col-sm-auto">
-                                        <app-die-image [die]="selectedBackground.diceToAssign[1]"></app-die-image>
-                                    </div>
-
-                                    <div class="col-md-auto">
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-secondary dropdown-toggle"
-                                                type="button"
-                                                id="secondQualityDropdown"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Select a quality to assign a D{{ selectedBackground.diceToAssign[1].sides }}
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="secondQualityDropdown">
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Fitness</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Persuasion</button>
-                                                </li>
-                                                <li>
-                                                    <h5 class="dropdown-header"><b>Any mental</b></h5>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Alertness</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Conviction</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Creativity</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Investigation</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Self-Discipline</button>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <app-quality-list [assignedDie]="die" [jsonData]="selectedBackground.qualities"></app-quality-list>
                                     </div>
                                     <div class="col-md-auto">
                                         <p>
