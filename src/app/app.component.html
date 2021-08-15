@@ -180,7 +180,7 @@
                                     Options for
                                     <!-- change to dropdown? -->
                                     <b
-                                        ><i>{{ firstBackground.name }}</i></b
+                                        ><i>{{ selectedBackground.name }}</i></b
                                     >
                                 </p>
                             </div>
@@ -188,13 +188,13 @@
                             <div class="container" style="outline-style: dashed; outline-color: darkgreen">
                                 <div class="row justify-content-start" style="margin-bottom: 10px">
                                     <div class="col-sm-auto">
-                                        <app-die-image [die]="firstBackground.diceToAssign[0]"></app-die-image>
+                                        <app-die-image [die]="selectedBackground.diceToAssign[0]"></app-die-image>
                                     </div>
 
                                     <div class="col-md-auto">
                                         <app-quality-list
-                                            [assignedDie]="firstBackground.diceToAssign[0]"
-                                            [jsonData]="firstBackground.qualities"
+                                            [assignedDie]="selectedBackground.diceToAssign[0]"
+                                            [jsonData]="selectedBackground.qualities"
                                         ></app-quality-list>
                                     </div>
                                     <div class="col-md-auto">
@@ -205,7 +205,7 @@
                                 </div>
                                 <div class="row justify-content-start" style="margin-bottom: 10px">
                                     <div class="col-sm-auto">
-                                        <app-die-image [die]="firstBackground.diceToAssign[1]"></app-die-image>
+                                        <app-die-image [die]="selectedBackground.diceToAssign[1]"></app-die-image>
                                     </div>
 
                                     <div class="col-md-auto">
@@ -217,7 +217,7 @@
                                                 data-bs-toggle="dropdown"
                                                 aria-expanded="false"
                                             >
-                                                Select a quality to assign a D{{ firstBackground.diceToAssign[1].sides }}
+                                                Select a quality to assign a D{{ selectedBackground.diceToAssign[1].sides }}
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="secondQualityDropdown">
                                                 <li>
