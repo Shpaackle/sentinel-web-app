@@ -30,7 +30,7 @@
                     </div>
                     <hr />
                     <div class="row" id="step-1-selections">
-                        <div class="row" style="text-align: center">
+                        <div class="row" style="text-align: center; font-size: large">
                             <div class="col-1">#</div>
                             <div class="col-2">BACKGROUND</div>
                             <div class="col-4">QUALITIES</div>
@@ -38,11 +38,12 @@
                             <div class="col-1">DICE</div>
                             <div class="col-1">PAGE</div>
                         </div>
+                        <hr />
                         <div
                             class="row"
                             *ngFor="let backgroundOption of rolledBackgrounds; index as i"
                             (click)="onBackgroundOptionSelect(backgroundOption)"
-                            style="text-align: center"
+                            style="text-align: center; font-size: medium"
                         >
                             <div class="col-1">
                                 {{ backgroundOption.number }}
@@ -62,9 +63,10 @@
                             <div class="col-1">
                                 {{ backgroundOption.pageNumber }}
                             </div>
+                            <hr />
                         </div>
                     </div>
-                    <hr />
+
                     <div class="row" *ngIf="selectedBackground.name !== 'empty'">
                         <div class="container" style="outline-width: 3px; outline-color: crimson; outline-style: double">
                             <div class="row" style="margin-top: 20px">
@@ -78,6 +80,9 @@
                             </div>
                             <hr />
                             <div class="container" style="outline-style: dashed; outline-color: darkgreen">
+                                <div class="row">
+                                    <p style="font-size: large; font-style: italic; margin-top: 10px">{{ selectedBackground.backgroundText }}</p>
+                                </div>
                                 <div
                                     *ngFor="let die of selectedBackground.diceToAssign"
                                     class="row justify-content-start"
@@ -97,6 +102,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr />
                             <div
                                 class="container"
                                 style="outline-style: groove; outline-color: darkmagenta"
@@ -134,7 +140,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr />
                             <div class="container" style="outline-style: solid; outline-color: deeppink" id="dice-given-container">
+                                <div class="row">
+                                    <p style="font-size: large; font-style: italic; margin-top: 10px">
+                                        Roll a {{ selectedBackground.diceText }} for power source selection.
+                                    </p>
+                                </div>
                                 <div class="row" style="margin-top: 10px">
                                     <div class="col-md-auto" *ngFor="let die of firstBackground.powerSourceDice">
                                         <app-rolling-die [die]="die"></app-rolling-die>
