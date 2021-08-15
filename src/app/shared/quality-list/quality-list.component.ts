@@ -48,6 +48,15 @@ export class QualityListComponent implements OnInit, OnChanges {
                 this.options.push('Leadership');
                 this.options.push('Persuasion');
                 break;
+            case 'any Information':
+                this.options.push('Criminal Underworld Info');
+                this.options.push('Deep Space Knowledge');
+                this.options.push('History');
+                this.options.push('Magical Lore');
+                this.options.push('Medicine');
+                this.options.push('Otherworldly Mythos');
+                this.options.push('Science');
+                this.options.push('Technology');
 
             default:
                 break;
