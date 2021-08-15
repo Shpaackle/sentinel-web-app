@@ -6,7 +6,7 @@ import { Die } from '../die.model';
     templateUrl: './quality-list.component.html',
     styleUrls: ['./quality-list.component.css'],
 })
-export class QualityListComponent implements OnInit, OnChanges {
+export class QualityListComponent implements OnInit {
     options: string[];
     @Input() qualityChoicesList: string[] = [];
     @Input() assignedDie: Die;
@@ -15,10 +15,6 @@ export class QualityListComponent implements OnInit, OnChanges {
 
     ngOnInit(): void {
         this.options = [];
-    }
-
-    ngOnChanges(): void {
-        this.populateOptionsList();
     }
 
     populateOptionsList() {
@@ -67,6 +63,6 @@ export class QualityListComponent implements OnInit, OnChanges {
     }
 
     logOptions() {
-        console.log(this.options);
+        this.populateOptionsList();
     }
 }
