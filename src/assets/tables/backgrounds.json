@@ -133,7 +133,7 @@
     },
     "12": {
         "num": 12,
-        "name": "criminal",
+        "name": "Criminal",
         "qualities": ["Criminal Underworld Info", "Imposing", "any Physical"],
         "quality_dice": [10, 8],
         "principle": "Expertise",
