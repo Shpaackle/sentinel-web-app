@@ -141,6 +141,8 @@ export class AppComponent {
         this.characterSheet = new CharacterSheet();
 
         this.backgroundSelected = backgrounds[this.backgroundSelectedName];
+
+        this.selectedBackground = this.firstBackground;
     }
 
     onNavigate(feature: string) {
