@@ -239,5 +239,17 @@
         "blurb": "Were you built to be the hero you are today? Perhaps. But it’s undeniable that you were created by someone or something. As a constructed being, you don’t have the same experiences or expectations as similar organic creatures, but you still feel drawn to the role of hero.",
         "background_text": "Assign a D12 and D6 to two of these two qualities:",
         "dice_text": "D10 D10 and D6"
+    },
+    "empty": {
+        "num": 0,
+        "name": "empty",
+        "qualities": ["Qualities Unknown"],
+        "quality_dice": [4, 4],
+        "principle": "None",
+        "power_source_dice": [4],
+        "page": -1,
+        "blurb": "",
+        "background_text": "Choose a background",
+        "dice_text": ""
     }
 }
