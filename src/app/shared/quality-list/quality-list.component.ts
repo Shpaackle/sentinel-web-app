@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Die } from '../die.model';
 
 @Component({
@@ -6,12 +6,16 @@ import { Die } from '../die.model';
     templateUrl: './quality-list.component.html',
     styleUrls: ['./quality-list.component.css'],
 })
-export class QualityListComponent {
+export class QualityListComponent implements OnInit {
     options: string[];
     @Input() qualityChoicesList: string[] = [];
     @Input() assignedDie: Die;
 
     constructor() {}
+
+    ngOnInit() {
+        this.populateOptionsList();
+    }
 
     populateOptionsList() {
         this.options = [];
