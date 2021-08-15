@@ -32,7 +32,7 @@
         "powerSourceDiceSides": [8, 8, 6],
         "pageNumber": 50,
         "blurb": "You’ve been down and out. Perhaps you’ve recovered a bit, but you also might still be stuck in a terrible situation. Low on resources and luck, you did your best, but it often just wasn't good enough.",
-        "backgroundText": "Assign a D10 and D8 to two of these two qualities:",
+        "backgroundText": "Assign a D8 and D6 D6 to three of these two qualities:",
         "diceText": "D8 D8 and D6"
     },
     "4": {
@@ -80,7 +80,7 @@
         "powerSourceDiceSides": [10, 8],
         "pageNumber": 51,
         "blurb": "You work or study in a field of knowledge. You could be a school teacher, professor, researcher, or clergy member. The pursuit of knowledge is very important to you, and possibly what led you to become a hero.",
-        "backgroundText": "Assign a D10 and D8 to two of these two qualities:",
+        "backgroundText": "Assign a D12 and D8 to two of these two qualities:",
         "diceText": "D10 and D8"
     },
     "8": {
@@ -128,7 +128,7 @@
         "powerSourceDiceSides": [12, 6, 6],
         "pageNumber": 52,
         "blurb": "You used to wear the cape and cowl, but hung them up long ago. Now, something has changed, making you feel compelled to once again take up the fight for what is right. You never thought you would be here again.",
-        "backgroundText": "Assign a D10 and D8 to two of these two qualities:",
+        "backgroundText": "Assign a D10 and D10 to two of these two qualities:",
         "diceText": "D12 and D6 D6"
     },
     "12": {
@@ -152,7 +152,7 @@
         "powerSourceDiceSides": [10, 8, 8],
         "pageNumber": 52,
         "blurb": "You were in the business of healing, as a doctor or nurse or maybe even a veterinarian. Given your medical background, you have a lot of experience with treating injuries and diseases.",
-        "backgroundText": "Assign a D10 and D8 to two of these two qualities:",
+        "backgroundText": "Assign a D10 D8 and D6 to three of these two qualities:",
         "diceText": "D10 and D8 D8",
         "qualityRequirement": ["Medicine"]
     },
@@ -201,7 +201,7 @@
         "powerSourceDiceSides": [10, 8, 6],
         "pageNumber": 53,
         "blurb": "You come from beyond the stars! As a newcomer to planet Earth, you may be unaware of strange customs here, but you can still communicate with earthlings, one way or another. You might be an alien, or a human from a civilization lost in space long ago, or something else entirely.",
-        "backgroundText": "Assign a D10 and D8 to two of these two qualities:",
+        "backgroundText": "Assign a D12 and D6 to two of these two qualities:",
         "diceText": "D10 D8 and D6"
     },
     "18": {
