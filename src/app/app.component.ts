@@ -241,7 +241,7 @@ export class AppComponent {
                 'Self Preservation',
                 'Zealot',
             ];
-        case 'identitity':
+        case 'identity':
             return [
                 'Ambition',
                 'Amnesia',
