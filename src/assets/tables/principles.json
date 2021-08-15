@@ -1,9 +1,23 @@
 {
     "Esoteric": {
         "principleCategoryText": "A hero with one of these principles has something more than a little strange about them. Who were you before? Where is your life leading? Are you even human? The weirdness that is your hero story may be commonplace for you (or not!), but those around you are likely to notice something a little differennt, especially when things start going wrong.",
-        "principles": [
+        "principles": 
+          "Destiny':
             {
-                "name": "",
+                "name": "Destiny",
+                "duringRoleplayingText": "Signs and portents lead you towards an inevitable place inm your life. You can always gain some measure of direction when needed.",
+                "minorTwist": "What omen of dire fortune did you just witness?",
+                "majorTwist": "What heinous prophecy just came true?",
+                "principleAbility": {
+                    "icon": "action",
+                    "name": "Principle of Destiny",
+                    "type": "A",
+                    "gameText": "Overcome a situation directly connected to your destiny and use your Max die. You and each  of your allies gain a hero point."
+                }
+            },
+          "Energy/Element":
+{
+  "name": "",
                 "duringRoleplayingText": "",
                 "minorTwist": "",
                 "majorTwist": "",
@@ -13,8 +27,139 @@
                     "type": "",
                     "gameText": ""
                 }
-            }
-        ]
+},
+"Exorcism":
+{"name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Fauna": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Flora": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Future": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Immortality": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Inner Demon": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Magic": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Sea": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Space": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Time Traveler": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
+"Undead": {
+  "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+},
     },
     "Expertise": {
         "principleCategoryText": "text goes here",
