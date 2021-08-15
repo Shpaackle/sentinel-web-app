@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Die } from '../die.model';
 
 @Component({
@@ -54,7 +54,5 @@ export class QualityListComponent {
                 break;
             }
         }
-
-        console.log(this.options);
     }
 }
