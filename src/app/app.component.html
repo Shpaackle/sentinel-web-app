@@ -30,6 +30,30 @@
                     </div>
                     <hr />
                     <div class="row" id="step-1-selections">
+                        <div
+                            class="row"
+                            *ngFor="let backgroundOption of rolledBackgrounds; index as i"
+                            (click)="onBackgroundOptionSelect(backgroundOption)"
+                        >
+                            <div class="col-sm-auto">
+                                {{ backgroundOption.number }}
+                            </div>
+                            <div class="col-md-auto">
+                                {{ backgroundOption.name }}
+                            </div>
+                            <div class="col-md-auto">
+                                {{ backgroundOption.qualities }}
+                            </div>
+                            <div class="col-md-auto">
+                                {{ backgroundOption.principleCategory }}
+                            </div>
+                            <div class="col-md-auto">
+                                <b>{{ backgroundOption.qualityDiceString }}</b>
+                            </div>
+                            <div class="col-sm-auto">
+                                {{ backgroundOption.pageNumber }}
+                            </div>
+                        </div>
                         <div class="accordion accordion-flush" id="backgroundSelections">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
