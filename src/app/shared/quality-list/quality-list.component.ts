@@ -62,5 +62,11 @@ export class QualityListComponent implements OnInit, OnChanges {
                 break;
             }
         }
+
+        console.log(this.options);
+    }
+
+    logOptions() {
+        console.log(this.options);
     }
 }
