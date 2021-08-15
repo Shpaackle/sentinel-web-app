@@ -13,6 +13,8 @@ import backgrounds from '../assets/tables/backgrounds.json';
 export class AppComponent {
     // @Output() backgroundOptionSelected = new EventEmitter<CharacterBackground>();
 
+    private emptyBackground = new CharacterBackground(backgrounds['empty']);
+
     title = 'sentinel-web-app';
     loadedFeature = 'creation';
     firstStep: CreationStep;
@@ -134,7 +136,10 @@ export class AppComponent {
             [],
         );
 
-        this.firstBackground = new CharacterBackground(backgrounds['1']);
+        this.emptyBackground = new CharacterBackground(backgrounds['empty']);
+
+        // this.firstBackground = new CharacterBackground(backgrounds['1']);
+        this.firstBackground = this.emptyBackground;
         this.secondBackground = new CharacterBackground(backgrounds['2']);
         this.thirdBackground = new CharacterBackground(backgrounds['3']);
 
@@ -182,6 +187,7 @@ export class AppComponent {
         this.thirdBackground = this.rolledBackgrounds[2];
 
         this.backgroundSelected = backgrounds[dice_sum.toString()];
+        this.selectedBackground = this.emptyBackground;
     }
 
     getPrinciplesFromCategory(principle: string): string[] {
