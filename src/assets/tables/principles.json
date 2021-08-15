@@ -1,0 +1,87 @@
+{
+    "Esoteric": {
+        "principleCategoryText": "text goes here",
+        "principles": [
+            {
+                "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+            }
+        ]
+    },
+    "Expertise": {
+        "principleCategoryText": "text goes here",
+        "principles": [
+            {
+                "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+            }
+        ]
+    },
+    "Ideals": {
+        "principleCategoryText": "text goes here",
+        "principles": [
+            {
+                "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+            }
+        ]
+    },
+    "Identity": {
+        "principleCategoryText": "text goes here",
+        "principles": [
+            {
+                "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+            }
+        ]
+    },
+    "Responsibility": {
+        "principleCategoryText": "text goes here",
+        "principles": [
+            {
+                "name": "",
+                "duringRoleplayingText": "",
+                "minorTwist": "",
+                "majorTwist": "",
+                "principleAbility": {
+                    "icon": "",
+                    "name": "",
+                    "type": "",
+                    "gameText": ""
+                }
+            }
+        ]
+    }
+}
