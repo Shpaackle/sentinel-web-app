@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CharacterBackground } from './shared/background.model';
 import { CharacterSheet } from './shared/character-sheet.model';
 import { CreationStep } from './shared/creation-step.model';
@@ -11,6 +11,8 @@ import backgrounds from '../assets/tables/backgrounds.json';
     styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+    // @Output() backgroundOptionSelected = new EventEmitter<CharacterBackground>();
+
     title = 'sentinel-web-app';
     loadedFeature = 'creation';
     firstStep: CreationStep;
@@ -276,5 +278,12 @@ export class AppComponent {
         return background;
 
         // return backgroundsTable[roll];
+    }
+
+    onBackgroundOptionSelect(selectedBackground: CharacterBackground) {
+        console.log(selectedBackground);
+        // this.backgroundOptionSelected.emit(selectedBackground);
+
+        this.selectedBackground = selectedBackground;
     }
 }
