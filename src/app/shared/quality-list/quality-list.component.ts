@@ -8,7 +8,7 @@ import { Die } from '../die.model';
 })
 export class QualityListComponent implements OnInit, OnChanges {
     options: string[];
-    @Input() jsonData: string[] = [];
+    @Input() qualityChoicesList: string[] = [];
     @Input() assignedDie: Die;
 
     constructor() {}
@@ -23,7 +23,7 @@ export class QualityListComponent implements OnInit, OnChanges {
 
     populateOptionsList() {
         this.options = [];
-        for (let optionName of this.jsonData) {
+        for (let optionName of this.qualityChoicesList) {
             this.options.push(optionName);
             switch (optionName) {
             case 'any Mental':
