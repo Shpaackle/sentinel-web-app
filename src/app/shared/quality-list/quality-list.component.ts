@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Die } from '../die.model';
 
 @Component({
@@ -6,19 +6,23 @@ import { Die } from '../die.model';
     templateUrl: './quality-list.component.html',
     styleUrls: ['./quality-list.component.css'],
 })
-export class QualityListComponent implements OnInit {
-    options = [];
+export class QualityListComponent implements OnInit, OnChanges {
+    options: string[];
     @Input() jsonData: string[] = [];
     @Input() assignedDie: Die;
 
     constructor() {}
 
     ngOnInit(): void {
-        // this.options = [];
+        this.options = [];
+    }
+
+    ngOnChanges(): void {
         this.populateOptionsList();
     }
 
     populateOptionsList() {
+        this.options = [];
         for (let optionName of this.jsonData) {
             this.options.push(optionName);
             switch (optionName) {
