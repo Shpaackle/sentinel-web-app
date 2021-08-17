@@ -1,232 +1,780 @@
 {
     "Esoteric": {
-        "principleCategoryText": "A hero with one of these principles has something more than a little strange about them. Who were you before? Where is your life leading? Are you even human? The weirdness that is your hero story may be commonplace for you (or not!), but those around you are likely to notice something a little differennt, especially when things start going wrong.",
-        "principles": 
-          "Destiny':
-            {
-                "name": "Destiny",
-                "duringRoleplayingText": "Signs and portents lead you towards an inevitable place inm your life. You can always gain some measure of direction when needed.",
-                "minorTwist": "What omen of dire fortune did you just witness?",
-                "majorTwist": "What heinous prophecy just came true?",
-                "principleAbility": {
-                    "icon": "action",
-                    "name": "Principle of Destiny",
-                    "type": "A",
-                    "gameText": "Overcome a situation directly connected to your destiny and use your Max die. You and each  of your allies gain a hero point."
-                }
-            },
-          "Energy/Element":
-{
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Exorcism":
-{"name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Fauna": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Flora": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Future": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Immortality": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Inner Demon": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Magic": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Sea": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Space": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Time Traveler": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
-"Undead": {
-  "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
-},
+        "Destiny": {
+            "name": "Principle of Destiny",
+            "duringRoleplayingText": "Signs and portents lead you towards an inevitable place in your life. You can always gain some measure of direction when needed.",
+            "minorTwist": "What omen of dire fortune did you just witness?",
+            "majorTwist": "What heinous prophecy just came true?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Destiny",
+                "type": "A",
+                "gameText": "Overcome a situation directly connected to your destiny and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Energy/Element": {
+            "name": "Principle of [Energy/Element]",
+            "duringRoleplayingText": "You have an affinity to or a love of [energy/element]. You can interact with that [energy/element] with ease.",
+            "minorTwist": "What other energy/element is currently causing your powers to go on the fritz?",
+            "majorTwist": "What source of energy/element is currently dampening all your powers?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of [Energy/Element]",
+                "type": "A",
+                "gameText": "Overcome a challenge involving [energy/element] and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Exorcism": {
+            "name": "Principle of Exorcism",
+            "duringRoleplayingText": "You can detect the subtle hints of the influence of other realms in an event.",
+            "minorTwist": "What is (literally or figuratively) coming back to haunt you?",
+            "majorTwist": "What has been allowed to enter this world?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Exorcism",
+                "type": "A",
+                "gameText": "Overcome entitities or elements from another dimension and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Fauna": {
+            "name": "Principle of Fauna",
+            "duringRoleplayingText": "Your innate animalistic nature allows you to identify any type of non-sapient animal life and determine its origin in broad terms, such as Earth, alien, etc.",
+            "minorTwist": "How did your primal nature get the better of you?",
+            "majorTwist": "What is the only way the animal within can be restrained?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Fauna",
+                "type": "A",
+                "gameText": "Overcome with the local fauna and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Flora": {
+            "name": "Principle of Flora",
+            "duringRoleplayingText": "You can identify any type of plant life and determine its origin in broad terms, such as Earth, alien, etc.",
+            "minorTwist": "What grows out of your control?",
+            "majorTwist": "How is nature reclaiming somethign important?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Flora",
+                "type": "A",
+                "gameText": "Overcome with the aid of local flore and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Future": {
+            "name": "Principle of the Future",
+            "duringRoleplayingText": "You have visions or knowledge of things yet to come.",
+            "minorTwist": "What unintended ripple did your actions have?",
+            "majorTwist": "What ripple effect now threatens the future as you know it?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Future",
+                "type": "A",
+                "gameText": "Overcome using your knowledge of possible futures and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Immortality": {
+            "name": "Principle of Immortality",
+            "duringRoleplayingText": "You do not age and will not be affected by mundane ailments.",
+            "minorTwist": "You take the long view of things. How does that cause you to be too slow?",
+            "majorTwist": "What important attachment must you shed?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Immortality",
+                "type": "A",
+                "gameText": "Overcome using your knowledge of possible futures and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Inner Demon": {
+            "name": "Principle of the Inner Demon",
+            "duringRoleplayingText": "You have a darkness in you that you strive to keep suppressed. You can reach out to your dark side to connect with similar forces.",
+            "minorTwist": "What sinister act comes from tapping into your dark side?",
+            "majorTwist": "What havoc does your dark side inflict as you allow it to take control?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Inner Demon",
+                "type": "A",
+                "gameText": "Tap into your dark psyche to Overcome a problem and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Magic": {
+            "name": "Principle of Magic",
+            "duringRoleplayingText": "You are attuned to an otherworldly force, and can feel the mystical energies of the area.",
+            "minorTwist": "What weird cause is now following you around?",
+            "majorTwist": "What mystical backlash has changed your life?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Magic",
+                "type": "A",
+                "gameText": "Overcome against a mystical force and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Sea": {
+            "name": "Principle of the Sea",
+            "duringRoleplayingText": "You can speak to aquatic creatures and breathe underwater.",
+            "minorTwist": "What challenge does the surface world pose for you?",
+            "majorTwist": "What disaster is incoming as the sea comes calling?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Sea",
+                "type": "A",
+                "gameText": "Overcome a situation while underwater and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Space": {
+            "name": "Principle of Space",
+            "duringRoleplayingText": "You can survive in the vacuum of space without additional equipment.",
+            "minorTwist": "Who can hear you scream?",
+            "majorTwist": "What caused you to drift off into the unkown?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Space",
+                "type": "A",
+                "gameText": "Overcome while in space (or conditions similar to space) and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Time Traveler": {
+            "name": "Principle of the Time Traveler",
+            "duringRoleplayingText": "You are far from your own time and are often unsure how to act in this time. You have an innate sense for when time is not quite right in the era you're in.",
+            "minorTwist": "What detail of this era did you not previously know about?",
+            "majorTwist": "What effects are happening as you discorporate in time?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Time Traveler",
+                "type": "A",
+                "gameText": "Overcome a problem using knowledge from your home era and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Undead": {
+            "name": "Principle of the Undead",
+            "duringRoleplayingText": "You are 'living challenged'. You can still be hurt and damaged, but you can ignore many of the afflictions that bother the living.",
+            "minorTwist": "How did your undead nature unnerve those around you?",
+            "majorTwist": "How are you risking your connection to the living world with what happened?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Undead",
+                "type": "A",
+                "gameText": "Overcome a situation where your undead nature comes in handy and use your Max die. You and each of your allies gain a hero point."
+            }
+        }
     },
     "Expertise": {
-        "principleCategoryText": "text goes here",
-        "principles": [
-            {
-                "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
+        "Clockwork": {
+            "name": "Principle of Clockwork",
+            "duringRoleplayingText": "You are good at understand how pieces operate in tandem and can identify flaws in ordered systems.",
+            "minorTwist": "What tool just broke?",
+            "majorTwist": "What faraway location are your tools now occupying?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Clockwork",
+                "type": "A",
+                "gameText": "Overcome a complex problem with a simple tool and use your Max die. You and each of your allies gain a hero point."
             }
-        ]
+        },
+        "Gearhead": {
+            "name": "Principle of the Gearhead",
+            "duringRoleplayingText": "You always know the general state of repair or function of an item of technology, whether it’s a simple toaster or an alien orbital defense system.",
+            "minorTwist": "What mechanical device just shorted out?",
+            "majorTwist": "What machine just went terribly off the rails?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Gearhead",
+                "type": "A",
+                "gameText": "Overcome a technological challenge and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "History": {
+            "name": "Principle of History",
+            "duringRoleplayingText": "You have many contacts and references in the archaeological, historical, and anthropological fields.",
+            "minorTwist": "How did your old-timeyness cause an issue?",
+            "majorTwist": "What ancient force is now making itself known in the present?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of History",
+                "type": "A",
+                "gameText": "Overcome a situation involving archaeology, history, or puzzle-solving and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Indestructible": {
+            "name": "Principle of the Indestructible",
+            "duringRoleplayingText": "You ignore damage from unpowered close-combat weapons and attacks, such as clubs and non-powered fists, or basic ranged attacks, such as slings and arrows.",
+            "minorTwist": "What goes wrong with your defenses?",
+            "majorTwist": "Who gets hurt other than you as a result of you not being able to take damage?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Indestructible",
+                "type": "A",
+                "gameText": "Overcome in a situation where you charge headlong into danger and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Lab": {
+            "name": "Principle of the Lab",
+            "duringRoleplayingText": "You have nearly unlimited access to a dedicated research area, and are at home there.",
+            "minorTwist": "What did you make a detour to observe and sample for later experiments?",
+            "majorTwist": "Something's gone very wrong at the lab; what was it?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Lab",
+                "type": "A",
+                "gameText": "Overcome while in a familiar workspace or when you have ample research time. Use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Mastery": {
+            "name": "Principle of Mastery",
+            "duringRoleplayingText": "You have thoroughly studied your own powers and are proud of your mastery of them. You understans a good deal about the metaphysics of your powers.",
+            "minorTwist": "How did your powers fail you in the moment?",
+            "majorTwist": "What side effects are you suffering from your powers?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Mastery",
+                "type": "A",
+                "gameText": "Overcome in a situation that uses your powers in a new way and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Mentor": {
+            "name": "Principle of the Mentor",
+            "duringRoleplayingText": "It is important to you to share your knowledge and experience with less-weathered heroes. Everyone grants you some measure of respect for your wisdom.",
+            "minorTwist": "Which whippersnapper just showed you up?",
+            "majorTwist": "What has just proven that you're too behind the times?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Mentor",
+                "type": "A",
+                "gameText": "Overcome a challenge that someone else younger already tried and failed. Use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Powerless": {
+            "name": "Principle of the Powerless",
+            "duringRoleplayingText": "You value training and hard work over enhanced abilities. You understand how to get things done without powers and how to exploit flaws in powered individuals.",
+            "minorTwist": "What temporary injury did you just suffer?",
+            "majorTwist": "What more serious injury did you just suffer?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Powerless",
+                "type": "A",
+                "gameText": "Use your knowledge of the limitations of super powers in an Overcome action and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Science": {
+            "name": "Principle of Science",
+            "duringRoleplayingText": "You are up to date on and understand most modern scientific theories and research and can quote from them during conversations.",
+            "minorTwist": "What were the surprising effects of leveraging that scientific principle in this situation?",
+            "majorTwist": "Oh heck! What just blew up?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Science",
+                "type": "A",
+                "gameText": "Overcome while applying specific scientific principles. Use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Speed": {
+            "name": "Principle of Speed",
+            "duringRoleplayingText": "You're fast, and you don't like to waste time. You like to be on your way as quickly as possible.",
+            "minorTwist": "What physical drawbacks do you suffer from going too fast?",
+            "majorTwist": "What critical detail did you speed by earlier that is now coming back to haunt you?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Speed",
+                "type": "I",
+                "gameText": "When you successfully Overcome, you may end up anywhere in the current environment. You and each of your allies gain a hero point."
+            }
+        },
+        "Stealth": {
+            "name": "Principle of Stealth",
+            "duringRoleplayingText": "You always know the most efficient method to enter or leave a location.",
+            "minorTwist": "What evidence of your presence did you just leave behind?",
+            "majorTwist": "What just happened that identified you as an obvious threat?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Stealth",
+                "type": "A",
+                "gameText": "Overcome to infiltrate somewhere or avoid detection and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Strength": {
+            "name": "Principle of Strength",
+            "duringRoleplayingText": "You are very strong, so you must be careful to not crush delivate things. You do not need to roll to perform mundane acts of great strength.",
+            "minorTwist": "What just broke?",
+            "majorTwist": "Who just broke?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Strength",
+                "type": "A",
+                "gameText": "Overcome using brute force and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Tactician": {
+            "name": "Principle of the Tactician",
+            "duringRoleplayingText": "You are constantly assessing the situation, making plans and backup plans, and then reassessing situation.",
+            "minorTwist": "What one variable did your plan not account for?",
+            "majorTwist": "What major threat is revealed that invalidates all your plans?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Tactician",
+                "type": "A",
+                "gameText": "Overcome when you flashback to how you prepared for this exact situation. Use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Whispers": {
+            "name": "Principle of Whispers",
+            "duringRoleplayingText": "You hear a voice in your head that no one else hears. That voice tells you things, which might be true or false, but the voice certainly seems to know a lot.",
+            "minorTwist": "How did the voice in your head just distract you?",
+            "majorTwist": "What is the voice demanding of you now?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Whispers",
+                "type": "A",
+                "gameText": "Overcome against a challenge that involves information that you have no real way of knowing and use your Max die. You and each of your allies gain a hero point."
+            }
+        }
     },
     "Ideals": {
-        "principleCategoryText": "text goes here",
-        "principles": [
-            {
-                "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
+        "Chaos": {
+            "name": "Principle of Chaos",
+            "duringRoleplayingText": "You are an unpredictable free spirit. Even towering intellects can't predict what you will do next.",
+            "minorTwist": "How did you fall in line in order to get something done?",
+            "majorTwist": "What has caused you to become predictable and stale?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Chaos",
+                "type": "A",
+                "gameText": "Overcome a situation in a way that is truly unpredictable and use your Max die. You and each of your allies gain a hero point."
             }
-        ]
+        },
+        "Compassion": {
+            "name": "Principle of Compassion",
+            "duringRoleplayingText": "You are an empathetic person. You feel the suffering of others around you.",
+            "minorTwist": "What overwhelming injustice causes you extra pain?",
+            "majorTwist": "How will you handle disconnecting from humanity?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Compassion",
+                "type": "A",
+                "gameText": "Overcome to connect with an individual on a personal level and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Defender": {
+            "name": "Principle of the Defender",
+            "duringRoleplayingText": "You will put yourself in harm's way to defend another without a second thought.",
+            "minorTwist": "How do your actions put you in more danger than before?",
+            "majorTwist": "What great sacrifice did you just make to succeed?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Defender",
+                "type": "A",
+                "gameText": "Overcome a situation that requires you to hold the line and use your Max die OR use your Mid die and Defend with your Min die. You and each of your allies gain a hero point."
+            }
+        },
+        "Dependence": {
+            "name": "Principle of Dependence",
+            "duringRoleplayingText": "You are reliant on [something] and cannot normally function without it.",
+            "minorTwist": "How did the object of your dependence get damaged or lost?",
+            "majorTwist": "How is your dependence preventing you from functioning as a hero?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Dependence",
+                "type": "A",
+                "gameText": "Overcome in a situation that the object of your dependence was made for. Use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Equality": {
+            "name": "Principle of Equality",
+            "duringRoleplayingText": "You have a keen sense of social status and can spot any situation where people are treated unfairly.",
+            "minorTwist": "Who is in danger that you just spotted?",
+            "majorTwist": "What will you sacrifice to protect the downtrodden?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Equality",
+                "type": "A",
+                "gameText": "Overcome to protect the rights of the underprivileged and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Great Power": {
+            "name": "Principle of Great Power",
+            "duringRoleplayingText": "Your powers are so strong they can even scare you sometimes, but you work hard to control them. You can wield those powers to intimidate others.",
+            "minorTwist": "How do you restrain yourself from unleashing your full power?",
+            "majorTwist": "What major damage do you inflict in the process of saving the day?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Great Power",
+                "type": "A",
+                "gameText": "Overcome a situation using one of your highest rated powers and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Hero": {
+            "name": "Principle of the Hero",
+            "duringRoleplayingText": "Because of your abilities, you have a calling to protect others.",
+            "minorTwist": "Your immediate need to help someone else causes you to drop the ball in your personal life. What was it?",
+            "majorTwist": "You're given an ultimatum between your life as a hero and something else you value. What do you give up?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Hero",
+                "type": "A",
+                "gameText": "Overcome in a situationYou and each of your allies gain a hero point."
+            }
+        },
+        "Honor": {
+            "name": "Principle of Honor",
+            "duringRoleplayingText": "You are governed by a strict code of conduct. Even under coercion, you will not compromise your ideals.",
+            "minorTwist": "Your honor has been challenged. How will you answer?",
+            "majorTwist": "Will you choose your honor; or your life?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Honor",
+                "type": "A",
+                "gameText": "Overcome a situation to maintain your code of honor and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Justice": {
+            "name": "Principle of Justice",
+            "duringRoleplayingText": "You are always aware of acts of injustice in your environment and those who have committed them.",
+            "minorTwist": "How are you taking extra time to show yourself as a shining example of justice?",
+            "majorTwist": "How do you unnerve your allies in the single-minded pursuit of justice?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Justice",
+                "type": "A",
+                "gameText": "Overcome to stop an act of injustice in progress and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Liberty": {
+            "name": "Principle of Liberty",
+            "duringRoleplayingText": "You believe strongly in freedom and always side with the oppressed. You can never truly be mentally restrained.",
+            "minorTwist": "How do you become temporarily trapped?",
+            "majorTwist": "How have you become a prisoner yourself?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Liberty",
+                "type": "A",
+                "gameText": "Overcome in a situation where you are restricted or bound and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Order": {
+            "name": "Principle of Order",
+            "duringRoleplayingText": "You believe in organization and concordance. You always keep your head in the face of chaos.",
+            "minorTwist": "What element of disorder causes your plan to fall apart?",
+            "majorTwist": "How is your ordered existence ruined by chaos?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Order",
+                "type": "A",
+                "gameText": "Overcome a challenge where you can organize other people. Use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Self Preservation": {
+            "name": "Principle of Self Preservation",
+            "duringRoleplayingText": "You value your own safety more than most others in your line of work. You will never be caught fully unaware in a situation where your life is at stake.",
+            "minorTwist": "Who suffers because of your hesitation?",
+            "majorTwist": "Are you willing to lay down your life to save others?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Self Preservation",
+                "type": "A",
+                "gameText": "Overcome to get yourself out of immediate danger and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Zealot": {
+            "name": "Principle of the Zealot",
+            "duringRoleplayingText": "Your will is indomitable, and your beliefs govern your actions.",
+            "minorTwist": "Who suffered extra because of your zealous persecution?",
+            "majorTwist": "What has your faith called on you to do that no one else will understand?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Zealot",
+                "type": "A",
+                "gameText": "Overcome a situation that tests your faith and use your Max die. You and each of your allies gain a hero point."
+            }
+        }
     },
     "Identity": {
-        "principleCategoryText": "text goes here",
-        "principles": [
-            {
-                "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
+        "Ambition": {
+            "name": "Principle of Ambition",
+            "duringRoleplayingText": "There is something you want, and you strive towards achieving your goals, no matter the cost. You see paths to victory that no one else will.",
+            "minorTwist": "How is the pursuit of your goals getting in the way of being a hero in this situation?",
+            "majorTwist": "What did you just pass up or miss that could have helped you achieve your biggest goal at last?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Ambition",
+                "type": "A",
+                "gameText": "Overcome a situation where someone else has given you a bonus from a Boost and use your Max die. You and each of your allies gain a hero point."
             }
-        ]
+        },
+        "Amnesia": {
+            "name": "Principle of Amnesia",
+            "duringRoleplayingText": "Your past is lost to you or otherwise obscured. Others have immense difficulty in keeping track of you.",
+            "minorTwist": "You have a flash of your former life that momentarily distracted you — what was it?",
+            "majorTwist": "A shocking detail of your past changes the current situation — how does it affect the scene?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Amnesia",
+                "type": "A",
+                "gameText": "Overcome a situation where a completely fresh perspective is useful and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Detachment": {
+            "name": "Principle of Detachment",
+            "duringRoleplayingText": "You are detached from emotional situations and always keep your cool.",
+            "minorTwist": "Which hero or supporting character have you just alienated with your distant behavior?",
+            "majorTwist": "How have you withdrawn from the current situation to cope?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Detachment",
+                "type": "A",
+                "gameText": "Overcome a challenge related to duress or fear and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Discovery": {
+            "name": "Principle of Discovery",
+            "duringRoleplayingText": "You are eager to learn new things at any cost. You can rattle off data about newly discovered concepts and ideas.",
+            "minorTwist": "What new discovery causes you to reconsider what you are doing?",
+            "majorTwist": "What new discovery must you keep hidden at all costs?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Discovery",
+                "type": "A",
+                "gameText": "When you’re on the forefront in making a discovery or invention and take an Overcome action to further your knowledge, use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Levity": {
+            "name": "Principle of Levity",
+            "duringRoleplayingText": "You keep your positive outlook even when all hope is lost. Your spirit is nearly impossible to break.",
+            "minorTwist": "Who did you offend by making light at the wrong time?",
+            "majorTwist": "What has occurred to finally break your good spirits?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Levity",
+                "type": "A",
+                "gameText": "Overcome a dire situation where your jokes prevent demoralization and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Loner": {
+            "name": "Principle of the Loner",
+            "duringRoleplayingText": "You’re the best at what you do, as long as no one else sees you do it. You can always find your own path.",
+            "minorTwist": "Now that you’re separated from your team, how will you get back?",
+            "majorTwist": "How do you alienate the rest of your team with your loner tendencies?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Loner",
+                "type": "A",
+                "gameText": "Overcome when doing something different from the rest of your team and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Nomad": {
+            "name": "Principle of the Nomad",
+            "duringRoleplayingText": "You are far away from home, but you’re used to living on the road. You know how to get by on the run.",
+            "minorTwist": "What problem does your lack of attachments cause?",
+            "majorTwist": "How have you been lost from your new home?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Nomad",
+                "type": "A",
+                "gameText": "Overcome a situation where you can apply lessons from the road and use you Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Peace": {
+            "name": "Principle of Peace",
+            "duringRoleplayingText": "You believe that the ultimate goal of your mission is peace, and that violence is usually not the answer. While not necessarily a pacifist, you can almost always come up with a non-violent solution to problems.",
+            "minorTwist": "What causes you to lose your calm?",
+            "majorTwist": "What major issue do you create with your team when you refuse to engage in violence?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Peace",
+                "type": "A",
+                "gameText": "Overcome a situation with serenity instead of violence and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Rage": {
+            "name": "Principle of Rage",
+            "duringRoleplayingText": "They don’t like you when you’re angry. Your fury is intimidating to many.",
+            "minorTwist": "What did your anger just mess up?",
+            "majorTwist": "Who have you thoroughly alienated with your outbursts?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Rage",
+                "type": "A",
+                "gameText": "Overcome a situation where you can channel your rage for good and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Savagery": {
+            "name": "Principle of Savagery",
+            "duringRoleplayingText": "Your wild instincts stay with you and guide your actions. You can survive in the wild and resist the trappings of civilization.",
+            "minorTwist": "Who did you harm with your rampage?",
+            "majorTwist": "What major act of collateral damage are you responsible for?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Savagery",
+                "type": "A",
+                "gameText": "Overcome a situation that taps into your primal nature and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Split": {
+            "name": "Principle of the Split",
+            "duringRoleplayingText": "You have two (or more) entirely separate facets to your personality. As a result you can look at a situation from many different angles.",
+            "minorTwist": "What perspective ended up being the wrong one for the situation?",
+            "majorTwist": "What inner conflict has completely thrown you off?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Split",
+                "type": "A",
+                "gameText": "Overcome a situation that benefits from having a completely new outlook and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Spotless Mind": {
+            "name": "Principle of the Spotless Mind",
+            "duringRoleplayingText": "You have a state of blissful ignorance. Grudges, entanglements, and commitments slide right off you.",
+            "minorTwist": "What slid off you previously that could have been useful right now?",
+            "majorTwist": "What major thing did you forget and why did forgetting it make your situation much worse?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Spotless Mind",
+                "type": "A",
+                "gameText": "Overcome a situation where being free of the past is useful and use your Max die. You and each of your allies gain a hero point."
+            }
+        }
     },
     "Responsibility": {
-        "principleCategoryText": "text goes here",
-        "principles": [
-            {
-                "name": "",
-                "duringRoleplayingText": "",
-                "minorTwist": "",
-                "majorTwist": "",
-                "principleAbility": {
-                    "icon": "",
-                    "name": "",
-                    "type": "",
-                    "gameText": ""
-                }
+        "Business": {
+            "name": "Principle of Business",
+            "duringRoleplayingText": "You are an entrepreneur — running a business is an important part of your life and your identity. You have a base of operations that you can rely on for support.",
+            "minorTwist": "You’re always looking at the bigger picture. How does that cause friction in the moment with your team?",
+            "majorTwist": "Your business interests are in danger. Where are your priorities, truly?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Business",
+                "type": "A",
+                "gameText": "Overcome in a situation related to the field of your business or knowing locals. Use your Max die. You and each of your allies gain a hero point."
             }
-        ]
+        },
+        "Debtor": {
+            "name": "Principle of the Debtor",
+            "duringRoleplayingText": "You owe someone or something more than you can ever repay. You know plenty of folks willing to give out favors, but it’ll cost you later.",
+            "minorTwist": "What potential source of wealth looks mighty tempting right about now?",
+            "majorTwist": "Whp has come to collect?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Debtor",
+                "type": "A",
+                "gameText": "Overcome in a situation related to repaying a debt and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Detective": {
+            "name": "Principle of the Detective",
+            "duringRoleplayingText": "You can always tell when an important piece of information is being left out or obscured, though you might not know exactly what it is.",
+            "minorTwist": "What important clue did you miss?",
+            "majorTwist": "What major secret was just revealed that you would rather have stayed hidden?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Detective",
+                "type": "A",
+                "gameText": "Overcome to learn hidden information and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Double Agent": {
+            "name": "Principle of the Double Agent",
+            "duringRoleplayingText": "You are loyal to more than one organization, possibly working at cross purposes. You always cover your tracks.",
+            "minorTwist": "What were you just forced to do that seemed strange to your current allies?",
+            "majorTwist": "Will you shatter your trust with your current allies or forfeit what your other allegiance offers?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Double Agent",
+                "type": "A",
+                "gameText": "Overcome in a situation where you can draw upon resources from your other organization and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Everyman": {
+            "name": "Principle of the Everyman",
+            "duringRoleplayingText": "You are just a normal person who has had power thrust upon them or are otherwise in over your head. You don’t have the same sense of lofty purpose as other heroes. When needed, you can make yourself just another face in the crowd.",
+            "minorTwist": "Which hero did you make look good at the expense of yourself?",
+            "majorTwist": "How are you utterly and totally out of your league?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Everyman",
+                "type": "A",
+                "gameText": "Overcome when using a bonus made by another hero and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Family": {
+            "name": "Principle of Family",
+            "duringRoleplayingText": "Your family is an important part of your life. You have relatives in a wide range of fields that you can call upon.",
+            "minorTwist": "Which member of your family just compromised your mission?",
+            "majorTwist": "What do you have to give up in your heroic life for the sake of your family?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Family",
+                "type": "A",
+                "gameText": "Overcome in a situation where you have been given advice from a family member and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Mask": {
+            "name": "Principle of the Mask",
+            "duringRoleplayingText": "It is vitally important that you hide your true identity. You have a career that allows you to slip between identities when necessary.",
+            "minorTwist": "What clue about your real identity did you leave behind?",
+            "majorTwist": "Who from your civilian life is now in imminent danger?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Mask",
+                "type": "A",
+                "gameText": "Overcome using knowledge from your civilian life and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Sidekick": {
+            "name": "Principle of the Sidekick",
+            "duringRoleplayingText": "You always seem to be where the trouble is; you’re never too far away when a crisis strikes the group you sidekick for.",
+            "minorTwist": "Which hero has to rescue you from your current predicament?",
+            "majorTwist": "What serious lesson that you ignored is now getting you into big trouble?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Sidekick",
+                "type": "A",
+                "gameText": "Overcome a challenge that has already flummoxed a more senior teammate and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Team": {
+            "name": "Principle of the Team",
+            "duringRoleplayingText": "Your heroic team takes up a significant portion of your life and you have an official position in that team. Civilian authorities will recognize your status in the team.",
+            "minorTwist": "What embarrassment did you just cause as a representative of your team?",
+            "majorTwist": "What major sanctions will you suffer as a result of your actions?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Team",
+                "type": "A",
+                "gameText": "Overcome by using your status as an official representative and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Underworld": {
+            "name": "Principle of the Underworld",
+            "duringRoleplayingText": "You have a variety of contacts from the criminal underworld and organized crime.",
+            "minorTwist": "What shady detail causes others to distrust you?",
+            "majorTwist": "Are you guilty of what you’re being arrested for?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Underworld",
+                "type": "A",
+                "gameText": "Overcome a problem related to your knowledge of the criminal underworld or using one of your contacts and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Veteran": {
+            "name": "Principle of the Veteran",
+            "duringRoleplayingText": "You remain clear-headed under intense combat situations.",
+            "minorTwist": "What affected you emotionally about the current conflict?",
+            "majorTwist": "How are you withdrawing from the current conflict?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of the Veteran",
+                "type": "A",
+                "gameText": "Overcome a tactical challenge using knowledge of a previous conflict and use your Max die. You and each of your allies gain a hero point."
+            }
+        },
+        "Youth": {
+            "name": "Principle of Youth",
+            "duringRoleplayingText": "You have an innocent and cheerful outlook on most things, based on your upbeat personality and general lack of experience. You can slip into many situations that adults would have trouble with.",
+            "minorTwist": "Who has been put out by your overconfidence?",
+            "majorTwist": "What person that you would hate to let down is now very disappointed in you?",
+            "principleAbility": {
+                "icon": "overcome",
+                "name": "Principle of Youth",
+                "type": "A",
+                "gameText": "Overcome a situation where your age or size is an asset and use your Max die. You and each of your allies gain a hero point."
+            }
+        }
     }
 }
