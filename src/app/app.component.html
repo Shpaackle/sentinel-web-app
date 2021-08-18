@@ -138,10 +138,13 @@
                                         </div>
                                     </div>
                                     <div class="col-md-auto">
-                                        <p>
-                                            {{ selectedPrincipleName }}
+                                        <p *ngIf="selectedPrinciple">
+                                            {{ selectedPrinciple.name }}
                                         </p>
                                     </div>
+                                </div>
+                                <div class="row" *ngIf="selectedPrinciple">
+                                    <p>Principle data goes here</p>
                                 </div>
                             </div>
                             <hr />

@@ -5,6 +5,7 @@ import { CreationStep } from './shared/creation-step.model';
 import { Die } from './shared/die.model';
 import backgrounds from '../assets/tables/backgrounds.json';
 import principles from '../assets/tables/principles.json';
+import { Principle } from './shared/principle.model';
 
 @Component({
     selector: 'app-root',
@@ -42,6 +43,7 @@ export class AppComponent {
     backgroundSelected: any;
 
     selectedPrincipleName: string = '';
+    selectedPrinciple: Principle;
 
     constructor() {
         this.firstStep = new CreationStep(
@@ -305,9 +307,14 @@ export class AppComponent {
 
         this.selectedBackground = selectedBackground;
         this.selectedPrincipleName = '';
+        this.selectedPrinciple = null;
     }
 
     onPrincipleOptionSelect(selectedPrincipleName: string) {
         this.selectedPrincipleName = selectedPrincipleName;
+        this.selectedPrinciple = new Principle(principles[selectedPrincipleName]);
+
+        console.log(this.selectedPrincipleName);
+        console.log(this.selectedPrinciple);
     }
 }
