@@ -194,7 +194,6 @@ export class AppComponent {
     getPrinciplesFromCategory(principleCategoryName: string): string[] {
         let principleNames: string[] = [];
         const principleCategory = principles[principleCategoryName];
-        console.log(principleCategory);
         for (let name in principleCategory) {
             principleNames.push(name);
         }
