@@ -4,6 +4,7 @@ import { CharacterSheet } from './shared/character-sheet.model';
 import { CreationStep } from './shared/creation-step.model';
 import { Die } from './shared/die.model';
 import backgrounds from '../assets/tables/backgrounds.json';
+import principles from '../assets/tables/principles.json';
 
 @Component({
     selector: 'app-root',
@@ -190,92 +191,101 @@ export class AppComponent {
         this.selectedBackground = this.emptyBackground;
     }
 
-    getPrinciplesFromCategory(principle: string): string[] {
-        switch (principle.toLowerCase()) {
-        case 'esoteric':
-            return [
-                'Destiny',
-                'Energy/Element',
-                'Exorcism',
-                'Fauna',
-                'Flora',
-                'Future',
-                'Immortality',
-                'Inner Demon',
-                'Magic',
-                'Sea',
-                'Space',
-                'Time Traveller',
-                'Undead',
-            ];
-        case 'expertise':
-            return [
-                'Clockwork',
-                'Gearhead',
-                'History',
-                'Indestructible',
-                'Lab',
-                'Mastery',
-                'Mentor',
-                'Powerless',
-                'Science',
-                'Speed',
-                'Stealth',
-                'Strength',
-                'Tactician',
-                'Whispers',
-            ];
-        case 'ideals':
-            return [
-                'Chaos',
-                'Compassion',
-                'Defender',
-                'Dependence',
-                'Equality',
-                'Great Power',
-                'Hero',
-                'Honor',
-                'Justice',
-                'Liberty',
-                'Order',
-                'Self Preservation',
-                'Zealot',
-            ];
-        case 'identity':
-            return [
-                'Ambition',
-                'Amnesia',
-                'Detachment',
-                'Discovery',
-                'Loner',
-                'Nomad',
-                'Peace',
-                'Rage',
-                'Split',
-                'Savagery',
-                'Levity',
-                'Spotless Mind',
-            ];
-
-        case 'responsibility':
-            return [
-                'Business',
-                'Debtor',
-                'Detective',
-                'Double Agent',
-                'Everyman',
-                'Family',
-                'Mask',
-                'Sidekick',
-                'Team',
-                'Underworld',
-                'Veteran',
-                'Youth',
-            ];
-
-        default:
-            return [];
+    getPrinciplesFromCategory(principleCategoryName: string): string[] {
+        let principleNames: string[] = [];
+        const principleCategory = principles[principleCategoryName];
+        console.log(principleCategory);
+        for (let name in principleCategory) {
+            principleNames.push(name);
         }
+
+        return principleNames;
+
+        // switch (principle.toLowerCase()) {
+        // case 'esoteric':
+        //     return [
+        //         'Destiny',
+        //         'Energy/Element',
+        //         'Exorcism',
+        //         'Fauna',
+        //         'Flora',
+        //         'Future',
+        //         'Immortality',
+        //         'Inner Demon',
+        //         'Magic',
+        //         'Sea',
+        //         'Space',
+        //         'Time Traveller',
+        //         'Undead',
+        //     ];
+        // case 'expertise':
+        //     return [
+        //         'Clockwork',
+        //         'Gearhead',
+        //         'History',
+        //         'Indestructible',
+        //         'Lab',
+        //         'Mastery',
+        //         'Mentor',
+        //         'Powerless',
+        //         'Science',
+        //         'Speed',
+        //         'Stealth',
+        //         'Strength',
+        //         'Tactician',
+        //         'Whispers',
+        //     ];
+        // case 'ideals':
+        //     return [
+        //         'Chaos',
+        //         'Compassion',
+        //         'Defender',
+        //         'Dependence',
+        //         'Equality',
+        //         'Great Power',
+        //         'Hero',
+        //         'Honor',
+        //         'Justice',
+        //         'Liberty',
+        //         'Order',
+        //         'Self Preservation',
+        //         'Zealot',
+        //     ];
+        // case 'identity':
+        //     return [
+        //         'Ambition',
+        //         'Amnesia',
+        //         'Detachment',
+        //         'Discovery',
+        //         'Loner',
+        //         'Nomad',
+        //         'Peace',
+        //         'Rage',
+        //         'Split',
+        //         'Savagery',
+        //         'Levity',
+        //         'Spotless Mind',
+        //     ];
+
+        // case 'responsibility':
+        //     return [
+        //         'Business',
+        //         'Debtor',
+        //         'Detective',
+        //         'Double Agent',
+        //         'Everyman',
+        //         'Family',
+        //         'Mask',
+        //         'Sidekick',
+        //         'Team',
+        //         'Underworld',
+        //         'Veteran',
+        //         'Youth',
+        //     ];
+
+        // default:
+        //     return [];
+        // }
     }
 
     getBackgroundFromRoll(roll: number) {
