@@ -129,6 +129,7 @@
                                                     <button
                                                         class="dropdown-item btn btn-outline"
                                                         *ngFor="let principle of getPrinciplesFromCategory(selectedBackground.principleCategory)"
+                                                        (click)="onPrincipleOptionSelect(principle)"
                                                     >
                                                         {{ principle }}
                                                     </button>
@@ -138,7 +139,7 @@
                                     </div>
                                     <div class="col-md-auto">
                                         <p>
-                                            <i>Selected <b>Principle</b> goes here</i>
+                                            {{ selectedPrincipleName }}
                                         </p>
                                     </div>
                                 </div>
