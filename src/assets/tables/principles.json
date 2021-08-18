@@ -8,7 +8,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Destiny",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation directly connected to your destiny and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -20,7 +20,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of [Energy/Element]",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a challenge involving [energy/element] and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -32,7 +32,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Exorcism",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome entitities or elements from another dimension and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -44,7 +44,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Fauna",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome with the local fauna and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -56,7 +56,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Flora",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome with the aid of local flore and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -68,7 +68,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Future",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome using your knowledge of possible futures and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -80,7 +80,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Immortality",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome using your knowledge of possible futures and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -92,7 +92,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Inner Demon",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Tap into your dark psyche to Overcome a problem and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -104,7 +104,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Magic",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome against a mystical force and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -116,7 +116,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Sea",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation while underwater and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -128,7 +128,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Space",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome while in space (or conditions similar to space) and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -140,7 +140,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Time Traveler",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a problem using knowledge from your home era and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -152,7 +152,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Undead",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation where your undead nature comes in handy and use your Max die. You and each of your allies gain a hero point."
             }
         }
@@ -166,7 +166,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Clockwork",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a complex problem with a simple tool and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -178,7 +178,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Gearhead",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a technological challenge and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -190,7 +190,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of History",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation involving archaeology, history, or puzzle-solving and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -202,7 +202,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Indestructible",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situation where you charge headlong into danger and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -214,7 +214,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Lab",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome while in a familiar workspace or when you have ample research time. Use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -226,7 +226,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Mastery",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situation that uses your powers in a new way and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -238,7 +238,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Mentor",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a challenge that someone else younger already tried and failed. Use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -250,7 +250,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Powerless",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Use your knowledge of the limitations of super powers in an Overcome action and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -262,7 +262,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Science",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome while applying specific scientific principles. Use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -274,7 +274,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Speed",
-                "type": "I",
+                "actionType": "I",
                 "gameText": "When you successfully Overcome, you may end up anywhere in the current environment. You and each of your allies gain a hero point."
             }
         },
@@ -286,7 +286,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Stealth",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome to infiltrate somewhere or avoid detection and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -298,7 +298,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Strength",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome using brute force and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -310,7 +310,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Tactician",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome when you flashback to how you prepared for this exact situation. Use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -322,7 +322,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Whispers",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome against a challenge that involves information that you have no real way of knowing and use your Max die. You and each of your allies gain a hero point."
             }
         }
@@ -336,7 +336,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Chaos",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation in a way that is truly unpredictable and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -348,7 +348,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Compassion",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome to connect with an individual on a personal level and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -360,7 +360,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Defender",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation that requires you to hold the line and use your Max die OR use your Mid die and Defend with your Min die. You and each of your allies gain a hero point."
             }
         },
@@ -372,7 +372,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Dependence",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situation that the object of your dependence was made for. Use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -384,7 +384,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Equality",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome to protect the rights of the underprivileged and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -396,7 +396,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Great Power",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation using one of your highest rated powers and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -408,7 +408,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Hero",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situationYou and each of your allies gain a hero point."
             }
         },
@@ -420,7 +420,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Honor",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation to maintain your code of honor and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -432,7 +432,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Justice",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome to stop an act of injustice in progress and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -444,7 +444,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Liberty",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situation where you are restricted or bound and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -456,7 +456,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Order",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a challenge where you can organize other people. Use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -468,7 +468,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Self Preservation",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome to get yourself out of immediate danger and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -480,7 +480,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Zealot",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation that tests your faith and use your Max die. You and each of your allies gain a hero point."
             }
         }
@@ -494,7 +494,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Ambition",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation where someone else has given you a bonus from a Boost and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -506,7 +506,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Amnesia",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation where a completely fresh perspective is useful and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -518,7 +518,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Detachment",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a challenge related to duress or fear and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -530,7 +530,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Discovery",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "When you’re on the forefront in making a discovery or invention and take an Overcome action to further your knowledge, use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -542,7 +542,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Levity",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a dire situation where your jokes prevent demoralization and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -554,7 +554,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Loner",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome when doing something different from the rest of your team and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -566,7 +566,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Nomad",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation where you can apply lessons from the road and use you Max die. You and each of your allies gain a hero point."
             }
         },
@@ -578,7 +578,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Peace",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation with serenity instead of violence and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -590,7 +590,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Rage",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation where you can channel your rage for good and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -602,7 +602,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Savagery",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation that taps into your primal nature and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -614,7 +614,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Split",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation that benefits from having a completely new outlook and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -626,7 +626,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Spotless Mind",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation where being free of the past is useful and use your Max die. You and each of your allies gain a hero point."
             }
         }
@@ -640,7 +640,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Business",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situation related to the field of your business or knowing locals. Use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -652,7 +652,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Debtor",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situation related to repaying a debt and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -664,7 +664,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Detective",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome to learn hidden information and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -676,7 +676,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Double Agent",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situation where you can draw upon resources from your other organization and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -688,7 +688,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Everyman",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome when using a bonus made by another hero and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -700,7 +700,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Family",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome in a situation where you have been given advice from a family member and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -712,7 +712,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Mask",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome using knowledge from your civilian life and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -724,7 +724,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Sidekick",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a challenge that has already flummoxed a more senior teammate and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -736,7 +736,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Team",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome by using your status as an official representative and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -748,7 +748,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Underworld",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a problem related to your knowledge of the criminal underworld or using one of your contacts and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -760,7 +760,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of the Veteran",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a tactical challenge using knowledge of a previous conflict and use your Max die. You and each of your allies gain a hero point."
             }
         },
@@ -772,7 +772,7 @@
             "principleAbility": {
                 "icon": "overcome",
                 "name": "Principle of Youth",
-                "type": "A",
+                "actionType": "A",
                 "gameText": "Overcome a situation where your age or size is an asset and use your Max die. You and each of your allies gain a hero point."
             }
         }
