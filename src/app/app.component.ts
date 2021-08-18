@@ -312,7 +312,8 @@ export class AppComponent {
 
     onPrincipleOptionSelect(selectedPrincipleName: string) {
         this.selectedPrincipleName = selectedPrincipleName;
-        this.selectedPrinciple = new Principle(principles[selectedPrincipleName]);
+        const principleCategoryData = principles[this.selectedBackground.principleCategory];
+        this.selectedPrinciple = new Principle(principleCategoryData[selectedPrincipleName]);
 
         console.log(this.selectedPrincipleName);
         console.log(this.selectedPrinciple);
