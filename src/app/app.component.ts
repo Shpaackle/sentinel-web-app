@@ -41,6 +41,8 @@ export class AppComponent {
     backgroundSelectedName: string = '5';
     backgroundSelected: any;
 
+    selectedPrincipleName: string = '';
+
     constructor() {
         this.firstStep = new CreationStep(
             1,
@@ -302,5 +304,9 @@ export class AppComponent {
         // this.backgroundOptionSelected.emit(selectedBackground);
 
         this.selectedBackground = selectedBackground;
+    }
+
+    onPrincipleOptionSelect(selectedPrincipleName: string) {
+        this.selectedPrincipleName = selectedPrincipleName;
     }
 }
