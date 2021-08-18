@@ -304,6 +304,7 @@ export class AppComponent {
         // this.backgroundOptionSelected.emit(selectedBackground);
 
         this.selectedBackground = selectedBackground;
+        this.selectedPrincipleName = '';
     }
 
     onPrincipleOptionSelect(selectedPrincipleName: string) {
