@@ -1,1 +1,51 @@
-<p>principle-selection works!</p>
+<div class="container" style="outline-style: groove; outline-color: darkmagenta" id="background-principle-selection-container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="dropdown">
+                <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="backgroundPrincipleDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    Select a
+                    {{ selectedBackground.principleCategory }} principle
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="backgroundPrincipleDropdown">
+                    <li>
+                        <button
+                            class="dropdown-item btn btn-outline"
+                            *ngFor="let principle of getPrinciplesFromCategory(selectedBackground.principleCategory)"
+                            (click)="onPrincipleOptionSelect(principle)"
+                        >
+                            {{ principle.name }}
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-auto">
+            <p *ngIf="selectedPrinciple" style="text-align: center; font-size: large">
+                <b>{{ selectedPrinciple.name }}</b>
+            </p>
+        </div>
+    </div>
+    <div class="row" *ngIf="selectedPrinciple">
+        <p><b>During Roleplaying: </b>{{ selectedPrinciple.duringRoleplayingText }}</p>
+        <p><b>Minor Twist: </b>{{ selectedPrinciple.minorTwist }}</p>
+        <p><b>Major Twist: </b>{{ selectedPrinciple.majorTwist }}</p>
+        <div class="row" style="text-align: center; font-size: large">
+            <div class="col-2">ICON</div>
+            <div class="col-3">NAME</div>
+            <div class="col-1">ACTION</div>
+            <div class="col-6">GAME TEXT</div>
+        </div>
+        <div class="row" style="text-align: center; font-size: medium">
+            <div class="col-2">{{ selectedPrinciple.principleAbility.icon }}</div>
+            <div class="col-3">{{ selectedPrinciple.principleAbility.name }}</div>
+            <div class="col-1">{{ selectedPrinciple.principleAbility.actionType }}</div>
+            <div class="col-6">{{ selectedPrinciple.principleAbility.gameText }}</div>
+        </div>
+    </div>
+</div>

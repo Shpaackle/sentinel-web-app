@@ -195,7 +195,7 @@ export class AppComponent {
         this.selectedBackground = this.emptyBackground;
     }
 
-    getPrinciplesFromCategory(principleCategoryName: string): string[] {
+    getPrinciplesFromCategory(principleCategoryName: string): Principle[] {
         const prinCatData = principles[principleCategoryName];
 
         console.log(prinCatData);
