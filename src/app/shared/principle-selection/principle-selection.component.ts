@@ -22,7 +22,9 @@ export class PrincipleSelectionComponent implements OnInit {
     }
 
     onPrincipleSelection(selectedElement: any) {
-        this.selectedPrinciple = selectedElement.principle;
+        console.log('selectedElement');
+        console.log(selectedElement);
+        this.selectedPrinciple = selectedElement;
 
         this.principleSelected.emit(this.selectedPrinciple);
     }
