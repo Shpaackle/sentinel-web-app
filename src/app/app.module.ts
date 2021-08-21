@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RollingDieComponent } from './shared/rolling-die/rolling-die.component';
 import { DieImageComponent } from './shared/die-image/die-image.component';
 import { QualityListComponent } from './shared/quality-list/quality-list.component';
+import { PrincipleListComponent } from './shared/principle-list/principle-list.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { QualityListComponent } from './shared/quality-list/quality-list.compone
         RollingDieComponent,
         DieImageComponent,
         QualityListComponent,
+        PrincipleListComponent,
     ],
     imports: [BrowserModule, NgbModule, BrowserAnimationsModule],
     providers: [],
