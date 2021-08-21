@@ -9,7 +9,8 @@ import backgrounds from '../../../assets/tables/backgrounds.json';
     templateUrl: './principle-selection.component.html',
     styleUrls: ['./principle-selection.component.css'],
 })
-export class PrincipleSelectionComponent implements OnInit {
+export class PrincipleSelectionComponent {
+    // implements OnInit {
     @Input() selectedBackground: CharacterBackground;
 
     selectedPrinciple: Principle = null;
@@ -17,9 +18,9 @@ export class PrincipleSelectionComponent implements OnInit {
 
     constructor() {}
 
-    ngOnInit(): void {
-        this.selectedBackground = new CharacterBackground(backgrounds['empty']);
-    }
+    // ngOnInit(): void {
+    //     this.selectedBackground = new CharacterBackground(backgrounds['empty']);
+    // }
 
     onPrincipleSelection(selectedElement: any) {
         console.log('selectedElement');
