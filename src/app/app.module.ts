@@ -16,6 +16,7 @@ import { DieImageComponent } from './shared/die-image/die-image.component';
 import { QualityListComponent } from './shared/quality-list/quality-list.component';
 import { PrincipleListComponent } from './shared/principle-list/principle-list.component';
 import { PrincipleSelectionComponent } from './shared/principle-selection/principle-selection.component';
+import { QualitySelectionComponent } from './shared/quality-selection/quality-selection.component';
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { PrincipleSelectionComponent } from './shared/principle-selection/princi
         QualityListComponent,
         PrincipleListComponent,
         PrincipleSelectionComponent,
+        QualitySelectionComponent,
     ],
     imports: [BrowserModule, NgbModule, BrowserAnimationsModule],
     providers: [],
