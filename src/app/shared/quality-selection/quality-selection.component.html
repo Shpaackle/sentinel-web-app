@@ -4,11 +4,15 @@
     </div>
 
     <div class="col-md-auto">
-        <app-quality-list [assignedDie]="die" [qualityChoicesList]="selectedBackground.qualityChoices"></app-quality-list>
+        <app-quality-list
+            (qualitySelected)="onQualityChoiceSelected($event)"
+            [assignedDie]="die"
+            [qualityChoicesList]="selectedBackground.qualityChoices"
+        ></app-quality-list>
     </div>
     <div class="col-md-auto">
         <p>
-            <i>Selected <b>Quality</b> goes here</i>
+            <i>{{ selectedQuality.qualityName }}</i>
         </p>
     </div>
 </div>

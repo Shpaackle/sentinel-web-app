@@ -13,7 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RollingDieComponent } from './shared/rolling-die/rolling-die.component';
 import { DieImageComponent } from './shared/die-image/die-image.component';
-import { QualityListComponent } from './shared/quality-list/quality-list.component';
+import { QualityListComponent } from './shared/quality-selection/quality-list/quality-list.component';
 import { PrincipleListComponent } from './shared/principle-list/principle-list.component';
 import { PrincipleSelectionComponent } from './shared/principle-selection/principle-selection.component';
 import { QualitySelectionComponent } from './shared/quality-selection/quality-selection.component';

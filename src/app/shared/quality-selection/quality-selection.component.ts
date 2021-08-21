@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 import { CharacterBackground } from '../background.model';
+import { Die } from '../die.model';
 
 @Component({
     selector: 'app-quality-selection',
@@ -9,7 +10,17 @@ import { CharacterBackground } from '../background.model';
 export class QualitySelectionComponent implements OnInit {
     @Input() selectedBackground: CharacterBackground;
 
+    selectedQuality: { die: Die; qualityName: string };
+
     constructor() {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.selectedQuality = { die: new Die(), qualityName: 'Please select a quality' };
+    }
+
+    onQualityChoiceSelected(selectedQuality: { die: Die; qualityName: string }) {
+        console.log('onQualityChoiceSelected');
+        console.log(selectedQuality);
+        this.selectedQuality = selectedQuality;
+    }
 }
