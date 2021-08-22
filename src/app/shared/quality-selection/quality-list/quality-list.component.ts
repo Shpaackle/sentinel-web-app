@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Die } from '../../die.model';
 
 @Component({
@@ -11,7 +11,7 @@ export class QualityListComponent implements OnInit {
     @Input() qualityChoicesList: string[] = [];
     @Input() assignedDie: Die;
 
-    qualitySelected = new EventEmitter<{ die: Die; qualityName: string }>();
+    @Output() qualitySelected = new EventEmitter<{ die: Die; qualityName: string }>();
 
     constructor() {}
 
