@@ -1,18 +1,18 @@
-<div *ngFor="let die of selectedBackground.diceToAssign" class="row justify-content-start" style="margin-bottom: 10px">
+<div *ngFor="let die of selectedBackground.diceToAssign; index as i" class="row justify-content-start" style="margin-bottom: 10px">
     <div class="col-sm-auto">
         <app-die-image [die]="die"></app-die-image>
     </div>
 
     <div class="col-md-auto">
         <app-quality-list
-            (qualitySelected)="onQualityChoiceSelected($event)"
+            (qualitySelected)="onQualityChoiceSelected($event, i)"
             [assignedDie]="die"
             [qualityChoicesList]="selectedBackground.qualityChoices"
         ></app-quality-list>
     </div>
     <div class="col-md-auto">
         <p>
-            <i>{{ selectedQuality.qualityName }}</i>
+            <i>{{ selectedQualities[i].qualityName }}</i>
         </p>
     </div>
 </div>
