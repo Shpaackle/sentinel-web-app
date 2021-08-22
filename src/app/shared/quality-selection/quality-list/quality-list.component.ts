@@ -8,6 +8,7 @@ import { Die } from '../../die.model';
 })
 export class QualityListComponent implements OnInit {
     options: string[];
+    buttonText: string = 'Please select a quality';
     @Input() qualityChoicesList: string[] = [];
     @Input() assignedDie: Die;
 
@@ -67,5 +68,6 @@ export class QualityListComponent implements OnInit {
         const selectedQuality = { die: this.assignedDie, qualityName: selectedQualityChoice };
         console.log(selectedQuality);
         this.qualitySelected.emit(selectedQuality);
+        this.buttonText = selectedQualityChoice;
     }
 }
