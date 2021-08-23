@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Die } from '../die.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Die } from '../../die.model';
 
 @Component({
     selector: 'app-quality-list',
@@ -8,8 +8,11 @@ import { Die } from '../die.model';
 })
 export class QualityListComponent implements OnInit {
     options: string[];
+    buttonText: string = 'Please select a quality';
     @Input() qualityChoicesList: string[] = [];
     @Input() assignedDie: Die;
+
+    @Output() qualitySelected = new EventEmitter<{ die: Die; qualityName: string }>();
 
     constructor() {}
 
@@ -58,5 +61,13 @@ export class QualityListComponent implements OnInit {
                 break;
             }
         }
+    }
+
+    onQualityChoiceSelected(selectedQualityChoice: string) {
+        console.log(selectedQualityChoice);
+        const selectedQuality = { die: this.assignedDie, qualityName: selectedQualityChoice };
+        console.log(selectedQuality);
+        this.qualitySelected.emit(selectedQuality);
+        this.buttonText = selectedQualityChoice;
     }
 }

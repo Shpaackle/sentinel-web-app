@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrincipleSelectionComponent } from './principle-selection.component';
+import { QualitySelectionComponent } from './quality-selection.component';
 
-describe('PrincipleSelectionComponent', () => {
-    let component: PrincipleSelectionComponent;
-    let fixture: ComponentFixture<PrincipleSelectionComponent>;
+describe('QualitySelectionComponent', () => {
+    let component: QualitySelectionComponent;
+    let fixture: ComponentFixture<QualitySelectionComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [ PrincipleSelectionComponent ]
+            declarations: [ QualitySelectionComponent ]
         })
             .compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(PrincipleSelectionComponent);
+        fixture = TestBed.createComponent(QualitySelectionComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
