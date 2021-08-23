@@ -1,29 +1,28 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { Die } from '../die.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Die } from '../../die.model';
 
 @Component({
     selector: 'app-quality-list',
     templateUrl: './quality-list.component.html',
     styleUrls: ['./quality-list.component.css'],
 })
-export class QualityListComponent implements OnInit, OnChanges {
+export class QualityListComponent implements OnInit {
     options: string[];
-    @Input() jsonData: string[] = [];
+    buttonText: string = 'Please select a quality';
+    @Input() qualityChoicesList: string[] = [];
     @Input() assignedDie: Die;
+
+    @Output() qualitySelected = new EventEmitter<{ die: Die; qualityName: string }>();
 
     constructor() {}
 
-    ngOnInit(): void {
-        this.options = [];
-    }
-
-    ngOnChanges(): void {
+    ngOnInit() {
         this.populateOptionsList();
     }
 
     populateOptionsList() {
         this.options = [];
-        for (let optionName of this.jsonData) {
+        for (let optionName of this.qualityChoicesList) {
             this.options.push(optionName);
             switch (optionName) {
             case 'any Mental':
@@ -62,5 +61,13 @@ export class QualityListComponent implements OnInit, OnChanges {
                 break;
             }
         }
+    }
+
+    onQualityChoiceSelected(selectedQualityChoice: string) {
+        console.log(selectedQualityChoice);
+        const selectedQuality = { die: this.assignedDie, qualityName: selectedQualityChoice };
+        console.log(selectedQuality);
+        this.qualitySelected.emit(selectedQuality);
+        this.buttonText = selectedQualityChoice;
     }
 }
