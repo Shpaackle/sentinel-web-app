@@ -42,7 +42,7 @@ export class AppComponent {
     backgroundSelectedName: string = '5';
     backgroundSelected: any;
 
-    selectedPrincipleName: string = '';
+    // selectedPrincipleName: string = '';
     selectedPrinciple: Principle;
 
     constructor() {
@@ -195,8 +195,18 @@ export class AppComponent {
         this.selectedBackground = this.emptyBackground;
     }
 
-    getPrinciplesFromCategory(principleCategoryName: string): string[] {
-        let principleNames: string[] = [];
+    getPrinciplesFromCategory(principleCategoryName: string): Principle[] {
+        const prinCatData = principles[principleCategoryName];
+
+        console.log(prinCatData);
+        let principlesList = [];
+        // const principlesList = prinCatData.map((principleData: Principle) => new Principle(principleData));
+        for (let principleName in prinCatData) {
+            principlesList.push(new Principle(prinCatData[principleName]));
+        }
+        return principlesList;
+
+        /* let principleNames: string[] = [];
         const principleCategory = principles[principleCategoryName];
         for (let name in principleCategory) {
             principleNames.push(name);
@@ -288,7 +298,7 @@ export class AppComponent {
 
         // default:
         //     return [];
-        // }
+        // } */
     }
 
     getBackgroundFromRoll(roll: number) {
@@ -306,16 +316,18 @@ export class AppComponent {
         // this.backgroundOptionSelected.emit(selectedBackground);
 
         this.selectedBackground = selectedBackground;
-        this.selectedPrincipleName = '';
+        // this.selectedPrincipleName = '';
         this.selectedPrinciple = null;
     }
 
-    onPrincipleOptionSelect(selectedPrincipleName: string) {
-        this.selectedPrincipleName = selectedPrincipleName;
-        const principleCategoryData = principles[this.selectedBackground.principleCategory];
-        this.selectedPrinciple = new Principle(principleCategoryData[selectedPrincipleName]);
+    onPrincipleOptionSelect(selectedPrinciple: Principle) {
+        // this.selectedPrincipleName = selectedPrincipleName;
+        // const principleCategoryData = principles[this.selectedBackground.principleCategory];
+        console.log('selectedPrinciple');
+        console.log(selectedPrinciple);
+        this.selectedPrinciple = selectedPrinciple;
 
-        console.log(this.selectedPrincipleName);
-        console.log(this.selectedPrinciple);
+        // console.log(this.selectedPrincipleName);
+        // console.log(this.selectedPrinciple);
     }
 }
