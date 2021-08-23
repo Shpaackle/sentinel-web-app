@@ -1,0 +1,17 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <b>{{ buttonText }}</b>
+    </button>
+    <ul class="dropdown-menu">
+        <li *ngFor="let optionText of options">
+            <div *ngIf="optionText.substr(0, 3) !== 'any'">
+                <button (click)="onQualityChoiceSelected(optionText)" class="dropdown-item btn btn-warning" role="button">{{ optionText }}</button>
+            </div>
+            <div *ngIf="optionText.substr(0, 3) === 'any'">
+                <hr class="dropdown-divider" />
+                <p class="dropdown-header quality-header">{{ optionText }}</p>
+                <hr class="dropdown-divider" />
+            </div>
+        </li>
+    </ul>
+</div>

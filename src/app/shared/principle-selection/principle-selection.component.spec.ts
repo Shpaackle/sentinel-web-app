@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DieImageComponent } from './die-image.component';
+import { PrincipleSelectionComponent } from './principle-selection.component';
 
-describe('DieImageComponent', () => {
-    let component: DieImageComponent;
-    let fixture: ComponentFixture<DieImageComponent>;
+describe('PrincipleSelectionComponent', () => {
+    let component: PrincipleSelectionComponent;
+    let fixture: ComponentFixture<PrincipleSelectionComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [ DieImageComponent ]
+            declarations: [ PrincipleSelectionComponent ]
         })
             .compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(DieImageComponent);
+        fixture = TestBed.createComponent(PrincipleSelectionComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

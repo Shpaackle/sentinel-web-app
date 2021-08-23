@@ -30,285 +30,82 @@
                     </div>
                     <hr />
                     <div class="row" id="step-1-selections">
-                        <div class="accordion accordion-flush" id="backgroundSelections">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button
-                                        class="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseOne"
-                                        aria-expanded="false"
-                                        aria-controls="flush-collapseOne"
-                                    >
-                                        <b
-                                            >{{ firstBackground.number }} - <i>{{ firstBackground.name }}</i></b
-                                        >
-                                    </button>
-                                </h2>
-                                <div
-                                    id="flush-collapseOne"
-                                    class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingOne"
-                                    data-bs-parent="#accordionFlushExample"
-                                >
-                                    <div class="accordion-body">
-                                        <p>{{ firstBackground.backgroundText }}</p>
-                                        <ul>
-                                            <li *ngFor="let qual of firstBackground.qualities">
-                                                {{ qual }}
-                                            </li>
-                                        </ul>
-                                        <hr />
-                                        <p>
-                                            Choose a
-                                            {{ firstBackground.principleCategory }} principle.
-                                        </p>
-                                        <hr />
-                                        <p>Roll a {{ firstBackground.diceText }} for power source selection.</p>
-                                    </div>
-                                </div>
+                        <div class="row" style="text-align: center; font-size: large">
+                            <div class="col-1">#</div>
+                            <div class="col-2">BACKGROUND</div>
+                            <div class="col-4">QUALITIES</div>
+                            <div class="col-2">PRINCIPLE CATEGORY</div>
+                            <div class="col-1">DICE</div>
+                            <div class="col-1">PAGE</div>
+                        </div>
+                        <hr />
+                        <div
+                            class="row"
+                            *ngFor="let backgroundOption of rolledBackgrounds; index as i"
+                            (click)="onBackgroundOptionSelect(backgroundOption)"
+                            style="text-align: center; font-size: medium"
+                        >
+                            <div class="col-1">
+                                {{ backgroundOption.number }}
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button
-                                        class="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseTwo"
-                                        aria-expanded="false"
-                                        aria-controls="flush-collapseTwo"
-                                    >
-                                        <b
-                                            >{{ secondBackground.number }} - <i>{{ secondBackground.name }}</i></b
-                                        >
-                                    </button>
-                                </h2>
-                                <div
-                                    id="flush-collapseTwo"
-                                    class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingTwo"
-                                    data-bs-parent="#accordionFlushExample"
-                                >
-                                    <div class="accordion-body">
-                                        <p>{{ secondBackground.backgroundText }}</p>
-                                        <ul>
-                                            <li *ngFor="let qual of secondBackground.qualities">
-                                                {{ qual }}
-                                            </li>
-                                        </ul>
-                                        <hr />
-                                        <p>
-                                            Choose a
-                                            {{ secondBackground.principleCategory }} principle.
-                                        </p>
-                                        <hr />
-                                        <p>Roll a {{ secondBackground.diceText }} for power source selection.</p>
-                                    </div>
-                                </div>
+                            <div class="col-2">
+                                {{ backgroundOption.name }}
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingThree">
-                                    <button
-                                        class="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseThree"
-                                        aria-expanded="false"
-                                        aria-controls="flush-collapseThree"
-                                    >
-                                        <b
-                                            >{{ thirdBackground.number }} - <i>{{ thirdBackground.name }}</i></b
-                                        >
-                                    </button>
-                                </h2>
-                                <div
-                                    id="flush-collapseThree"
-                                    class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingThree"
-                                    data-bs-parent="#accordionFlushExample"
-                                >
-                                    <div class="accordion-body">
-                                        <p>{{ thirdBackground.backgroundText }}</p>
-                                        <ul>
-                                            <li *ngFor="let qual of thirdBackground.qualities">
-                                                {{ qual }}
-                                            </li>
-                                        </ul>
-                                        <hr />
-                                        <p>
-                                            Choose a
-                                            {{ thirdBackground.principleCategory }} principle.
-                                        </p>
-                                        <hr />
-                                        <p>Roll a {{ thirdBackground.diceText }} for power source selection.</p>
-                                    </div>
-                                </div>
+                            <div class="col-4">
+                                {{ backgroundOption.qualityChoices }}
                             </div>
+                            <div class="col-2">
+                                {{ backgroundOption.principleCategory }}
+                            </div>
+                            <div class="col-1">
+                                <b>{{ backgroundOption.qualityDiceString }}</b>
+                            </div>
+                            <div class="col-1">
+                                {{ backgroundOption.pageNumber }}
+                            </div>
+                            <hr />
                         </div>
                     </div>
-                    <hr />
-                    <div class="row">
+
+                    <div class="row" *ngIf="selectedBackground.name !== 'empty'">
                         <div class="container" style="outline-width: 3px; outline-color: crimson; outline-style: double">
                             <div class="row" style="margin-top: 20px">
                                 <p class="fs-4">
                                     Options for
                                     <!-- change to dropdown? -->
                                     <b
-                                        ><i>{{ firstBackground.name }}</i></b
+                                        ><i>{{ selectedBackground.name }}</i></b
                                     >
                                 </p>
                             </div>
                             <hr />
                             <div class="container" style="outline-style: dashed; outline-color: darkgreen">
-                                <div class="row justify-content-start" style="margin-bottom: 10px">
-                                    <div class="col-sm-auto">
-                                        <app-die-image [die]="firstBackground.diceToAssign[0]"></app-die-image>
-                                    </div>
-
-                                    <div class="col-md-auto">
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-secondary dropdown-toggle"
-                                                type="button"
-                                                id="firstQualityDropdown"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Select a quality to assign a D{{ firstBackground.diceToAssign[0].sides }}
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="firstQualityDropdown">
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Fitness</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Persuasion</button>
-                                                </li>
-                                                <li>
-                                                    <h5 class="dropdown-header"><b>Any mental</b></h5>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Alertness</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Conviction</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Creativity</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Investigation</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Self-Discipline</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-auto">
-                                        <p>
-                                            <i>Selected <b>Quality</b> goes here</i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-start" style="margin-bottom: 10px">
-                                    <div class="col-sm-auto">
-                                        <app-die-image [die]="firstBackground.diceToAssign[1]"></app-die-image>
-                                    </div>
-
-                                    <div class="col-md-auto">
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-secondary dropdown-toggle"
-                                                type="button"
-                                                id="secondQualityDropdown"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Select a quality to assign a D{{ firstBackground.diceToAssign[1].sides }}
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="secondQualityDropdown">
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Fitness</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Persuasion</button>
-                                                </li>
-                                                <li>
-                                                    <h5 class="dropdown-header"><b>Any mental</b></h5>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item btn btn-outline" role="button">Alertness</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Conviction</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Creativity</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Investigation</button>
-                                                </li>
-                                                <li>
-                                                    <button class="dropdown-item" role="button">Self-Discipline</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-auto">
-                                        <p>
-                                            <i>Selected <b>Quality</b> goes here</i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="container"
-                                style="outline-style: groove; outline-color: darkmagenta"
-                                id="background-principle-selection-container"
-                            >
                                 <div class="row">
-                                    <div class="col-md-auto">
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-secondary dropdown-toggle"
-                                                type="button"
-                                                id="backgroundPrincipleDropdown"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Select a
-                                                {{ firstBackground.principleCategory }} principle
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="backgroundPrincipleDropdown">
-                                                <li>
-                                                    <button
-                                                        class="dropdown-item btn btn-outline"
-                                                        *ngFor="let principle of getPrinciplesFromCategory(firstBackground.principleCategory)"
-                                                    >
-                                                        {{ principle }}
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-auto">
-                                        <p>
-                                            <i>Selected <b>Principle</b> goes here</i>
-                                        </p>
-                                    </div>
+                                    <p style="font-size: large; font-style: italic; margin-top: 10px">{{ selectedBackground.backgroundText }}</p>
                                 </div>
+                                <app-quality-selection [selectedBackground]="selectedBackground"></app-quality-selection>
                             </div>
+                            <hr />
+                            <app-principle-selection
+                                (principleSelected)="onPrincipleOptionSelect($event)"
+                                [selectedBackground]="selectedBackground"
+                            ></app-principle-selection>
+                            <hr />
                             <div class="container" style="outline-style: solid; outline-color: deeppink" id="dice-given-container">
+                                <div class="row">
+                                    <p style="font-size: large; font-style: italic; margin-top: 10px">
+                                        Roll a {{ selectedBackground.diceText }} for power source selection.
+                                    </p>
+                                </div>
                                 <div class="row" style="margin-top: 10px">
-                                    <div class="col-md-auto" *ngFor="let die of firstBackground.powerSourceDice">
+                                    <div class="col-md-auto" *ngFor="let die of selectedBackground.powerSourceDice">
                                         <app-rolling-die [die]="die"></app-rolling-die>
                                     </div>
                                     <div class="col-md-3">
                                         <button
                                             class="btn btn-primary btn-lg"
                                             role="button"
-                                            (click)="rollAllDice(firstBackground.powerSourceDice)"
+                                            (click)="rollAllDice(selectedBackground.powerSourceDice)"
                                             style="margin-left: 50px; max-width: 175px"
                                         >
                                             Roll Dice
