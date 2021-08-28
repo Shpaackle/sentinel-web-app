@@ -7,10 +7,10 @@ import { Die } from '../../die.model';
     styleUrls: ['./quality-list.component.css'],
 })
 export class QualityListComponent implements OnInit {
-    options: string[];
+    options: string[] = [];
     buttonText: string = 'Please select a quality';
     @Input() qualityChoicesList: string[] = [];
-    @Input() assignedDie: Die;
+    @Input() assignedDie: Die = new Die();
 
     @Output() qualitySelected = new EventEmitter<{ die: Die; qualityName: string }>();
 
@@ -21,7 +21,6 @@ export class QualityListComponent implements OnInit {
     }
 
     populateOptionsList() {
-        this.options = [];
         for (let optionName of this.qualityChoicesList) {
             this.options.push(optionName);
             switch (optionName) {
