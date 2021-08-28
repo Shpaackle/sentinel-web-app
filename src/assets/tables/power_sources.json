@@ -69,9 +69,33 @@
         "blurb": "The source of your powers is the result of your hard work, dedication, and long hours.",
         "page": 58,
         "abilities": {
-            "yellow": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] },
+            "yellow": {
+                "selectAmount": 2,
+                "abilityOptions": [
+                    {
+                        "icon": ["boost", "attack"],
+                        "name": "Always Be Prepared",
+                        "actionType": "A",
+                        "gameText": "Boost yourself using [power]. That bonus is persistent and exclusive. Then, Attack using your Min die. You may use the bonus you just created on that Attack."
+                    },
+                    {
+                        "icon": [""],
+                        "name": "Reactive Field",
+                        "actionType": "R",
+                        "gameText": "When you are attacked by a nearby enemy, the attacker also takes an equal amount of damage."
+                    },
+                    {
+                        "icon": ["attack"],
+                        "name": "Flowing Fight",
+                        "actionType": "A",
+                        "gameText": "Attack using [power]. Use your Mid die to Attack one extra target for each bonus you have. Apply a different bonus to each Attack."
+                    }
+                ]
+            },
             "green": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] }
-        }
+        },
+        "specialText": "When you move to the next step, select an extra quality from that archetype's list at D8.",
+        "specialDiceSides": [8]
     },
     {
         "num": 3,
@@ -81,8 +105,46 @@
         "blurb": "Mutations in your DNA have caused you to develop unusual abilities.",
         "page": 58,
         "abilities": {
-            "yellow": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] },
-            "green": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] }
+            "yellow": {
+                "selectAmount": 2,
+                "abilityOptions": [
+                    {
+                        "icon": ["defend"],
+                        "name": "Danger Sense",
+                        "actionType": "R",
+                        "gameText": "When damaged by an environment target or a surprise Attack, Defend by rolling your single [power] die."
+                    },
+                    {
+                        "icon": ["boost", "recover"],
+                        "name": "Adaptive",
+                        "actionType": "A",
+                        "gameText": "Boost yourself using [power], then either remove a penalty on yourself or Recover using your Min die."
+                    },
+                    {
+                        "icon": ["attack"],
+                        "name": "Area Assault",
+                        "actionType": "A",
+                        "gameText": "Attack multiple targets using [power], using your Min die against each."
+                    }
+                ]
+            },
+            "green": {
+                "selectAmount": 2,
+                "abilityOptions": [
+                    {
+                        "icon": ["boost"],
+                        "name": "Growth",
+                        "actionType": "A",
+                        "gameText": "Boost yourself using [quality]. That bonus is persistent and exclusive."
+                    },
+                    {
+                        "icon": ["attack", "recover"],
+                        "name": "Rally",
+                        "actionType": "A",
+                        "gameText": "Attack using [quality]. Other nearby heroes in the Yellow or Red zone Recover equal to your Min die."
+                    }
+                ]
+            }
         }
     },
     {
@@ -93,8 +155,41 @@
         "blurb": "Your powers were created in a lab and had some unexpected side effects.",
         "page": 59,
         "abilities": {
-            "yellow": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] },
-            "green": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] }
+            "yellow": {
+                "selectAmount": 2,
+                "abilityOptions": [
+                    {
+                        "icon": ["boost"],
+                        "name": "Personal Upgrade",
+                        "actionType": "A",
+                        "gameText": "Boost yourself using [power]. Use your Max die. That bonus is persistent and exclusive."
+                    },
+                    {
+                        "icon": ["defend"],
+                        "name": "Misdirection",
+                        "actionType": "R",
+                        "gameText": "When a nearby hero in the Yellow or Red zone would take damage, Defend against that damage by rolling your single [power] die, then redirect any remaining damage to a nearby minion of your choice."
+                    },
+                    {
+                        "icon": ["attack"],
+                        "name": "Throw Minion",
+                        "actionType": "A",
+                        "gameText": "Attack a minion using [power]. The result of the minion's save Attacks another target of your choice."
+                    }
+                ]
+            },
+            "green": {
+                "selectAmount": 1,
+                "abilityOptions": [
+                    {
+                        "icon": [""],
+                        "name": "Overpower",
+                        "actionType": "I",
+                        "gameText": "Whenever you are Boosted, increas that bonus by +1. Then if that bonus is +5 or higher, take damage equal to that bonus and remove it."
+                    },
+                    { "icon": [""], "name": "Unflagging", "actionType": "I", "gameText": "At the start of your turn, remove a penalty on yourself." }
+                ]
+            }
         }
     },
     {
@@ -115,9 +210,33 @@
         "blurb": "Your magical training or alteration by magic gives you your powers.",
         "page": 59,
         "abilities": {
-            "yellow": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] },
+            "yellow": {
+                "selectAmount": 2,
+                "abilityOptions": [
+                    {
+                        "icon": ["boost", "hinder"],
+                        "name": "Modification Wave",
+                        "actionType": "A",
+                        "gameText": "Boost or Hinder using [power], and apply that mod to multiple nearby targets."
+                    },
+                    {
+                        "icon": ["defend"],
+                        "name": "Mystic Redirection",
+                        "actionType": "R",
+                        "gameText": "When another hero in the Yellow or Red zone would take damage, you may redirect it to yourself and Defend against it by rolling your single [power] die."
+                    },
+                    {
+                        "icon": ["overcome", "boost"],
+                        "name": "Sever Link",
+                        "actionType": "A",
+                        "gameText": "Overcome an environmental challenge using [power]. Use your Max die. Either remove any penalty in the scene or Boost equal to your Mid die."
+                    }
+                ]
+            },
             "green": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] }
-        }
+        },
+        "specialText": "Gain an Information quality and assign a D10 to it.",
+        "specialDiceSides": [10]
     },
     {
         "num": 6,
@@ -141,8 +260,41 @@
         "blurb": "The power of nature flows through you.",
         "page": 60,
         "abilities": {
-            "yellow": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] },
-            "green": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] }
+            "yellow": {
+                "selectAmount": 2,
+                "abilityOptions": [
+                    {
+                        "icon": [""],
+                        "name": "Call to the Wild",
+                        "actionType": "A",
+                        "gameText": "Gain a D8 minion. It takes its turn before yours, but goes away at the end of the scene. You may only have one such minion at a time."
+                    },
+                    {
+                        "icon": ["attack", "boost"],
+                        "name": "Predator's Eye",
+                        "actionType": "A",
+                        "gameText": "Attack using [power]. Use your Max+Min dice. Then gain a Boost using your Mid die. The target of the Attack gains a bonus of the same size."
+                    },
+                    {
+                        "icon": ["boost"],
+                        "name": "Wild Strength",
+                        "actionType": "R",
+                        "gameText": "When you defeat a minion, roll that minion's die and Boost yourself using that roll to create a bonus for your next action."
+                    }
+                ]
+            },
+            "green": {
+                "selectAmount": 1,
+                "abilityOptions": [
+                    {
+                        "icon": ["hinder"],
+                        "name": "Grasping Vine",
+                        "actionType": "A",
+                        "gameText": "Hinder using [power]. Use your Max die. You may split that penalty across multiple nearby targets."
+                    },
+                    { "icon": ["attack"], "name": "Natural Weapon", "actionType": "A", "gameText": "Attack using [power]. Use your Max die." }
+                ]
+            }
         }
     },
     {
@@ -163,8 +315,52 @@
         "blurb": "An object (or collection of objects) of mystical significance either grants you powers or altered you to give you powers.",
         "page": 61,
         "abilities": {
-            "yellow": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] },
-            "green": { "selectAmount": 0, "abilityOptions": [{ "icon": [""], "name": "", "actionType": "", "gameText": "" }] }
+            "yellow": {
+                "selectAmount": 2,
+                "abilityOptions": [
+                    {
+                        "icon": ["attack", "recover"],
+                        "name": "Harvest Life Force",
+                        "actionType": "A",
+                        "gameText": "Attack using [power]. Use your Min die. Take damage equal to your Mid die, and one nearby ally Recovers Health equal to your Max die."
+                    },
+                    {
+                        "icon": ["defend"],
+                        "name": "Magical Shield",
+                        "actionType": "R",
+                        "gameText": "When another hero in the Yellow or Red zone qould take damage, you may Defend them by rolling your single [power] die."
+                    },
+                    {
+                        "icon": ["boost", "hinder"],
+                        "name": "Momentary Power",
+                        "actionType": "A",
+                        "gameText": "Boost yourself using [power]. Use your Max die. Hinder a nearby opponent with your Min die."
+                    },
+                    {
+                        "icon": ["hinder", "recover"],
+                        "name": "Relic Drain",
+                        "actionType": "A",
+                        "gameText": "Hinder using [power]. Also Recover Health equal to your Min die."
+                    }
+                ]
+            },
+            "green": {
+                "selectAmount": 1,
+                "abilityOptions": [
+                    {
+                        "icon": ["boost"],
+                        "name": "Draw Power",
+                        "actionType": "A",
+                        "gameText": "Boost yourself using [power]. That bonus is persistent and exclusive."
+                    },
+                    {
+                        "icon": [""],
+                        "name": "Punishment",
+                        "actionType": "I",
+                        "gameText": "Whenever you Attack an enemy that has inflicted a penalty on you, treat that penalty as if it were a bonus for the purpose of that Attack."
+                    }
+                ]
+            }
         }
     },
     {
