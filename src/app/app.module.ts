@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -35,7 +36,7 @@ import { QualitySelectionComponent } from './shared/quality-selection/quality-se
         PrincipleSelectionComponent,
         QualitySelectionComponent,
     ],
-    imports: [BrowserModule, NgbModule, BrowserAnimationsModule],
+    imports: [BrowserModule, NgbModule, BrowserAnimationsModule, ReactiveFormsModule],
     providers: [],
     bootstrap: [AppComponent],
 })
