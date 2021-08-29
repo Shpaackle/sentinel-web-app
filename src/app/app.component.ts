@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
+
 import { CharacterBackground } from './shared/background.model';
 import { CharacterSheet } from './shared/character-sheet.model';
 import { CreationStep } from './shared/creation-step.model';
@@ -12,7 +14,7 @@ import { Principle } from './shared/principle.model';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     private emptyBackground = new CharacterBackground(backgrounds['empty']);
 
     title = 'sentinel-web-app';
@@ -41,6 +43,8 @@ export class AppComponent {
     backgroundSelected: any;
 
     selectedPrinciple: Principle;
+
+    stepOneForm: FormGroup;
 
     constructor() {
         this.firstStep = new CreationStep(
@@ -150,6 +154,14 @@ export class AppComponent {
         this.backgroundSelected = backgrounds[this.backgroundSelectedName];
 
         this.selectedBackground = this.firstBackground;
+    }
+
+    ngOnInit() {
+        this.stepOneForm = new FormGroup({
+            backgroundSelection: new FormControl(null),
+            qualitiesSelection: new FormArray(null),
+            principleSelection: new FormControl(null),
+        });
     }
 
     onNavigate(feature: string) {
