@@ -5,7 +5,9 @@
     <ul class="dropdown-menu">
         <li *ngFor="let optionText of options">
             <div *ngIf="optionText.substr(0, 3) !== 'any'">
-                <button (click)="onQualityChoiceSelected(optionText)" class="dropdown-item btn btn-warning" role="button">{{ optionText }}</button>
+                <button (click)="onQualityChoiceSelected(optionText)" class="dropdown-item btn btn-warning" role="button" type="button">
+                    {{ optionText }}
+                </button>
             </div>
             <div *ngIf="optionText.substr(0, 3) === 'any'">
                 <hr class="dropdown-divider" />

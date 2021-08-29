@@ -18,6 +18,7 @@
                             class="dropdown-item btn btn-outline"
                             *ngFor="let principle of getPrinciplesFromCategory(selectedBackground.principleCategory)"
                             (click)="onPrincipleSelection(principle)"
+                            type="button"
                         >
                             {{ principle.name }}
                         </button>
