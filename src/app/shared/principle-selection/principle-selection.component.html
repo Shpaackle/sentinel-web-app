@@ -10,13 +10,13 @@
                     aria-expanded="false"
                 >
                     Select a
-                    {{ selectedBackground.principleCategory }} principle
+                    {{ principleCategoryName }} principle
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="backgroundPrincipleDropdown">
                     <li>
                         <button
                             class="dropdown-item btn btn-outline"
-                            *ngFor="let principle of getPrinciplesFromCategory(selectedBackground.principleCategory)"
+                            *ngFor="let principle of principleOptions"
                             (click)="onPrincipleSelection(principle)"
                         >
                             {{ principle.name }}

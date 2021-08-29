@@ -88,7 +88,7 @@
                             <hr />
                             <app-principle-selection
                                 (principleSelected)="onPrincipleOptionSelect($event)"
-                                [selectedBackground]="selectedBackground"
+                                [principleCategoryName]="selectedBackground.principleCategory"
                             ></app-principle-selection>
                             <hr />
                             <div class="container" style="outline-style: solid; outline-color: deeppink" id="dice-given-container">
