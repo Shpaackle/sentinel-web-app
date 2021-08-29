@@ -13,8 +13,6 @@ import { Principle } from './shared/principle.model';
     styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-    // @Output() backgroundOptionSelected = new EventEmitter<CharacterBackground>();
-
     private emptyBackground = new CharacterBackground(backgrounds['empty']);
 
     title = 'sentinel-web-app';
@@ -42,7 +40,6 @@ export class AppComponent {
     backgroundSelectedName: string = '5';
     backgroundSelected: any;
 
-    // selectedPrincipleName: string = '';
     selectedPrinciple: Principle;
 
     constructor() {
@@ -174,7 +171,6 @@ export class AppComponent {
     }
 
     rollBackgroundDice() {
-        //this.rollAllDice(this.firstStep.diceToRoll);
         this.rolledBackgrounds = [];
 
         let dice_sum: number = 0;
@@ -200,105 +196,11 @@ export class AppComponent {
 
         console.log(prinCatData);
         let principlesList = [];
-        // const principlesList = prinCatData.map((principleData: Principle) => new Principle(principleData));
+
         for (let principleName in prinCatData) {
             principlesList.push(new Principle(prinCatData[principleName]));
         }
         return principlesList;
-
-        /* let principleNames: string[] = [];
-        const principleCategory = principles[principleCategoryName];
-        for (let name in principleCategory) {
-            principleNames.push(name);
-        }
-
-        return principleNames;
-
-        // switch (principle.toLowerCase()) {
-        // case 'esoteric':
-        //     return [
-        //         'Destiny',
-        //         'Energy/Element',
-        //         'Exorcism',
-        //         'Fauna',
-        //         'Flora',
-        //         'Future',
-        //         'Immortality',
-        //         'Inner Demon',
-        //         'Magic',
-        //         'Sea',
-        //         'Space',
-        //         'Time Traveller',
-        //         'Undead',
-        //     ];
-        // case 'expertise':
-        //     return [
-        //         'Clockwork',
-        //         'Gearhead',
-        //         'History',
-        //         'Indestructible',
-        //         'Lab',
-        //         'Mastery',
-        //         'Mentor',
-        //         'Powerless',
-        //         'Science',
-        //         'Speed',
-        //         'Stealth',
-        //         'Strength',
-        //         'Tactician',
-        //         'Whispers',
-        //     ];
-        // case 'ideals':
-        //     return [
-        //         'Chaos',
-        //         'Compassion',
-        //         'Defender',
-        //         'Dependence',
-        //         'Equality',
-        //         'Great Power',
-        //         'Hero',
-        //         'Honor',
-        //         'Justice',
-        //         'Liberty',
-        //         'Order',
-        //         'Self Preservation',
-        //         'Zealot',
-        //     ];
-        // case 'identity':
-        //     return [
-        //         'Ambition',
-        //         'Amnesia',
-        //         'Detachment',
-        //         'Discovery',
-        //         'Loner',
-        //         'Nomad',
-        //         'Peace',
-        //         'Rage',
-        //         'Split',
-        //         'Savagery',
-        //         'Levity',
-        //         'Spotless Mind',
-        //     ];
-
-        // case 'responsibility':
-        //     return [
-        //         'Business',
-        //         'Debtor',
-        //         'Detective',
-        //         'Double Agent',
-        //         'Everyman',
-        //         'Family',
-        //         'Mask',
-        //         'Sidekick',
-        //         'Team',
-        //         'Underworld',
-        //         'Veteran',
-        //         'Youth',
-        //     ];
-
-        // default:
-        //     return [];
-        // } */
     }
 
     getBackgroundFromRoll(roll: number) {
@@ -307,27 +209,16 @@ export class AppComponent {
         let background = new CharacterBackground(rolledBackgroundData);
 
         return background;
-
-        // return backgroundsTable[roll];
     }
 
     onBackgroundOptionSelect(selectedBackground: CharacterBackground) {
-        // console.log(selectedBackground);
-        // this.backgroundOptionSelected.emit(selectedBackground);
-
         this.selectedBackground = selectedBackground;
-        // this.selectedPrincipleName = '';
         this.selectedPrinciple = null;
     }
 
-    onPrincipleOptionSelect(selectedPrinciple: Principle) {
-        // this.selectedPrincipleName = selectedPrincipleName;
-        // const principleCategoryData = principles[this.selectedBackground.principleCategory];
+    onPrincipleOptionSelect(selectedPrinciple) {
         console.log('selectedPrinciple');
         console.log(selectedPrinciple);
         this.selectedPrinciple = selectedPrinciple;
-
-        // console.log(this.selectedPrincipleName);
-        // console.log(this.selectedPrinciple);
     }
 }
