@@ -6,7 +6,7 @@
         <div class="col">
             <div class="container" id="character-creation-container">
                 <div class="container" id="step-1-container">
-                    <form>
+                    <form [formGroup]="stepOneForm">
                         <div class="row" id="step-1-instructions">
                             <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
                             <p>{{ firstStep.stepDetails }}</p>
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <hr />
-                        <div class="row" id="step-1-selections">
+                        <div class="row" id="step-1-selections" formControlName="backgroundSelectionControl">
                             <div class="row" style="text-align: center; font-size: large">
                                 <div class="col-1">#</div>
                                 <div class="col-2">BACKGROUND</div>

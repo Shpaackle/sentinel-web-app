@@ -41,6 +41,7 @@ export class AppComponent implements OnInit {
 
     backgroundSelectedName: string = '5';
     backgroundSelected: any;
+    backgroundSelectionControl: FormControl = new FormControl('');
 
     selectedPrinciple: Principle;
 
@@ -158,9 +159,9 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.stepOneForm = new FormGroup({
-            backgroundSelection: new FormControl(null),
-            qualitiesSelection: new FormArray(null),
-            principleSelection: new FormControl(null),
+            backgroundSelectionControl: new FormControl(''),
+            // qualitiesSelection: new FormArray(null),
+            // principleSelection: new FormControl(null),
         });
     }
 
@@ -226,6 +227,10 @@ export class AppComponent implements OnInit {
     onBackgroundOptionSelect(selectedBackground: CharacterBackground) {
         this.selectedBackground = selectedBackground;
         this.selectedPrinciple = null;
+
+        console.log(JSON.stringify(this.stepOneForm.getRawValue()));
+        this.stepOneForm.setValue({ backgroundSelectionControl: selectedBackground });
+        console.log(this.stepOneForm.getRawValue());
     }
 
     onPrincipleOptionSelect(selectedPrinciple) {
