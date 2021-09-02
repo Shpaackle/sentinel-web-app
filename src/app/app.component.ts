@@ -229,7 +229,14 @@ export class AppComponent implements OnInit {
         this.selectedPrinciple = null;
 
         console.log(JSON.stringify(this.stepOneForm.getRawValue()));
+        // using setValue to set the forms value
         this.stepOneForm.setValue({ backgroundSelectionControl: selectedBackground });
+        // set means completely override
+        // name, background, charisma ... setValue background = green
+        // patch means only override what I gave you
+        // this.stepOneForm.patchValue({ backgroundSelectionControl: selectedBackground });
+        // this.stepOneForm.get('backgroundSelectionControl').setValue(selectedBackground);
+        // this.stepOneForm.updateValueAndValidity();
         console.log(this.stepOneForm.getRawValue());
     }
 
