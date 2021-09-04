@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CharacterBackground } from '../background.model';
 import { Principle } from '../principle.model';
 import * as principles from '../../../assets/tables/principles.json';
 import backgrounds from '../../../assets/tables/backgrounds.json';
+import { PrinciplesService } from '../services/principles.service';
 
 @Component({
     selector: 'app-principle-selection',
@@ -14,14 +15,15 @@ export class PrincipleSelectionComponent implements OnInit {
 
     principleOptions: Principle[] = [];
     selectedPrinciple: Principle = null;
-    principleSelected = new EventEmitter<Principle>();
+    @Output() principleSelected = new EventEmitter<Principle>();
 
-    constructor() {}
+    constructor(private principlesService: PrinciplesService) {}
 
     ngOnInit(): void {
-        const principlesDataFromCategory = principles[this.principleCategoryName];
+        // const principlesDataFromCategory = principles[this.principleCategoryName];
 
-        this.principleOptions = principlesDataFromCategory.map((principleData) => new Principle(principleData));
+        // this.principleOptions = principlesDataFromCategory.map((principleData) => new Principle(principleData));
+        this.principleOptions = this.principlesService.principles;
     }
 
     onPrincipleSelection(selectedElement: any) {
