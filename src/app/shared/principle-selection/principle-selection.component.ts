@@ -1,8 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CharacterBackground } from '../background.model';
-import { Principle } from '../principle.model';
 
-import backgrounds from '../../../assets/tables/backgrounds.json';
+import { Principle } from '../principle.model';
 import { PrinciplesService } from '../services/principles.service';
 
 @Component({
@@ -20,11 +18,7 @@ export class PrincipleSelectionComponent implements OnInit {
     constructor(private principlesService: PrinciplesService) {}
 
     ngOnInit(): void {
-        // const principlesDataFromCategory = principles[this.principleCategoryName];
-
-        // this.principleOptions = principlesDataFromCategory.map((principleData) => new Principle(principleData));
         this.principleOptions = this.principlesService.getPrinciplesByCategoryName(this.principleCategoryName);
-        console.log(this.principleOptions);
     }
 
     onPrincipleSelection(selectedElement: any) {
@@ -34,16 +28,4 @@ export class PrincipleSelectionComponent implements OnInit {
 
         this.principleSelected.emit(this.selectedPrinciple);
     }
-
-    // getPrinciplesFromCategory(principleCategoryName: string): Principle[] {
-    //     const prinCatData = principles[principleCategoryName];
-
-    //     console.log(prinCatData);
-    //     let principlesList = [];
-    //     // const principlesList = prinCatData.map((principleData: Principle) => new Principle(principleData));
-    //     for (let principleName in prinCatData) {
-    //         principlesList.push(new Principle(prinCatData[principleName]));
-    //     }
-    //     return principlesList;
-    // }
 }
