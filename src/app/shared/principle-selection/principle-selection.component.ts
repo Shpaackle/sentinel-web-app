@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CharacterBackground } from '../background.model';
 import { Principle } from '../principle.model';
-import * as principles from '../../../assets/tables/principles.json';
+
 import backgrounds from '../../../assets/tables/backgrounds.json';
 import { PrinciplesService } from '../services/principles.service';
 
@@ -23,7 +23,8 @@ export class PrincipleSelectionComponent implements OnInit {
         // const principlesDataFromCategory = principles[this.principleCategoryName];
 
         // this.principleOptions = principlesDataFromCategory.map((principleData) => new Principle(principleData));
-        this.principleOptions = this.principlesService.principles;
+        this.principleOptions = this.principlesService.getPrinciplesByCategoryName(this.principleCategoryName);
+        console.log(this.principleOptions);
     }
 
     onPrincipleSelection(selectedElement: any) {
