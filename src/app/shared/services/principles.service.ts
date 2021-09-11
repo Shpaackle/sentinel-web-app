@@ -17,7 +17,6 @@ export class PrinciplesService {
         // and any component that needs this data, grabs it from this service
 
         for (let principleCategoryName in principlesData) {
-            console.log(principleCategoryName);
             let categoryPrinciplesData = principlesData[principleCategoryName];
             this.principlesByCategory[principleCategoryName] = [];
             for (let principleName in categoryPrinciplesData) {
