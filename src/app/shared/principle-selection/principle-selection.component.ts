@@ -1,26 +1,25 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
-import { CharacterBackground } from '../background.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 import { Principle } from '../principle.model';
-import principles from '../../../assets/tables/principles.json';
-import backgrounds from '../../../assets/tables/backgrounds.json';
+import { PrinciplesService } from '../services/principles.service';
 
 @Component({
     selector: 'app-principle-selection',
     templateUrl: './principle-selection.component.html',
     styleUrls: ['./principle-selection.component.css'],
 })
-export class PrincipleSelectionComponent {
-    // implements OnInit {
-    @Input() selectedBackground: CharacterBackground;
+export class PrincipleSelectionComponent implements OnInit {
+    @Input() principleCategoryName: string;
 
+    principleOptions: Principle[] = [];
     selectedPrinciple: Principle = null;
-    principleSelected = new EventEmitter<Principle>();
+    @Output() principleSelected = new EventEmitter<Principle>();
 
-    constructor() {}
+    constructor(private principlesService: PrinciplesService) {}
 
-    // ngOnInit(): void {
-    //     this.selectedBackground = new CharacterBackground(backgrounds['empty']);
-    // }
+    ngOnInit(): void {
+        this.principleOptions = this.principlesService.getPrinciplesByCategoryName(this.principleCategoryName);
+    }
 
     onPrincipleSelection(selectedElement: any) {
         console.log('selectedElement');
@@ -28,17 +27,5 @@ export class PrincipleSelectionComponent {
         this.selectedPrinciple = selectedElement;
 
         this.principleSelected.emit(this.selectedPrinciple);
-    }
-
-    getPrinciplesFromCategory(principleCategoryName: string): Principle[] {
-        const prinCatData = principles[principleCategoryName];
-
-        console.log(prinCatData);
-        let principlesList = [];
-        // const principlesList = prinCatData.map((principleData: Principle) => new Principle(principleData));
-        for (let principleName in prinCatData) {
-            principlesList.push(new Principle(prinCatData[principleName]));
-        }
-        return principlesList;
     }
 }

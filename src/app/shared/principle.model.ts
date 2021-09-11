@@ -1,4 +1,4 @@
-interface IPrinciple {
+export interface IPrinciple {
     name: string;
     duringRoleplayingText: string;
     minorTwist: string;

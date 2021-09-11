@@ -4,7 +4,7 @@ import { CharacterSheet } from './shared/character-sheet.model';
 import { CreationStep } from './shared/creation-step.model';
 import { Die } from './shared/die.model';
 import backgrounds from '../assets/tables/backgrounds.json';
-import principles from '../assets/tables/principles.json';
+import principles from '../assets/tables/principles-data.json';
 import { Principle } from './shared/principle.model';
 
 @Component({
