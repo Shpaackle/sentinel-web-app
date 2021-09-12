@@ -17,6 +17,7 @@ import { QualityListComponent } from './shared/quality-selection/quality-list/qu
 import { PrincipleListComponent } from './shared/principle-list/principle-list.component';
 import { PrincipleSelectionComponent } from './shared/principle-selection/principle-selection.component';
 import { QualitySelectionComponent } from './shared/quality-selection/quality-selection.component';
+import { BackgroundSelectionComponent } from './background-selection/background-selection.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +35,7 @@ import { QualitySelectionComponent } from './shared/quality-selection/quality-se
         PrincipleListComponent,
         PrincipleSelectionComponent,
         QualitySelectionComponent,
+        BackgroundSelectionComponent,
     ],
     imports: [BrowserModule, NgbModule, BrowserAnimationsModule],
     providers: [],
