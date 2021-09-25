@@ -169,7 +169,8 @@ export class AppComponent {
 
     rollAllDice(diceToRoll: Die[]) {
         for (let die of diceToRoll) {
-            this.rollDie(die);
+            // this.rollDie(die);
+            die.roll();
         }
     }
 
@@ -179,7 +180,8 @@ export class AppComponent {
 
         let dice_sum: number = 0;
         for (let die of this.firstStep.diceToRoll) {
-            let roll = this.rollDie(die);
+            // let roll = this.rollDie(die);
+            let roll = die.roll();
             let rolled_background = this.getBackgroundFromRoll(roll);
             this.rolledBackgrounds.push(rolled_background);
             dice_sum += die.faceShowing;
