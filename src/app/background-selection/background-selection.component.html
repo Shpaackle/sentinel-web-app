@@ -1,1 +1,6 @@
-<p>background-selection works!</p>
+<div class="container">
+    <app-rolling-die *ngFor="let die of diceToRoll" [die]="die"></app-rolling-die>
+    <button class="btn btn-primary btn-lg" role="button" (click)="rollDice()" style="margin-left: 50px; max-width: 175px">
+        Roll Background Dice
+    </button>
+</div>
