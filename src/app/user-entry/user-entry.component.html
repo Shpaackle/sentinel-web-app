@@ -1,0 +1,8 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <label for="name">Name:</label>
+        <input id="name" type="text" formControlName="name" />
+    </div>
+    <div class="row"><label for="email">Email:</label> <input id="email" type="text" formControlName="email" /></div>
+    <button style="margin: 10px" type="submit">Submit User</button>
+</form>

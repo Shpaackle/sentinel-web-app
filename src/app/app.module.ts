@@ -17,6 +17,8 @@ import { QualityListComponent } from './shared/quality-selection/quality-list/qu
 import { PrincipleListComponent } from './shared/principle-list/principle-list.component';
 import { PrincipleSelectionComponent } from './shared/principle-selection/principle-selection.component';
 import { QualitySelectionComponent } from './shared/quality-selection/quality-selection.component';
+import { UserEntryComponent } from './user-entry/user-entry.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -34,8 +36,9 @@ import { QualitySelectionComponent } from './shared/quality-selection/quality-se
         PrincipleListComponent,
         PrincipleSelectionComponent,
         QualitySelectionComponent,
+        UserEntryComponent,
     ],
-    imports: [BrowserModule, NgbModule, BrowserAnimationsModule],
+    imports: [BrowserModule, NgbModule, BrowserAnimationsModule, ReactiveFormsModule],
     providers: [],
     bootstrap: [AppComponent],
 })
