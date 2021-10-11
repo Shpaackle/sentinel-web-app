@@ -4,5 +4,7 @@
         <input id="name" type="text" formControlName="name" />
     </div>
     <div class="row"><label for="email">Email:</label> <input id="email" type="text" formControlName="email" /></div>
-    <button style="margin: 10px" type="submit">Submit User</button>
+    <div class="row"><label for="characters">Character Names:</label> <input id="characters" type="text" formControlName="characters" /></div>
+    <button class="btn btn-success" style="margin: 10px" type="submit">Submit User</button>
+    <button class="btn btn-primary" type="button" (click)="getUsers()">Get Users</button>
 </form>

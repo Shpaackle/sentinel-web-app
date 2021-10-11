@@ -1,6 +1,52 @@
 const express = require('express');
+const mongoose = require('mongoose');
+
+const User = require('./models/user');
 
 const app = express();
+
+mongoose
+    .connect('mongodb://localhost:27017')
+    .then(() => {
+        console.log('connected to database successfully');
+    })
+    .catch(() => {
+        console.log('Connection failed!');
+    });
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS');
+    next();
+});
+
+app.use(express.json());
+
+app.post('/api/users', (req, res, next) => {
+    const user = new User({
+        name: req.body.name,
+        email: req.body.email,
+        characters: req.body.characters,
+    });
+    console.log('posted: ');
+    console.log(user);
+    user.save();
+    res.status(201).json({
+        message: 'user added successfully',
+    });
+});
+
+app.get('/api/users', (req, res, next) => {
+    User.find().then((documents) => {
+        //console.log('get users pressed');
+        //console.log(documents);
+        res.status(200).json({
+            message: 'Users fetched successfully!',
+            users: documents,
+        });
+    });
+});
 
 app.use('/api/principles/esoteric', (req, res, next) => {
     const principles = [
