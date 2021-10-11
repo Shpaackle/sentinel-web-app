@@ -33,14 +33,14 @@ export class UserEntryComponent implements OnInit {
             email: this.profileForm.get('email').value,
             characters: this.profileForm.get('characters').value,
         };
-        this.http.post<{ message: string }>('http://localhost:3000/api/users', user).subscribe((responseData) => {
+        this.http.post<{ message: string }>('http://localhost:9000/api/users', user).subscribe((responseData) => {
             console.log(responseData.message);
         });
         console.warn(this.profileForm.value);
     }
 
     getUsers() {
-        this.http.get<{ message: string; users: [User] }>('http://localhost:3000/api/users').subscribe((userData) => {
+        this.http.get<{ message: string; users: [User] }>('http://localhost:9000/api/users').subscribe((userData) => {
             this.users = userData.users;
         });
         console.warn(this.users);
