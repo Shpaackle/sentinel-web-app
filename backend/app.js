@@ -23,6 +23,12 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
+app.post('/api/users/create', (req, res, next) => {});
+
+app.get('/api/users/login', (req, res, next) => {});
+
+app.use('api/users/update', (req, res, next) => {});
+
 app.post('/api/users', (req, res, next) => {
     const user = new User({
         name: req.body.name,
