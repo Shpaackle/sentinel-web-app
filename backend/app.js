@@ -23,7 +23,31 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.post('/api/users/create', (req, res, next) => {});
+app.post('/api/users/create', (req, res, next) => {
+    const username = req.body.username;
+    const email = req.body.email;
+    const password = req.body.password;
+
+    var statusCode;
+    var message;
+
+    if (User.exists({ username: username })) {
+        res.status(404).json({
+            message: 'User already exists',
+        });
+    } else {
+        const user = new User({
+            username: username,
+            email: email,
+            password: password,
+        });
+
+        user.save();
+        res.status(201).json({
+            message: 'User added successfully',
+        });
+    }
+});
 
 app.get('/api/users/login', (req, res, next) => {});
 
