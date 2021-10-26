@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
-import { User } from './user.model';
+import { User } from '../shared/user.model';
 
 @Component({
     selector: 'app-user-entry',
@@ -32,6 +32,8 @@ export class UserEntryComponent implements OnInit {
             name: this.profileForm.get('name').value,
             email: this.profileForm.get('email').value,
             characters: this.profileForm.get('characters').value,
+            username: '',
+            password: '',
         };
         this.http.post<{ message: string }>('http://localhost:9000/api/users', user).subscribe((responseData) => {
             console.log(responseData.message);
