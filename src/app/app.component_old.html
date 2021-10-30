@@ -1,0 +1,174 @@
+<div class="container">
+    <router-outlet></router-outlet>
+    <div class="row" style="margin: 20px">
+        <app-user-entry></app-user-entry>
+    </div>
+    <div class="row"><h1>Guided Character Creation</h1></div>
+
+    <hr />
+    <div class="row">
+        <div class="col">
+            <div class="container" id="character-creation-container">
+                <div class="container" id="step-1-container">
+                    <div class="row" id="step-1-instructions">
+                        <h2>Step {{ firstStep.stepNumber }}: {{ firstStep.stepName }}</h2>
+                        <p>{{ firstStep.stepDetails }}</p>
+                    </div>
+                    <hr />
+                    <div class="row" id="step-1-dice">
+                        <div class="btn-group" role="group" aria-label="step-1-dice">
+                            <!-- <app-rolling-die *ngFor="let die of firstStep.dice" [die]="die"></app-rolling-die> -->
+
+                            <app-rolling-die [die]="firstStep.firstDie"></app-rolling-die>
+                            <app-rolling-die [die]="firstStep.secondDie"></app-rolling-die>
+
+                            <button
+                                class="btn btn-primary btn-lg"
+                                role="button"
+                                (click)="rollBackgroundDice()"
+                                style="margin-left: 50px; max-width: 175px"
+                            >
+                                Roll Background Dice
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row" id="step-1-selections">
+                        <div class="row" style="text-align: center; font-size: large">
+                            <div class="col-1">#</div>
+                            <div class="col-2">BACKGROUND</div>
+                            <div class="col-4">QUALITIES</div>
+                            <div class="col-2">PRINCIPLE CATEGORY</div>
+                            <div class="col-1">DICE</div>
+                            <div class="col-1">PAGE</div>
+                        </div>
+                        <hr />
+                        <div
+                            class="row"
+                            *ngFor="let backgroundOption of rolledBackgrounds; index as i"
+                            (click)="onBackgroundOptionSelect(backgroundOption)"
+                            style="text-align: center; font-size: medium"
+                        >
+                            <div class="col-1">
+                                {{ backgroundOption.number }}
+                            </div>
+                            <div class="col-2">
+                                {{ backgroundOption.name }}
+                            </div>
+                            <div class="col-4">
+                                {{ backgroundOption.qualityChoices }}
+                            </div>
+                            <div class="col-2">
+                                {{ backgroundOption.principleCategory }}
+                            </div>
+                            <div class="col-1">
+                                <b>{{ backgroundOption.qualityDiceString }}</b>
+                            </div>
+                            <div class="col-1">
+                                {{ backgroundOption.pageNumber }}
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row" *ngIf="selectedBackground.name !== 'empty'">
+                        <div class="container" style="outline-width: 3px; outline-color: crimson; outline-style: double">
+                            <div class="row" style="margin-top: 20px">
+                                <p class="fs-4">
+                                    Options for
+                                    <!-- change to dropdown? -->
+                                    <b
+                                        ><i>{{ selectedBackground.name }}</i></b
+                                    >
+                                </p>
+                            </div>
+                            <hr />
+                            <div class="container" style="outline-style: dashed; outline-color: darkgreen">
+                                <div class="row">
+                                    <p style="font-size: large; font-style: italic; margin-top: 10px">{{ selectedBackground.backgroundText }}</p>
+                                </div>
+                                <app-quality-selection [selectedBackground]="selectedBackground"></app-quality-selection>
+                            </div>
+                            <hr />
+                            <app-principle-selection
+                                (principleSelected)="onPrincipleOptionSelect($event)"
+                                [principleCategoryName]="selectedBackground.principleCategory"
+                            ></app-principle-selection>
+                            <hr />
+                            <div class="container" style="outline-style: solid; outline-color: deeppink" id="dice-given-container">
+                                <div class="row">
+                                    <p style="font-size: large; font-style: italic; margin-top: 10px">
+                                        Roll a {{ selectedBackground.diceText }} for power source selection.
+                                    </p>
+                                </div>
+                                <div class="row" style="margin-top: 10px">
+                                    <div class="col-md-auto" *ngFor="let die of selectedBackground.powerSourceDice">
+                                        <app-rolling-die [die]="die"></app-rolling-die>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button
+                                            class="btn btn-primary btn-lg"
+                                            role="button"
+                                            (click)="rollAllDice(selectedBackground.powerSourceDice)"
+                                            style="margin-left: 50px; max-width: 175px"
+                                        >
+                                            Roll Dice
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="btn-group" role="group" aria-label="save-clear">
+                                    <!-- Apply choices to character sheet and pushes to next step -->
+                                    <button type="button" class="btn-success btn-lg" style="margin: 10px">Save</button>
+                                    <!-- Reset choices to defaults -->
+                                    <button type="button" class="btn-danger btn-lg" style="margin: 10px">Clear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <hr />
+                <!-- Step 2 -->
+                <div class="container" id="step-2-container">
+                    <div class="row" id="step-2-instructions">
+                        <h2>Step {{ secondStep.stepNumber }}: {{ secondStep.stepName }}</h2>
+                        <p>{{ secondStep.stepDetails }}</p>
+                    </div>
+                    <hr />
+                    <div class="row" id="step-2-dice">
+                        <div class="col">
+                            <button
+                                id="secondStep-die-button-0"
+                                class="D{{ secondStep.firstDie.sides }} die-button btn btn-disabled"
+                                (click)="rollDie(secondStep.firstDie)"
+                                style="margin: 10px; height: 100px; width: 100px"
+                            >
+                                <figure>
+                                    <img
+                                        src="{{ secondStep.firstDie.imagePath }}"
+                                        alt="D{{ secondStep.firstDie.sides"
+                                        id="secondStep-die-image-0"
+                                        style="max-height: 75px; max-width: 75px"
+                                    />
+                                    <figcaption class="D{{ secondStep.firstDie.sides }}-roll">
+                                        {{ secondStep.firstDie.faceShowing }}
+                                    </figcaption>
+                                </figure>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-warn">Roll Dice</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row" id="step-2-options">
+                        <div class="col"><b>Step 2 options go here</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

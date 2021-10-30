@@ -20,6 +20,7 @@ import { QualitySelectionComponent } from './shared/quality-selection/quality-se
 import { UserEntryComponent } from './user-entry/user-entry.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
         QualitySelectionComponent,
         UserEntryComponent,
     ],
-    imports: [BrowserModule, NgbModule, BrowserAnimationsModule, ReactiveFormsModule, HttpClientModule],
+    imports: [BrowserModule, AppRoutingModule, NgbModule, BrowserAnimationsModule, ReactiveFormsModule, HttpClientModule],
     providers: [],
     bootstrap: [AppComponent],
 })
