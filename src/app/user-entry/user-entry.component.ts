@@ -35,7 +35,7 @@ export class UserEntryComponent implements OnInit {
             username: this.profileForm.get('username').value,
             password: this.profileForm.get('password').value,
         };
-        this.http.post<{ message: string }>('http://localhost:9000/api/users', user).subscribe((responseData) => {
+        this.http.post<{ message: string }>('http://localhost:9000/api/users/create', user).subscribe((responseData) => {
             console.log(responseData.message);
         });
         console.warn(this.profileForm.value);
