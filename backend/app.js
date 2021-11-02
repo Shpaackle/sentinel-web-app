@@ -56,8 +56,6 @@ app.post('/api/users/create', (req, res, next) => {
                 message: 'User added successfully',
             });
         }
-        //userExists = found;
-        //console.log('userExists is ' + found);
     });
 });
 
