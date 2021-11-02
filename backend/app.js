@@ -23,30 +23,47 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.post('/api/users', (req, res, next) => {
+app.post('/api/users/create', (req, res, next) => {
     const user = new User({
-        name: req.body.name,
+        username: req.body.username,
         email: req.body.email,
-        characters: req.body.characters,
+        password: req.body.password,
     });
-    console.log('posted: ');
-    console.log(user);
-    user.save();
-    res.status(201).json({
-        message: 'user added successfully',
+
+    console.log('username: ' + user.username);
+    console.log('email: ' + user.email);
+    console.log('password: ' + user.password);
+
+    User.exists({ username: user.username }).then((found) => {
+        if (found) {
+            console.log('found should be true!');
+            console.log('found = ' + found);
+            res.status(201).json({
+                message: 'User already exists',
+            });
+        } else {
+            // const user = new User({
+            //     username: username,
+            //     email: email,
+            //     password: password,
+            // });
+
+            console.log('found should be false!');
+            console.log('found = ' + found);
+
+            user.save();
+            res.status(201).json({
+                message: 'User added successfully',
+            });
+        }
+        //userExists = found;
+        //console.log('userExists is ' + found);
     });
 });
 
-app.get('/api/users', (req, res, next) => {
-    User.find().then((documents) => {
-        //console.log('get users pressed');
-        //console.log(documents);
-        res.status(200).json({
-            message: 'Users fetched successfully!',
-            users: documents,
-        });
-    });
-});
+app.get('/api/users/login', (req, res, next) => {});
+
+app.use('/api/users/update', (req, res, next) => {});
 
 app.use('/api/principles/esoteric', (req, res, next) => {
     const principles = [
