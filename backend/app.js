@@ -38,7 +38,7 @@ app.post('/api/users/create', (req, res, next) => {
         if (found) {
             console.log('found should be true!');
             console.log('found = ' + found);
-            res.status(404).json({
+            res.status(201).json({
                 message: 'User already exists',
             });
         } else {
