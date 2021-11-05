@@ -42,22 +42,16 @@ app.post('/api/users/create', (req, res, next) => {
                 message: 'User already exists',
             });
         } else {
-            // const user = new User({
-            //     username: username,
-            //     email: email,
-            //     password: password,
-            // });
-
             console.log('found should be false!');
             console.log('found = ' + found);
 
-            user.save();
-            res.status(201).json({
-                message: 'User added successfully',
+            user.save().then((createdUser) => {
+                res.status(201).json({
+                    message: 'User added successfully',
+                    userID: createdUser._id,
+                });
             });
         }
-        //userExists = found;
-        //console.log('userExists is ' + found);
     });
 });
 
