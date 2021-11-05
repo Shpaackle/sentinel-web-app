@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { UserService } from '../shared/services/user.service';
 
 import { User } from '../shared/user.model';
 
@@ -14,7 +15,7 @@ export class UserEntryComponent implements OnInit {
     characters: [];
     users: User[];
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, public userService: UserService) {}
 
     ngOnInit(): void {
         this.profileForm = new FormGroup({
@@ -28,14 +29,16 @@ export class UserEntryComponent implements OnInit {
 
     onSubmit() {
         // TODO: Send information to backend?
-        const user: User = {
-            email: this.profileForm.get('email').value,
-            username: this.profileForm.get('username').value,
-            password: this.profileForm.get('password').value,
-        };
-        this.http.post<{ message: string }>('http://localhost:9000/api/users/create', user).subscribe((responseData) => {
-            console.log(responseData.message);
-        });
+        const username = this.profileForm.get('username').value;
+        const email = this.profileForm.get('email').value;
+        const password = this.profileForm.get('password').value;
+        const responseMessage = this.userService.createUser(username, email, password);
+        switch (responseMessage) {
+            case 'User added successfully':
+                break;
+            case 'User already exists':
+                break;
+        }
     }
 
     getUsers() {
