@@ -45,9 +45,11 @@ app.post('/api/users/create', (req, res, next) => {
             console.log('found should be false!');
             console.log('found = ' + found);
 
-            user.save();
-            res.status(201).json({
-                message: 'User added successfully',
+            user.save().then((createdUser) => {
+                res.status(201).json({
+                    message: 'User added successfully',
+                    userID: createdUser._id,
+                });
             });
         }
     });
