@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const user = require('./models/user');
 
 const User = require('./models/user');
 
@@ -55,7 +56,32 @@ app.post('/api/users/create', (req, res, next) => {
     });
 });
 
-app.get('/api/users/login', (req, res, next) => {});
+app.get('/api/users/login', (req, res, next) => {
+    const username = req.body.username;
+    const email = req.body.email;
+    const password = req.body.password;
+    User.findOne({ $or: [{ username: username }, { email: email }] }, function (err, user) {
+        if (err) {
+            console.error('SERVER ERROR DURING LOGIN ATTEMPT');
+            console.error(err);
+            res.status(404).json({
+                message: err,
+                userID: -1,
+            });
+        }
+        if (user && password == user.password) {
+            res.status(201).json({
+                message: 'User login successfull',
+                userID: user._id,
+            });
+        } else {
+            res.status(404).json({
+                message: 'Login attempt failed',
+                userID: null,
+            });
+        }
+    });
+});
 
 app.use('/api/users/update', (req, res, next) => {});
 
