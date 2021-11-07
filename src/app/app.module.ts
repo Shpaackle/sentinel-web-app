@@ -4,6 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,6 +27,7 @@ import { PrincipleSelectionComponent } from './shared/principle-selection/princi
 import { QualitySelectionComponent } from './shared/quality-selection/quality-selection.component';
 import { UserEntryComponent } from './user-entry/user-entry.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
     declarations: [
@@ -39,8 +46,22 @@ import { AppRoutingModule } from './app-routing.module';
         PrincipleSelectionComponent,
         QualitySelectionComponent,
         UserEntryComponent,
+        LoginComponent,
     ],
-    imports: [BrowserModule, AppRoutingModule, NgbModule, BrowserAnimationsModule, ReactiveFormsModule, HttpClientModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatInputModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatProgressSpinnerModule,
+        MatToolbarModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })
