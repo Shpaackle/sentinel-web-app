@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatInputModule } from '@angular/material/input';
@@ -54,6 +54,7 @@ import { LoginComponent } from './auth/login/login.component';
         NgbModule,
         BrowserAnimationsModule,
         ReactiveFormsModule,
+        FormsModule,
         HttpClientModule,
         MatInputModule,
         MatCardModule,
