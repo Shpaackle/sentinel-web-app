@@ -83,7 +83,27 @@ app.get('/api/users/login', (req, res, next) => {
     });
 });
 
-app.use('/api/users/update', (req, res, next) => {});
+app.put('/api/users/update', (req, res, next) => {
+    const username = req.body.username;
+    const email = req.body.email;
+    const password = req.body.password;
+    const userID = req.body.userID;
+
+    User.findByIdAndUpdate(userID, { username: username, email: email, password: password }, function (err, updatedUser) {
+        if (err) {
+            console.error('SERVER ERROR DURING LOGIN ATTEMPT');
+            console.error(err);
+            res.status(404).json({
+                message: err,
+            });
+        } else {
+            res.status(201).json({
+                message: 'User updated successfully',
+                user: user,
+            });
+        }
+    });
+});
 
 app.use('/api/principles/esoteric', (req, res, next) => {
     const principles = [
