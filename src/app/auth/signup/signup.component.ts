@@ -14,10 +14,6 @@ export class SignupComponent {
     constructor(public userService: UserService) {}
 
     onSignup(form: NgForm) {
-        console.log(form);
-
-        console.log('form.value= ' + JSON.stringify(form.value));
-
         if (form.invalid) {
             return;
         }
