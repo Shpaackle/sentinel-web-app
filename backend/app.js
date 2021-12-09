@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const user = require('./models/user');
 
 const User = require('./models/user');
 
@@ -31,29 +30,42 @@ app.post('/api/users/create', (req, res, next) => {
         password: req.body.password,
     });
 
-    console.log('username: ' + user.username);
-    console.log('email: ' + user.email);
-    console.log('password: ' + user.password);
-
-    User.exists({ username: user.username }).then((found) => {
-        if (found) {
-            console.log('found should be true!');
-            console.log('found = ' + found);
+    user.save()
+        .then((createdUser) => {
             res.status(201).json({
-                message: 'User already exists',
+                message: 'User added successfully',
+                userID: createdUser._id,
             });
-        } else {
-            console.log('found should be false!');
-            console.log('found = ' + found);
+        })
+        .catch((err) => {
+            res.status(500).json({
+                error: err,
+            });
+        });
 
-            user.save().then((createdUser) => {
-                res.status(201).json({
-                    message: 'User added successfully',
-                    userID: createdUser._id,
-                });
-            });
-        }
-    });
+    // console.log('username: ' + user.username);
+    // console.log('email: ' + user.email);
+    // console.log('password: ' + user.password);
+
+    // User.exists({ username: user.username }).then((found) => {
+    //     if (found) {
+    //         console.log('found should be true!');
+    //         console.log('found = ' + found);
+    //         res.status(201).json({
+    //             message: 'User already exists',
+    //         });
+    //     } else {
+    //         console.log('found should be false!');
+    //         console.log('found = ' + found);
+
+    //         user.save().then((createdUser) => {
+    //             res.status(201).json({
+    //                 message: 'User added successfully',
+    //                 userID: createdUser._id,
+    //             });
+    //         });
+    //     }
+    // });
 });
 
 app.get('/api/users/login', (req, res, next) => {
